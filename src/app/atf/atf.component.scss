@@ -1,0 +1,99 @@
+section {
+    background-color: #141D2F;
+    height: 500px;
+    width: 100%;
+}
+
+.verticalHeadlineBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+    position: fixed;
+    top: 297px;
+    left: 207px;
+    gap: 35px;
+
+    span {
+        
+        font-weight: 400;
+        font-size: 90px;
+        line-height: 108px;
+        align-items: center;
+
+        color: #FFFFFF;
+        writing-mode: vertical-rl;
+       
+    }
+}
+
+.horizontal {
+    display: flex;
+    flex-direction: column;
+    width: 920px;
+    height: 224px;
+    gap: 6px;
+    
+    #name{
+        width: 920px;
+        height: 149px;
+        color: #FFFFFF;
+        font-weight: 700;
+        font-size: 128px;
+        line-height: 153.6px;
+        writing-mode: horizontal-tb;
+    }
+
+    #title{
+        width: 740px;
+        height: 69px;
+
+        color: #9747FF;
+        font-weight: 400;
+        font-size: 64px;
+        line-height: 76.8px;
+        writing-mode: horizontal-tb;
+    }
+}
+
+.purpleShadow {
+    width: 572.03px;
+    height: 608px;
+    position: fixed;
+    top: 140px;
+    left: -149.23px;
+    rotate: -2.66deg;
+}
+
+.blueShadow {
+    width: 679.58px;
+    height: 573.58px;
+    position: fixed;
+    top: 300.9px;
+    left: 1084.63px;
+    rotate: 26.87deg
+
+}
+
+
+button {
+    width: 165px;
+    height: 58px;
+    position: absolute;
+    top: 593px;
+    left: 637px;
+    border-radius: 10px;
+    border-color: #70E61C;
+    padding: 15px, 30px, 15px, 30px;
+    gap: 10px;
+    background: #70E61C;
+    box-shadow: 4px 4px 4px 0px #00000040;
+
+    //Button Text
+    color: #FFFFFF;
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 27.6px;
+    
+}
