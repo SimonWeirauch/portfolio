@@ -1,0 +1,72 @@
+.aboutMe{
+    width: 471px;
+    height: 479px;
+    color: #FFFFFF;
+    position: absolute;
+    top: 1011px;
+    left: 100px;
+
+    h1 {
+        font-weight: 700;
+        font-size: 90px;
+        line-height: 108px;
+        margin-block-end: 35px;
+        margin-block-start: 0px; 
+    }
+
+    span {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19.2px;
+    }
+
+    img {
+        width: 50px;
+        height: 50px;
+        gap: 10px;
+        padding: 0px 2px 0px 2px;
+    }
+}
+
+.detailBox{
+    display: flex;
+    flex-direction: column;
+    width: 471px;
+    height: 336px;
+    gap: 35px;
+}
+
+.personalInfoBulb{
+    display: flex;
+    width: 444px;  
+    gap: 35px;
+}
+
+
+.personalInfoPuzzle{
+    display: flex;
+    width: 444px;  
+    gap: 35px;
+}
+
+.shadows{
+    display: flex;
+    width: 634px;
+    height: 616.57px;
+    position: absolute;
+    top: 1111.43px;
+    left: 705px;
+}
+
+.profilePic{
+    width: 593px;
+    height: 647px;
+    position: absolute;
+    top: 1005px;
+    left: 737px;
+}
+
+.vector {
+    position: absolute;
+    top: 1400px;
+}
