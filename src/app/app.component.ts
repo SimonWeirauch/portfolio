@@ -8,12 +8,14 @@ import { SkillsComponent } from './skills/skills.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
+import { ProjectComponent } from './project/project.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [CommonModule, RouterOutlet, HeaderComponent, AtfComponent, 
-          AboutmeComponent, SkillsComponent, PortfolioComponent, ContactComponent, FooterComponent],
+          AboutmeComponent, SkillsComponent, PortfolioComponent, ContactComponent, FooterComponent,
+          ProjectComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

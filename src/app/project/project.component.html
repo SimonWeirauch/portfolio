@@ -1,0 +1,14 @@
+<div (mouseenter)=showDetails(idProject) (mouseleave)=hideDetails(idProject) id={{idProject}} class="bg_project d-none">
+        <div class="orientation">
+            <h1>{{projectTitle}}</h1>
+            <p>{{description}}</p>
+            <span >{{tech}}</span>
+        </div>
+        <button (mouseenter)=showDetails(idProject) (mouseleave)=hideDetails(idProject) id="{{idGit}}" class="gitButton gitLink">Github</button>
+        <button  id="{{idTest}}" class="testButton liveTest">Live test</button>
+</div>
+<div (mouseenter)=showDetails(idProject) (mouseleave)=hideDetails(idProject) id={{idBackground}} class="background" >
+    
+</div>
+<img id="{{idImage}}" src={{imageSrc}}>
+

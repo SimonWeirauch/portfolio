@@ -1,3 +1,7 @@
+section {
+    height: 800px;
+}
+
 .aboutMe{
     width: 471px;
     height: 479px;
@@ -7,14 +11,16 @@
     left: 100px;
 
     h1 {
+        font-family: Poppins;
         font-weight: 700;
         font-size: 90px;
         line-height: 108px;
-        margin-block-end: 35px;
+        margin-block-end: 40px;
         margin-block-start: 0px; 
     }
 
     span {
+        font-family: Poppins;
         font-weight: 400;
         font-size: 16px;
         line-height: 19.2px;
@@ -40,6 +46,10 @@
     display: flex;
     width: 444px;  
     gap: 35px;
+
+    img:hover {
+        transform: scale(1.2);
+    }
 }
 
 
@@ -47,6 +57,10 @@
     display: flex;
     width: 444px;  
     gap: 35px;
+
+    img:hover {
+        transform: scale(1.2);
+    }
 }
 
 .shadows{
@@ -54,7 +68,7 @@
     width: 634px;
     height: 616.57px;
     position: absolute;
-    top: 1111.43px;
+    top: 1211.43px;
     left: 705px;
 }
 
@@ -62,11 +76,12 @@
     width: 593px;
     height: 647px;
     position: absolute;
-    top: 1005px;
+    top: 1105px;
     left: 737px;
 }
 
 .vector {
     position: absolute;
-    top: 1400px;
+    top: 1500px;
+    width: 100%;
 }

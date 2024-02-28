@@ -1,31 +1,70 @@
+@mixin fontStyle {
+    font-family: Poppins;
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 27.6px;
+}
+
 .header{
     display: flex;
+    position: fixed;
     justify-content: space-between;
     align-items: center;
     color: #FFFFFF;
-    height: 109.03px;
-    padding-left: 37px;
-    padding-right: 37px;
+    height: 100px;
+    width: 100%;
+    z-index: 999;
+    padding: 24px 50px 24px 50px;
     background-color: #141D2F;
 
     span{
+        cursor: pointer;
+        font-family: Poppins;
         font-size: 35px;
+        font-weight: 400;
+        line-height: 27.6px;
     }
     
     div {
         display: flex;
-        justify-content: space-between;
-        width: 326px;
+        text-wrap: nowrap;
+        width: 440px;
         height: 32px;
+        margin-right: 64px;
+
     }
 
     div a{
         text-decoration: none;
         color: #FFFFFF;
         cursor: pointer;
-        font-size: 23px;
-        font-weight: 400;
-        line-height: 27.6px;
+        @include fontStyle;
+        
+        margin-right: 64px;
+    }
+
+    div a:hover {
+        color: #70E61C;
+
+    }
+
+
+    .clickedAbout {
+        border-bottom: 2px solid #9747FF;
+        color: #70E61C !important;
+        width: 53px;
+        margin-right: 102px !important;
+        
+        #test{
+            margin-right: 102px;
+            
+        }
+    }
+
+    .clicked {
+        border-bottom: 2px solid #9747FF;
+        color: #70E61C !important;
+        width: 53px;
     }
 }
 
