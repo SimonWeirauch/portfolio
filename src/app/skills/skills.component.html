@@ -1,4 +1,10 @@
 <section >
+    <div class="mobileButton">
+        <a
+        [ngClass]="{'d-none': mobileOff}"
+        href="#mycontact"><button>Get in touch</button></a>
+    </div>
+    
     <div class="iconfield" >
         <div class="column1">
             <div class="iconBox">
@@ -15,7 +21,7 @@
             </div>
             <div class="iconBox">
                 <img src="../../assets/img/skills/matDesign.png">
-                <div>
+                <div id="myportfolio">
                     <span>Material </span>
                     <span>Design</span> 
                 </div>
@@ -62,9 +68,8 @@
         <span>I have gained experience in building projects with various 
             front end technologies and concepts.
         </span>
-        <a href="#mycontact"><button> Get in touch</button></a>
+        <a
+        [ngClass]="{'d-none': mobileOn}"
+        href="#mycontact"><button>Get in touch</button></a>
     </div>
-    
-    
-
 </section>

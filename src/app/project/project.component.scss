@@ -1,6 +1,14 @@
+section {
+    display: flex;
+    justify-content: center;
+}
+
 .d-none {
     display: none !important; 
 }
+
+
+
 
 .bg_project{
     position: absolute;
@@ -33,6 +41,7 @@ h1 {
     letter-spacing: 0em;
     text-align: center;
     color: #9747FF;
+
 }
 
 p {
@@ -46,6 +55,9 @@ p {
     line-height: 27.6px;
     letter-spacing: 0em;
     text-align: center;
+
+    display: block;
+
 }
 
 span {
@@ -55,6 +67,7 @@ span {
     align-items: center;
     width: 319px;
     height: 28px;
+    
 
     //styleName: Style 1/subtitles;
     font-family: Poppins;
@@ -162,4 +175,160 @@ img {
     transform: scaleY(1.85) scaleX(1.50);
     transition: transform 0.5s;
     margin-left: 20px;
+}
+
+
+
+@media (max-width: 700px) {
+    img {
+        left: 10px;
+    }
+
+
+    h1 {
+        width: 141px;
+        font-family: Poppins;
+        font-size: 23px;
+        font-weight: 700;
+        line-height: 27.6px;
+
+    }
+    
+    p {
+        width: 280px;
+        
+        height: 112px;
+        
+        font-size: 16px;
+        line-height: 19.2px;
+
+
+    }
+    
+    span {
+
+        width: 230px;
+        height: 28px;
+    
+        font-size: 16px;
+        line-height: 19.2px;
+
+    }
+    
+
+    
+    
+    .gitButton{
+
+        width: 114px;
+        height: 49px;
+        font-size: 16px;
+
+        line-height: 19.2px;
+
+    }
+    
+    .testButton{
+
+        width: 124px;
+        height: 49px;
+        font-size: 16px;
+        line-height: 19.2px;
+
+    }
+
+    .liveTest{
+        position: absolute;
+        top: -110px;
+        left: 320px;
+    }
+    
+    .gitLink{
+        position: absolute;
+        top: -110px;
+        left: 160px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    h1 {
+        width: 141px;
+        font-family: Poppins;
+        font-size: 23px;
+        font-weight: 700;
+        line-height: 27.6px;
+        margin-block-start: 0.5em;
+        margin-block-end: 0em;
+
+    }
+    
+    p {
+        width: 290px;
+        height: 112px;
+        font-size: 16px;
+        line-height: 19.2px;
+        margin-block-start: 0em;
+        margin-block-end: 0em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+    }
+
+
+    .bg_project{
+
+        margin-top: 150px;
+      
+        height: 200px;
+        width: 602.5px;
+        border-top-left-radius: 15%;
+        border-top-right-radius: 15%;
+        border-bottom-left-radius: 3%;
+        border-bottom-right-radius: 3%;
+        z-index: 2;
+    }
+
+
+
+    .liveTest{
+        position: absolute;
+        top: -100px;
+        left: 320px;
+    }
+    
+    .gitLink{
+        position: absolute;
+        top: -100px;
+        left: 160px;
+    }
+ 
+
+    .orientation {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        height: 180px;
+        width: 600px;
+        position: relative;
+        top: 0px;
+        background-color: #FFFFFF;
+    }
+
+
+    img {
+        position: relative;
+        height: 342px;
+        width: 342px;
+        margin-right: 20px;
+        
+    }
+    
+    .imgHover{
+        transform: scaleY(1.85) scaleX(1.50);
+        transition: transform 0.5s;
+        margin-left: 20px;
+    }
 }

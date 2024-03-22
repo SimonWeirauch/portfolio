@@ -5,14 +5,23 @@
     line-height: 27.6px;
 }
 
+header {
+    height: 100px;
+    width: 100%;
+}
+
+.d-none {
+    display: none;
+}
+
 .header{
     display: flex;
     position: fixed;
     justify-content: space-between;
     align-items: center;
     color: #FFFFFF;
-    height: 100px;
-    width: 100%;
+
+    
     z-index: 999;
     padding: 24px 50px 24px 50px;
     background-color: #141D2F;
@@ -28,43 +37,111 @@
     div {
         display: flex;
         text-wrap: nowrap;
-        width: 440px;
+        margin-right: 32px;
         height: 32px;
-        margin-right: 64px;
-
+        
     }
+
+    .name a{
+        margin-left: 0px;
+    }
+
 
     div a{
         text-decoration: none;
         color: #FFFFFF;
         cursor: pointer;
         @include fontStyle;
-        
-        margin-right: 64px;
+        margin-left: 64px;
     }
+
+
 
     div a:hover {
         color: #70E61C;
-
     }
 
-
-    .clickedAbout {
-        border-bottom: 2px solid #9747FF;
-        color: #70E61C !important;
-        width: 53px;
-        margin-right: 102px !important;
-        
-        #test{
-            margin-right: 102px;
-            
-        }
-    }
 
     .clicked {
         border-bottom: 2px solid #9747FF;
         color: #70E61C !important;
-        width: 53px;
     }
 }
+
+
+.burgerMenu {
+    position: fixed;
+    right: 0;
+    top: 148px;
+    padding-top: 16px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    width: 102vw;
+    height: 100vh;
+    background-color: #414856;
+    transform: translateX(102vw);
+    transition: all 125ms ease-in-out;
+
+    .orientation {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 290px;
+   }
+
+    a {
+        display: flex;
+        align-items: flex-start;
+        justify-content: start;
+        text-decoration: none;
+        color: #FFFFFF;
+        cursor: pointer;
+        @include fontStyle;
+        margin-bottom: 29px;
+    }
+
+    a:hover {
+        color: #70E61C;
+    }
+}
+
+
+/* move to the screen */
+.show-burgerMenu {
+    transform: translateX(0px);
+    
+}
+
+@media (max-width: 700px) {
+   .burger {
+        width: 70px;
+       cursor: pointer;
+   }
+}
+
+
+@media (max-width: 390px) {
+    .burgerMenu {
+        .orientation {
+
+            position: absolute;
+            top: 200px;
+       }
+    }
+ }
+
+
+ @media (max-width: 375px) {
+    .burgerMenu {
+        .orientation {
+            position: absolute;
+            top: 150px;
+       }
+    }
+ }
+
 

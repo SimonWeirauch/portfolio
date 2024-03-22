@@ -2,7 +2,17 @@ body {
     margin: 0;
     background-color: #141D2F;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
+
+app-root {
+  display: flex;
+  flex-direction: column;
+  height: 0px
+}
+
+
+
 
 /* poppins-100 - latin */
 @font-face {

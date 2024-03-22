@@ -1,0 +1,165 @@
+app-header {
+    height: 100px;
+}
+
+app-skills{
+    position: relative;
+    top: -600px;
+}
+
+app-portfolio{
+    position: relative;
+    top: -400px;
+}
+
+app-contact{
+    position: relative;
+    top: -400px;
+}
+
+
+app-footer{
+    position: relative;
+    top: -400px;
+}
+
+
+@media (max-width: 1200px) {
+    app-footer{
+        position: relative;
+        top: -650px;
+    }
+}
+
+
+@media (max-width: 1050px) {
+
+    app-contact{
+        position: relative;
+        top: 0px;
+        height: 500px;
+    }
+
+    app-portfolio{
+        position: relative;
+        top: -400px;
+        height: 1100px;
+    }
+
+    app-footer{
+        position: relative;
+        top: -75px;
+    }
+}
+
+
+@media (max-width: 900px) {
+
+    app-portfolio{
+        position: relative;
+        top: -400px;
+        height: 800px;
+    }
+
+
+    app-contact{
+        position: relative;
+        top: 250px;
+        height: 200px;
+    }
+
+    app-footer{
+        position: relative;
+        top: 0px;
+    }
+}
+
+
+@media (max-width: 800px) {
+    app-contact{
+        position: relative;
+        top: 215px;
+        height: 120px;
+    }
+
+    app-footer{
+        position: relative;
+        top: 0px;
+    }
+}
+
+@media (max-width: 700px) {
+   
+   
+    app-skills{
+        position: relative;
+        top: 550px;
+    }
+
+    app-portfolio{
+        position: relative;
+        top: 400px;
+    }
+
+    app-contact{
+        position: relative;
+        top: 2000px;
+        height: 120px;
+    }
+
+    app-footer{
+        position: relative;
+        top: 2500px;
+    }
+}
+
+
+@media (max-width: 600px) {
+    app-contact{
+        position: relative;
+        top: 1350px;
+        height: 120px;
+    }
+
+    app-footer{
+        position: relative;
+        top: 1855px;
+    }
+}
+
+
+@media (max-width: 450px) {
+    app-skills{
+        position: relative;
+        top: 400px;
+    }
+
+    app-portfolio{
+        position: relative;
+        top: 100px;
+    }
+
+    app-contact{
+        position: relative;
+        top: 1100px;
+        height: 120px
+    }
+
+    app-footer{
+        position: relative;
+        top: 1600px;
+    }
+}
+
+@media (max-width: 400px) {
+    app-contact{
+        position: relative;
+        top: 1050px;
+        height: 120px
+    }
+
+    app-footer{
+        position: relative;
+        top: 1550px;
+    }
+}

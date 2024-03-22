@@ -1,12 +1,56 @@
-import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, HostListener } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [],
+  imports: [FormsModule, CommonModule],
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.scss'
 })
 export class SkillsComponent {
+  
+  mobileOn: boolean = false;
+  mobileOff: boolean = true;
 
+ /**
+ * Needed for testing purposes
+ * Executes the function "isMobileView()" if window is resized
+ * @param event resize of window
+ */
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event) {  
+    if(event){
+      this.mobileView();
+    }  
+  }
+
+
+  /**
+   * Executes the function "isMobileView()" if window is loaded
+   * @param event load of  window
+   */
+  @HostListener('window:load', ['$event'])
+  onLoad(event: Event) {
+    if(event){
+      this.mobileView();
+    }  
+  }
+
+
+  /**
+   * switches the booleans of "mobileOn" and "mobileOff" according to 
+   * the width of the window
+   */
+  mobileView(){
+    if(window.innerWidth < 700){
+      this.mobileOn = true;
+      this.mobileOff = false;
+    }
+    else{
+      this.mobileOn = false;
+      this.mobileOff = true;
+    }
+  }
 }

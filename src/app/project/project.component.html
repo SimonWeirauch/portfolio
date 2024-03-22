@@ -1,14 +1,28 @@
-<div (mouseenter)=showDetails(idProject) (mouseleave)=hideDetails(idProject) id={{idProject}} class="bg_project d-none">
+<section>
+    <div 
+    (mouseenter)=showDetails() 
+    (mouseleave)=hideDetails() 
+    id={{idProject}} 
+    class="bg_project d-none"
+    [ngClass]="{'d-none': dnone}"
+    >
+    
         <div class="orientation">
             <h1>{{projectTitle}}</h1>
             <p>{{description}}</p>
             <span >{{tech}}</span>
         </div>
-        <button (mouseenter)=showDetails(idProject) (mouseleave)=hideDetails(idProject) id="{{idGit}}" class="gitButton gitLink">Github</button>
-        <button  id="{{idTest}}" class="testButton liveTest">Live test</button>
+        <button (click)="openGit(idGit)" id="{{idGit}}" class="gitButton gitLink">Github</button>
+        <button (click)="openTest(idTest)" id="{{idTest}}" class="testButton liveTest">Live test</button>
 </div>
-<div (mouseenter)=showDetails(idProject) (mouseleave)=hideDetails(idProject) id={{idBackground}} class="background" >
+<div (mouseenter)=showDetails() (mouseleave)=hideDetails()
+ id={{idBackground}} 
+ class="background"
+ [ngClass]="{'backgroundShadow': bgShadow}" 
+>
     
 </div>
-<img id="{{idImage}}" src={{imageSrc}}>
+<img [ngClass]="{'imgHover': hover}" id="{{idImage}}" src={{imageSrc}}>
+</section>
+
 

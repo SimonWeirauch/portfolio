@@ -1,96 +1,154 @@
 section {
+    display: flex;
+    flex-direction: column;
     background-color: #141D2F;
-    height: 780px;
-    width: 100%;
+    justify-content: center;
+  
+}
+
+.d-none {
+    display: none;
 }
 
 .verticalHeadlineBox {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    top: 290px;
-    left: 190px;
+    position: relative;
+    top: 80px;
+    width: 100%;
     gap: 35px;
+}
 
+
+.purpleShadow {
+    position: relative;
+    left: 200.23px;
+    top: 40px;
+    
+    /*
+    width: 572.03px;
+    height: 608px;
+    */
+
+
+    rotate: -2.66deg;
+}
+
+
+.blueShadow {
+    position: relative;
+    top: -80px;
+    right: 100px;
+    width: 779.58px;
+    /*
+    width: 679.58px;
+    height: 573.58px;
+    */
+    
+
+    rotate: -10.13deg;
+}
+
+.nameSection {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 1100px;
+ 
+}
+
+.iam {
+    display: flex;
+    //flex-direction: column;
+    rotate: 180deg !important;
+
+}
+
+
+
+.horizontal {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    
     span {
         font-family: Poppins;
         font-weight: 400;
         font-size: 90px;
         line-height: 108px;
-        align-items: center;
         color: #FFFFFF;
         writing-mode: vertical-rl;
-        
     }
 }
 
-.horizontal {
-    display: flex;
-    flex-direction: column;
-    width: 1440px;
-    height: 224px;
-    gap: 6px;
-    
-    #name{
-        width: 1440px;
-        height: 149px;
-        color: #FFFFFF;
-        font-family: Poppins;
-        font-weight: 700;
-        font-size: 112px;
-        line-height: 153.6px;
-        writing-mode: horizontal-tb;
-    }
 
-    #title{
-        font-family: Poppins;
-        width: 740px;
-        height: 69px;
-        
-        color: #9747FF;
-        font-weight: 400;
-        font-size: 64px;
-        line-height: 76.8px;
-        writing-mode: horizontal-tb;
-    }
-}
-
-.iam {
-    display: flex;
-    flex-direction: column;
-    rotate: 180deg !important;
-}
-
-
-
-button {
-    width: 165px;
-    height: 58px;
-    position: absolute;
-    top: 593px;
-    left: 637px;
-    border-radius: 10px;
-    border-color: #70E61C;
-    padding: 15px, 30px, 15px, 30px;
-    gap: 10px;
-    background: #70E61C;
-    box-shadow: 4px 4px 4px 0px #00000040;
-    cursor: pointer;
-
-    //Button Text
+#name{
     color: #FFFFFF;
     font-family: Poppins;
-    font-size: 23px;
-    font-weight: 400;
-    line-height: 27.6px;
-
-    a {
-        text-decoration: none;
-         color: #FFFFFF;
-    }
-    
+    font-weight: 700;
+    font-size: 128px;
+    line-height: 153.6px;
+    writing-mode: horizontal-tb;
 }
+
+#title{
+    font-family: Poppins;
+    color: #9747FF;
+    font-weight: 400;
+    font-size: 83px;
+    line-height: 76.8px;
+    writing-mode: horizontal-tb;
+}
+
+
+
+.talk {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -100px;
+    a {
+        width: 165px;
+        height: 58px;
+        
+        z-index: 3;
+        //Button Text
+        text-decoration: none;
+        color: #FFFFFF;
+    
+        button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 3;
+    
+            width: 165px;
+            height: 58px;
+            
+            border-radius: 10px;
+            border-color: #70E61C;
+            //padding: 15px 30px 15px 30px;
+            gap: 10px;
+            background: #70E61C;
+            box-shadow: 4px 4px 4px 0px #00000040;
+            cursor: pointer;
+    
+            color: #FFFFFF;
+            font-family: Poppins;
+            font-size: 23px;
+            font-weight: 400;
+            line-height: 27.6px;
+        }
+        
+    }
+}
+
+
 
 button:hover {
     background-color: #9747FF;
@@ -101,16 +159,23 @@ button:hover {
 .socials{
     display: flex;
     align-items: center;
+    width: 100%;
     height: 40px;
-    width: 300px;
-    position: absolute;
-    top: 867px;
+   
+    
+    
+    position: relative;
+    
+    top: 50px;
     gap: 42px;
 
-    img:hover {
-        cursor: pointer;
-            transform: scale(1.4);
-    }
+
+
+}
+
+.scaleUp:hover {
+    cursor: pointer;
+    transform: scale(1.4);
 }
 
 #line{
@@ -122,12 +187,8 @@ button:hover {
 .scrollDown{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 28px;
-    height: 160px;
-    position: absolute;
-    top: 747px;
-    left: 1316px;
+    align-items: flex-end;
+    margin-right: 24px;
     gap: 3px;
 }
 
@@ -144,22 +205,196 @@ button:hover {
 .scrollDown img {
     width: 24px;
     height: 24px;
+    position: relative;
+    right: 2px;
 }
 
-.purpleShadow {
-    width: 572.03px;
-    height: 608px;
-    position: absolute;
-    top: 140px;
-    left: -149.23px;
-    rotate: -2.66deg;
+
+
+
+@media (max-width: 1500px) {
+    
+    .horizontal{
+        transform: scale(0.90);
+    }
+
+    .talk {
+        transform: scale(0.90);
+    }
+
 }
 
-.blueShadow {
-    width: 679.58px;
-    height: 573.58px;
-    position: absolute;
-    top: 150.9px;
-    left: 1150.63px;
-    rotate: 0.87deg
+@media (max-width: 1400px) {
+    .horizontal{
+        transform: scale(0.80);
+    }
+}
+
+
+@media (max-width: 1300px) {
+    
+    .horizontal{
+        transform: scale(0.70);
+    }
+}
+
+@media (max-width: 1000px) {
+    
+    .horizontal{
+        transform: scale(0.60);
+    }
+
+    section {
+        position: relative;
+        top: -50px;
+    }
+
+}
+
+
+@media (max-width: 900px) {
+    
+    .horizontal{
+        transform: scale(0.50);
+    }
+}
+
+
+@media (max-width: 800px) {
+    
+    .horizontal{
+        transform: scale(0.45);
+    }
+
+
+}
+
+
+//MOBILE VIEW!
+@media (max-width: 700px) {
+    
+    .purpleShadow {
+        position: relative;
+        left: 300px;
+        top: -30px;
+        height: 600px;
+    }
+    
+    
+    .blueShadow {
+        position: relative;
+        top: 140px;
+        right: 150px;
+        width: 779.58px;
+        transform: scale(0.8);
+        rotate: -4deg;
+    }
+
+
+
+
+
+    .talk {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: -150px;
+        a {
+            width: 133px;
+            height: 49px;
+            
+            button {
+                width: 133px;
+                height: 49px;
+                color: #FFFFFF;
+                font-family: Poppins;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 19.2px;
+            }
+            
+        }
+    }
+
+
+
+    .socials {
+        transform: scale(1);
+        right: 10px;
+        top: 0px;
+    }
+
+
+
+
+    .horizontal {
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 6px;
+        transform: scale(1);
+
+        span {
+            font-family: Poppins;
+            font-weight: 400;
+            font-size: 32px;
+            line-height: 38.4px;
+            color: #FFFFFF;
+            writing-mode: vertical-rl;
+            position: relative;
+            left: 100px;
+        }
+    }
+
+
+    #name{
+        color: #FFFFFF;
+        font-family: Poppins;
+        font-weight: 700;
+        font-size: 45px;
+        line-height: 54px;
+        writing-mode: horizontal-tb;
+        text-wrap: nowrap;
+    }
+    
+    #title{
+        font-family: Poppins;
+        color: #9747FF;
+        font-weight: 400;
+        font-size: 29px;
+        line-height: 34.8px;
+        writing-mode: horizontal-tb;
+        text-wrap: nowrap;
+    }
+
+    .verticalHeadlineBox {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: unset;
+        position: relative;
+        top: 80px;
+        width: 100%;
+        gap: 35px;
+        transform: scale(0.8);
+    }
+
+}
+
+@media (max-width: 450px) {
+    .socials {
+        transform: scale(0.8);
+        right: 40px;
+        top: 0px;
+    }
+
+}
+
+
+@media (max-width: 400px) {
+    .horizontal {
+        transform: scale(0.9);
+    }
 }

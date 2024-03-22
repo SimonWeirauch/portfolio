@@ -3,19 +3,25 @@
     <div class="textbox">
         
         <div class="name">
-            <span id="name" >Simon</span>
-            <span id="impressum" >Impressum</span>
+            <a href="#atf">
+                <span id="name" >Simon</span>
+            </a>
             
+            <span [ngClass]="{'d-none': hide}" id="impressum" >Impressum</span>
         </div>
         
         
         <span class="copyright">© Simon Weirauch 2024</span>
             
         <div class="socials">
-            <img src="../../assets/img/atf/github_button.png">
-            <img src="../../assets/img/atf/email_button.png">
-            <img src="../../assets/img/atf/linkedin_button.png">
+            <img (click)="showGit()" src="../../assets/img/atf/github_button.png">
+            <a href="mailto:simon.w2@gmx.net">
+                <img  src="../../assets/img/atf/email_button.png">
+            </a>
+            <img (click)="showLinkedIn()" src="../../assets/img/atf/linkedin_button.png">
         </div>
+
+        <span class="d-none" [ngClass]="{'d-none': mobileView}" >Impressum</span>
     </div>
 
 </footer>

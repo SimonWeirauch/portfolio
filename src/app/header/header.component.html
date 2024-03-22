@@ -1,9 +1,37 @@
 <header class="header">
-    <span>Simon</span>
+    <div class="name">
+        <a href="#atf">
+            <span>Simon</span>
+        </a>
+       
+    </div>
     <div>
-        <a (click)="styleQuicklinks('about')" id="about" href="#myaboutMe">About me</a>
-        <a (click)="styleQuicklinks('skills')" id="skills" href="#myskills">Skills</a>
-        <a (click)="styleQuicklinks('portfolio')" id="portfolio" href="#myportfolio">Portfolio</a>
+        <div class="d-none">
+            <a [ngClass]="{'d-none': quicklinks, 'clicked' : about}" (click)="styleQuicklinks('about')" id="about" href="#myaboutMe">About me</a>
+            <a [ngClass]="{'d-none': quicklinks, 'clicked' : skills}" (click)="styleQuicklinks('skills')" id="skills" href="#myskills">Skills</a>
+            <a [ngClass]="{'d-none': quicklinks, 'clicked' : portfolio}" (click)="styleQuicklinks('portfolio')" id="portfolio" href="#myportfolio">Portfolio</a>
+        </div>
         
+        <div class="burger d-none" >
+            <img (click)="showBurgerMenu()"  [ngClass]="{'d-none': mobileView}" src="../../assets/img/header/burger_menu.png" alt="">
+        </div>
     </div>
 </header>
+
+    
+    <div class="burgerMenu"
+    (click)="showBurgerMenu()"
+    [ngClass]="{'show-burgerMenu': burgerMenu}"
+    >
+        <div class="orientation">
+            <div>
+                <a href="#myaboutMe">About me</a>
+                <a href="#myRespSkills">Skills</a>
+                <a href="#myportfolio">Portfolio</a>
+                <a href="#mycontact">Contact</a>
+            </div>
+        </div>
+    </div>
+   
+
+
