@@ -1,0 +1,53 @@
+p {
+    color: white;
+    font-family: Poppins;
+    font-weight: 400;    
+    font-size: 14px;
+    line-height: 17px;
+}
+
+h1 {
+    color: white;
+    font-family: Poppins;
+    font-weight: 400;
+    line-height: 27.6px;
+    font-size: 23px;
+}
+
+h2 {
+    color: white;
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 25px;
+}
+
+h3 {
+    color: white;
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 23px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+strong {
+    color: white;
+    font-family: Poppins;
+    font-weight: 400;
+}
+
+
+
+.impressum {
+    height: 500px;
+    width: 80%;
+    text-wrap: wrap;
+    overflow-y: scroll;
+    padding-left: 10%;
+    padding-right: 10%;
+}

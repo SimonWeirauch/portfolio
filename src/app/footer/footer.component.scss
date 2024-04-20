@@ -13,6 +13,12 @@ footer {
 }
 
 
+a {
+    color: white;
+    text-decoration: none;
+    font-family: Poppins;
+}
+
 .d-none {
     display: none;
 }
@@ -64,6 +70,10 @@ footer {
     line-height: 27.6px;
     gap: 10px;
 
+}
+
+.cursor{
+    cursor: pointer;
 }
 
 #impressum{

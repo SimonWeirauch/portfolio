@@ -1,7 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component, HostListener} from '@angular/core';
+import { Component, HostListener, Input} from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { withDebugTracing } from '@angular/router';
 
 
 @Component({
@@ -12,10 +11,9 @@ import { withDebugTracing } from '@angular/router';
   styleUrl: './atf.component.scss'
 })
 export class AtfComponent {
-
-  mobileView: boolean = false;
-  scrollDown: boolean = true;
-
+  
+  @Input() hide?: boolean;
+  @Input() scrollDown?: boolean;
 
   /**
  * Needed for testing purposes
@@ -48,11 +46,11 @@ export class AtfComponent {
    */
   isMobileView(){
     if(window.innerWidth < 700){
-      this.mobileView = true;
+      this.hide = true;
       this.scrollDown = false;
     }
     else{
-      this.mobileView = false;
+      this.hide = false;
       this.scrollDown = true;
     }
   }

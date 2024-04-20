@@ -1,7 +1,32 @@
-<app-header id="header"></app-header>
-<app-atf id="atf"></app-atf>
-<app-aboutme  ></app-aboutme>
-<app-skills  ></app-skills>
-<app-portfolio ></app-portfolio>
-<app-contact ></app-contact>
-<app-footer id="footer"></app-footer>
+<app-header (skillButtonAndScrollDownEmitterHeader)="setSkillButtonAndScrollDown($event)" (defaultEmitterHeader)="setDefault($event)" id="header"></app-header>
+
+@if(privacy || legal)
+{
+    @if(privacy){
+        <app-privacy></app-privacy>
+    }
+    @else {
+        <app-legal></app-legal>
+    }
+}
+@else{
+    <app-atf id="atf"
+    [hide]=hideValue
+    [scrollDown]=scrollDownValue
+    ></app-atf>
+    <app-aboutme  ></app-aboutme>
+    <app-skills
+    [mobileOn]=mobileOnValue
+    [mobileOff]=mobileOffValue
+    ></app-skills>
+    <app-portfolio ></app-portfolio>
+    <app-contact (privacyEmitter)="changePrivacy($event)" ></app-contact>
+}
+
+<app-footer 
+[ngClass]="{'privacyFooter':privacy}"
+[ngClass]="{'legalFooter':legal}"
+(legalEmitter)="changeLegal($event)" 
+(defaultEmitterFooter)="setDefault($event)" 
+(skillButtonAndScrollDownEmitterFooter)="setSkillButtonAndScrollDown($event)"
+id="footer"></app-footer>

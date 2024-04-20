@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { Component, inject } from '@angular/core';
+import { Component, inject, Output, EventEmitter } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 
 
@@ -24,7 +24,6 @@ export class ContactComponent {
   errorImgMail: boolean = true;
   errorMsgMail: boolean = true;
 
-
   successImgMessage: boolean = true;
   errorImgMessage: boolean = true;
   errorMsgMessage: boolean = true;
@@ -41,9 +40,13 @@ export class ContactComponent {
   borderGreenMail: boolean = false;
   borderRedMail: boolean = false;
 
+
+  buttonDisabled: boolean = true;
+
   checkbox: boolean = false;
 
-  mailTest: boolean = true;
+  mailTest: boolean = false;
+  privacy: boolean = false;
 
   post = {
     endPoint: 'https://simon-weirauch.de/sendMail.php',
@@ -56,11 +59,33 @@ export class ContactComponent {
     },
   };
 
+
   contactData = {
     name: "",
     email: "",
     message: ""
   }
+
+
+  @Output() privacyEmitter = new EventEmitter<boolean>();
+
+
+  /**
+   * changes the status of the boolean "legal" which will
+   * change the DOM of app.component.html
+   */
+  changePrivacy() {
+    if(this.privacy){
+      this.privacy = false;
+      this.privacyEmitter.emit(false)
+    }
+    else{
+      this.privacy = true;
+      this.privacyEmitter.emit(true)
+      
+    }
+  }
+
 
 /**
  * sends the contact data to the php file on my server
@@ -73,8 +98,11 @@ export class ContactComponent {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-            //alles hinzufügen was benötigt wird
+            //function to be called in production if submit is successful
+            console.log(this.contactData);
             ngForm.resetForm();
+            this.acceptCheckbox();
+            
           },
           error: (error) => {
             console.error(error);
@@ -82,10 +110,17 @@ export class ContactComponent {
           complete: () => console.info('send post complete'),
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-      console.log(this.contactData);
+      //function to be called in testing
+      //console.log(this.contactData);
       ngForm.resetForm();
       this.acceptCheckbox();
-      //alles hinzufügen was benötigt wird zum testen
+      
+    }
+    else{
+      //function to be called in production if submit fails
+      this.nameValidation();
+      this.mailValidation();
+      this.messageValidation();
     }
   }
 
@@ -154,7 +189,7 @@ export class ContactComponent {
    * of the textareafield
    */
   messageValidation(){
-    if(this.contactData.message == ""){
+    if(this.contactData.message.length < 4 || this.contactData.message == "" ){
       this.successImgMessage = true;
       this.errorImgMessage = false;
       this.errorMsgMessage = false;

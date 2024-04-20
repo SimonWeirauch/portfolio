@@ -1,4 +1,4 @@
-import { Component, Input} from '@angular/core';
+import { Component, Input, Output} from '@angular/core';
 import { PortfolioComponent } from '../portfolio/portfolio.component';
 import { CommonModule } from '@angular/common';
 
@@ -23,6 +23,7 @@ export class ProjectComponent {
   @Input() idBackground = '';
   @Input() idImage = '';
 
+  
 
   dnone: boolean = true;
   hover: boolean = false;
@@ -37,6 +38,7 @@ export class ProjectComponent {
     this.hover = true;
     this.bgShadow = true;
   }
+
 
   /**
    * hides projectdetails while not hovering
@@ -57,13 +59,13 @@ export class ProjectComponent {
       window.open('https://github.com/SimonWeirauch/El-Pollo-Loco')
     }
     else if(idGit == 'joinGit'){
-      window.open('https://github.com/SimonWeirauch/El-Pollo-Loco')
+      window.open('https://github.com/SimonWeirauch')
         }
     else if(idGit == 'crmGit'){
-      window.open('https://github.com/SimonWeirauch/El-Pollo-Loco')
+      window.open('https://github.com/SimonWeirauch')
         }
     else {
-      window.open('https://github.com/SimonWeirauch/El-Pollo-Loco')
+      window.open('https://github.com/SimonWeirauch')
     }
   }
 

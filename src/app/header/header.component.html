@@ -1,15 +1,16 @@
+
 <header class="header">
     <div class="name">
-        <a href="#atf">
+        <a (click)="setLegalPrivacyDefault()" href="#atf">
             <span>Simon</span>
         </a>
        
     </div>
     <div>
         <div class="d-none">
-            <a [ngClass]="{'d-none': quicklinks, 'clicked' : about}" (click)="styleQuicklinks('about')" id="about" href="#myaboutMe">About me</a>
-            <a [ngClass]="{'d-none': quicklinks, 'clicked' : skills}" (click)="styleQuicklinks('skills')" id="skills" href="#myskills">Skills</a>
-            <a [ngClass]="{'d-none': quicklinks, 'clicked' : portfolio}" (click)="styleQuicklinks('portfolio')" id="portfolio" href="#myportfolio">Portfolio</a>
+            <a [ngClass]="{'d-none': quicklinks, 'clicked' : about}" (click)="styleQuicklinks('about'); setLegalPrivacyDefault()" id="about" href="#myaboutMe">About me</a>
+            <a [ngClass]="{'d-none': quicklinks, 'clicked' : skills}" (click)="styleQuicklinks('skills'); setLegalPrivacyDefault()" id="skills" href="#myskills">Skills</a>
+            <a [ngClass]="{'d-none': quicklinks, 'clicked' : portfolio}" (click)="styleQuicklinks('portfolio'); setLegalPrivacyDefault()" id="portfolio" href="#myportfolio">Portfolio</a>
         </div>
         
         <div class="burger d-none" >
@@ -25,10 +26,10 @@
     >
         <div class="orientation">
             <div>
-                <a href="#myaboutMe">About me</a>
-                <a href="#myRespSkills">Skills</a>
-                <a href="#myportfolio">Portfolio</a>
-                <a href="#mycontact">Contact</a>
+                <a (click)="setLegalPrivacyDefault(); setSkillButtonAndScrollDown()" href="#myaboutMe">About me</a>
+                <a (click)="setLegalPrivacyDefault(); setSkillButtonAndScrollDown()" href="#myRespSkills">Skills</a>
+                <a (click)="setLegalPrivacyDefault(); setSkillButtonAndScrollDown()" href="#myportfolio">Portfolio</a>
+                <a (click)="setLegalPrivacyDefault(); setSkillButtonAndScrollDown()" href="#mycontact">Contact</a>
             </div>
         </div>
     </div>

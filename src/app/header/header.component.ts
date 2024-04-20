@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, Input, Output, EventEmitter} from '@angular/core';
 
 
 
@@ -20,6 +20,29 @@ export class HeaderComponent {
   skills: boolean = false;
   portfolio: boolean = false;
   
+  privacy: boolean = false;
+  legal: boolean = false;
+
+  @Output() defaultEmitterHeader = new EventEmitter<boolean>();
+  @Output() skillButtonAndScrollDownEmitterHeader = new EventEmitter<boolean>();
+
+  
+  /**
+   * Defines input variable in app component to render
+   * skill and atf component for mobile usage
+   */
+  setSkillButtonAndScrollDown(){
+    this.skillButtonAndScrollDownEmitterHeader.emit(true);
+  }
+
+
+  /**
+   * Sets legal and privacy bool in app component to
+   * render the page without legal and privacy page
+   */
+  setLegalPrivacyDefault(){
+    this.defaultEmitterHeader.emit(false);
+  }
 
 
  /**

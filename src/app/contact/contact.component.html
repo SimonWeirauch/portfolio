@@ -57,8 +57,9 @@
                         id="inputMail" 
                         [ngClass]="{'borderGreen': borderGreenMail, 'borderRed': borderRedMail }"
                         type="email" 
-                        required placeholder="Your email" 
-                        pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,3}"
+                        required 
+                        placeholder="Your email" 
+                        pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
                         >
                     
                     <img id="errorImgMail"
@@ -74,7 +75,7 @@
                 </div>
                 <span id="errorMail" 
                     [ngClass]="{'d-none': errorMsgMail}"
-                      >Your email is required</span>
+                      >Your email is required (e.g. example&#64;.de)</span>
             </div>
     
             <div class="inputGab">
@@ -104,7 +105,7 @@
                 </div>
                 <span id="errorText" 
                     [ngClass]="{'d-none': errorMsgMessage}"
-                    >Your message is empty</span>
+                    >Your message is empty or has less than 4 characters</span>
             </div>
             
             <div class="inputGab">
@@ -116,7 +117,7 @@
                         <img (click)="acceptCheckbox(); sendForm()" src="../../assets/img/contact/checkbox_unchecked.png" alt="">
                     }
                     
-                    <span>I've read the <a>privacy policy</a> and agree to the 
+                    <span>I've read the <a href="#header" (click)="changePrivacy()">privacy policy</a> and agree to the 
                         processing of my data as outlined.
                     </span>
                 </div>
@@ -125,8 +126,17 @@
                       >Please accept the privacy policy.
                 </span>
             </div>
-    
-            <button type="submit" class="buttonHover">Send message :)</button>
+            
+            <div> @if(checkbox){
+                    <button type="submit" class="buttonHover">Send message :)</button>
+                }
+                @else{
+                    <button 
+                    disabled 
+                    [ngClass]="{'disabledButton': buttonDisabled}"
+                    >Send message :)</button>
+                }
+            </div>
         </form>
 
     </div>

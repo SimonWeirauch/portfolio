@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, Input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -10,9 +10,10 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './skills.component.scss'
 })
 export class SkillsComponent {
+
+  @Input() mobileOn?: boolean;
+  @Input() mobileOff?: boolean;
   
-  mobileOn: boolean = false;
-  mobileOff: boolean = true;
 
  /**
  * Needed for testing purposes

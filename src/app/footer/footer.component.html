@@ -3,11 +3,11 @@
     <div class="textbox">
         
         <div class="name">
-            <a href="#atf">
+            <a href="#atf" (click)="setLegalPrivacyDefault(); setSkillButtonAndScrollDown()">
                 <span id="name" >Simon</span>
             </a>
             
-            <span [ngClass]="{'d-none': hide}" id="impressum" >Impressum</span>
+            <a href="#header" (click)="changeLegal()" [ngClass]="{'d-none': hide}" class="cursor" id="impressum" >Impressum</a>
         </div>
         
         
@@ -21,7 +21,7 @@
             <img (click)="showLinkedIn()" src="../../assets/img/atf/linkedin_button.png">
         </div>
 
-        <span class="d-none" [ngClass]="{'d-none': mobileView}" >Impressum</span>
+        <a href="#header" (click)="changeLegal()" class="d-none cursor" [ngClass]="{'d-none': mobileView}" >Impressum</a>
     </div>
 
 </footer>
