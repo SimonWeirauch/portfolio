@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, HostListener, Input, Output, EventEmitter} from '@angular/core';
+import { Component, HostListener, Output, EventEmitter} from '@angular/core';
 
 
 
@@ -26,7 +26,7 @@ export class HeaderComponent {
   @Output() defaultEmitterHeader = new EventEmitter<boolean>();
   @Output() skillButtonAndScrollDownEmitterHeader = new EventEmitter<boolean>();
 
-  
+
   /**
    * Defines input variable in app component to render
    * skill and atf component for mobile usage
@@ -42,6 +42,8 @@ export class HeaderComponent {
    */
   setLegalPrivacyDefault(){
     this.defaultEmitterHeader.emit(false);
+    
+    console.log('changed from setLegalPrivacyDefault() privacy and legal to false');
   }
 
 
@@ -91,35 +93,59 @@ export class HeaderComponent {
   * will be shown.
   */
   showBurgerMenu() {
-  
-  if(this.burgerMenu){
-    this.burgerMenu = false;
+    if(this.burgerMenu){
+      this.burgerMenu = false;
+    }
+    else{
+      this.burgerMenu = true;
+    }
   }
-  else{
-    this.burgerMenu = true;
-  }
-}
 
 
 /**
- * styles the quicklinks according to which quicklink is pressed
+ * executes function to style the quicklinks according to the pressed quicklink
  * @param id 
  */
   styleQuicklinks(id: string): void{
     if(id == 'about'){
-      this.about = true;
-      this.skills = false;
-      this.portfolio = false;
+      this.styleAboutMeLink();
     }
     else if(id =='skills'){
-      this.about = false;
-      this.skills = true;
-      this.portfolio = false;
+      this.styleSkillsLink();
     }
     else{
-      this.about = false;
-      this.skills = false;
-      this.portfolio = true;
+      this.stylePortfolioLink();
     }
   }
+
+
+  /**
+   * styles the about me quicklink
+   */
+  styleAboutMeLink(){
+    this.about = true;
+    this.skills = false;
+    this.portfolio = false;
+  }
+
+
+  /**
+   * styles the skills quicklink
+   */
+  styleSkillsLink(){
+    this.about = false;
+    this.skills = true;
+    this.portfolio = false;
+  }
+
+
+  /**
+   * styles the portfolio quicklink
+   */
+  stylePortfolioLink(){
+    this.about = false;
+    this.skills = false;
+    this.portfolio = true;
+  }
 }
+

@@ -7,7 +7,7 @@
                 <span id="name" >Simon</span>
             </a>
             
-            <a href="#header" (click)="changeLegal()" [ngClass]="{'d-none': hide}" class="cursor" id="impressum" >Impressum</a>
+            <a href="legal?style=legal" (click)="changeLegal()" [ngClass]="{'d-none': hide}" class="cursor" id="impressum" >Impressum</a>
         </div>
         
         
@@ -21,7 +21,9 @@
             <img (click)="showLinkedIn()" src="../../assets/img/atf/linkedin_button.png">
         </div>
 
-        <a href="#header" (click)="changeLegal()" class="d-none cursor" [ngClass]="{'d-none': mobileView}" >Impressum</a>
+        <a href="legal?style=legal" (click)="changeLegal()"
+        
+        class="d-none cursor" [ngClass]="{'d-none': mobileView}" >Impressum</a>
     </div>
 
 </footer>

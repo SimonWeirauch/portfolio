@@ -1,8 +1,11 @@
 body {
     margin: 0;
     background-color: #141D2F;
-    scroll-behavior: smooth;
     overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 app-root {
@@ -10,9 +13,6 @@ app-root {
   flex-direction: column;
   height: 0px
 }
-
-
-
 
 /* poppins-100 - latin */
 @font-face {
@@ -175,7 +175,3 @@ app-root {
     font-weight: 900;
     src: url('../src/assets/fonts/poppins-v20-latin-900italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
-  
-  
-  
-

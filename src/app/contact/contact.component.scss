@@ -7,7 +7,6 @@ section {
     overflow: hidden;
 }
 
-
 .headline {
     display: flex;
     align-items: center;
@@ -51,7 +50,6 @@ section {
         flex-direction: row;
         align-items: center;
 
-
         img {
             position: absolute;
             top: 300px;
@@ -92,7 +90,6 @@ section {
     .callToAction {
         width: 473px;
         height: 38px;
-
         gap: 8px;
         font-family: Poppins;
         font-size: 16px;
@@ -102,7 +99,6 @@ section {
         text-align: left;
     }
 }
-
 
 .formGab {
     gap: 32px;
@@ -140,8 +136,7 @@ form {
             top: 16px;
             height: 25px;
             width: 25px;
-            padding-right: 16px;
-            
+            padding-right: 16px; 
         }
     }
 
@@ -156,15 +151,12 @@ form {
         linear-gradient(0deg, #9747FF, #9747FF);
         border: 1px solid #9747FF;
         color: #FFFFFF;
-
-       
         font-family: Poppins;
         font-size: 16px;
         font-weight: 400;
         line-height: 19px;
         letter-spacing: 0em;
         text-align: left;
-
     }
 
     input:hover {
@@ -187,7 +179,6 @@ form {
         linear-gradient(0deg, #9747FF, #9747FF);
         border: 1px solid #9747FF;
         color: #FFFFFF;
-
         font-family: Poppins;
         font-size: 16px;
         font-weight: 400;
@@ -220,7 +211,6 @@ form {
         }
 
         a {
-            //styleName: Style 1/label;
             font-family: Poppins;
             font-size: 14px;
             font-weight: 400;
@@ -232,20 +222,16 @@ form {
         }
     }
 
-
-
     button {
         display: flex;
         justify-content: center;
         text-align: center;
         margin-left: 200px;
-
         width: 253px;
         height: 58px;
         padding: 15px 30px 15px 30px;
         border-radius: 10px;
         gap: 10px;
-        
         cursor: pointer;
         background-color: #70E61C !important;
         background-color: #B6B6B6;
@@ -265,13 +251,11 @@ form {
         justify-content: center;
         text-align: center;
         margin-left: 200px;
-
         width: 253px;
         height: 58px;
         padding: 15px 30px 15px 30px;
         border-radius: 10px;
         gap: 10px;
-        
         cursor: pointer;
         background-color: #B6B6B6 !important;
         background-color: #B6B6B6;
@@ -297,7 +281,6 @@ form {
     border: 1px solid #70E61C !important;
 }
 
-
 .borderRed {
     border: 1px solid #E61C40 !important;
 }
@@ -308,12 +291,10 @@ form {
     justify-content: flex-end;
     width: auto;
    
-   
     .purpleShadow {
-       position: relative;
-       top: -350px;
-       right: 0px;
-       
+        position: relative;
+        top: -350px;
+        right: 0px;
         z-index: -1;
         height: 700px;
         width: 600px;
@@ -333,344 +314,17 @@ form {
         border: 2px;
     }
     
-    
     .topArrowGreen {
         cursor: pointer;
         display: flex;
         position: relative;
         top: 0px;
         left: 530px;
-        
         z-index: 1;
         width: 39px;
         height: 39px;
-    
         padding: 8px 8px 7px 7px;
         border-radius: 41px;
         border: 2px;
-    }
-}
-
-
-@media (max-width: 1300px) {
-    .middleSection{
-        transform: scale(0.9);
-    }
-
-    .contactTextbox {
-        .contactTextheadline{
-            img {
-                position: absolute;
-                top: 45px;
-                left: -50px;
-                height: 4px;
-                border: 4px;
-            }
-        }
-    }
-
-}
-
-@media (max-width: 1200px) {
-
-
-
-    
-    .middleSection{
-        transform: scale(0.8);
-        position: relative;
-        top: -50px;
-    }
-
-
-
-    section {
-        position: relative;
-        bottom: 250px;
-        height: 850px;
-    }
-
-
-    .contactTextbox {
-        .contactTextheadline{
-            img {
-                position: absolute;
-                top: 50px;
-                left: -130px;
-
-            }
-        }
-    }
-}
-
-
-@media (max-width: 1050px) {
-
-    .headline {
-        h1 {
-            font-size: 72px;
-        }
-    }
-
-    .middleSection{
-        transform: scale(0.7);
-        top: -100px;
-    }
-
-    .bottomSection{
-        position: relative;
-        top: -100px;
-
-        .purpleShadow {
-            height: 300px;
-            width: 400px;
-            top: -250px
-        }
-
-        .topArrow {
-            left: 350px;
-            top: -50px;
-        }
-
-        .topArrowGreen {
-            left: 350px;
-            top: -50px;
-        }
-
-    }
-
-    .contactTextbox {
-        .contactTextheadline{
-            img {
-                position: absolute;
-                top: 50px;
-                left: -220px;
-
-            }
-        }
-    }
-}
-
-
-@media (max-width: 900px) {
-
-
-    .headline {
-        h1 {
-            font-size: 56px;
-        }
-    }
-
-    .middleSection{
-        transform: scale(0.6);
-        top: -125px;
-        
-    }
-
-    .bottomSection{
-        top: -150px;
-
-
-        .purpleShadow {
-            height: 300px;
-            width: 300px;
-            position: relative;
-            top: -300px;
-        }
-
-
-        .topArrow {
-            left: 250px;
-            top: -75px;
-            transform: scale(0.9);
-        }
-
-        .topArrowGreen {
-            left: 250px;
-            top: -75px;
-            transform: scale(0.9);
-        }
-    }
-
-
-    section {
-        position: relative;
-        bottom: 600px;
-
-    }
-
-    .contactTextbox {
-        .contactTextheadline{
-            img {
-                position: absolute;
-                top: 50px;
-                left: -290px;
-
-            }
-        }
-    }
-}
-
-@media (max-width: 800px) {
-
-
-    .middleSection{
-        transform: scale(0.55);
-        top: -150px;
-    }
-
-    .bottomSection{
-        top: -200px;
-
-        .purpleShadow {
-            top: -280px;
-        }
-    }
-
-    section {
-        position: relative;
-        bottom: 620px;
-        height: 550px;
-    }
-
-
-
-    .contactTextbox {
-        .contactTextheadline{
-            img {
-                position: absolute;
-                top: 50px;
-                left: -320px;
-            }
-        }
-    }
-}
-
-
-@media (max-width: 700px) {
-    section {
-        position: relative;
-        bottom: 0px;
-        top: 0px;
-        height: 625px;
-    }
-
-    .middleSection {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-        top: -220px;
-
-        .contactTextbox{
-            position: relative;
-            right: 70px;
-        }
-    }
-
-    .bottomSection {
-        .topArrow {
-            left: 250px;
-            top: -170px;
-            transform: scale(0.8);
-        }
-
-        .topArrowGreen {
-            left: 250px;
-            top: -170px;
-            transform: scale(0.8);
-        }
-
-        .purpleShadow {
-            top: -380px;
-        }
-    }
-
-    .contactTextbox {
-        .contactTextheadline{
-            img {
-                position: absolute;
-                top: 50px;
-                left: -310px;
-                width: 100px;
-            }
-        }
-    }
-
-}
-
-@media (max-width: 700px) {
-    .contactTextbox {
-        .contactTextheadline{
-            img {
-                left: -220px;
-                width: 100px;
-            }
-        }
-    }
-
-
-    .headline {
-        img {
-            width: 20%;
-        }
-    }
-}
-
-
-@media (max-width: 500px) {
-    .contactTextbox {
-        .contactTextheadline{
-            img {
-                left: -120px;
-                width: 100px;
-            }
-        }
-    }
-}
-
-
-@media (max-width: 450px) {
-    .contactTextbox {
-        .contactTextheadline{
-            img {
-                left: -120px;
-                width: 100px;
-            }
-        }
-    } 
-
-
-    form {
-        input {
-            width: 550px;
-        }
-
-        textarea {
-            width:  550px;
-        }
-    }    
-
-    .middleSection {
-        .contactTextbox{
-            right: 60px;
-
-            img {
-                width: 110px;
-            }
-        }
-    }
-}
-
-
-
-@media (min-height: 1024px) {
-    .middleSection {
-        right: 100px;
-    }
-
-    
-    section {
-        height: 730px;
     }
 }

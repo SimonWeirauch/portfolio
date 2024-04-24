@@ -31,7 +31,8 @@
                         name="name"
                         [ngClass]="{'borderGreen': borderGreenName, 'borderRed': borderRedName }" 
                         type="text" 
-                        required placeholder="Your name">
+                        required 
+                        placeholder="Your name">
                     
                     <img id="errorImgName"
                         [ngClass]="{'d-none': errorImgName, 'imgPositioning': true}"
@@ -59,7 +60,6 @@
                         type="email" 
                         required 
                         placeholder="Your email" 
-                        pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
                         >
                     
                     <img id="errorImgMail"
@@ -75,7 +75,7 @@
                 </div>
                 <span id="errorMail" 
                     [ngClass]="{'d-none': errorMsgMail}"
-                      >Your email is required (e.g. example&#64;.de)</span>
+                      >Your email is required (e.g. example&#64;domain.de)</span>
             </div>
     
             <div class="inputGab">
@@ -117,7 +117,7 @@
                         <img (click)="acceptCheckbox(); sendForm()" src="../../assets/img/contact/checkbox_unchecked.png" alt="">
                     }
                     
-                    <span>I've read the <a href="#header" (click)="changePrivacy()">privacy policy</a> and agree to the 
+                    <span>I've read the <a href="privacy?style=privacy" (click)="changePrivacy()">privacy policy</a> and agree to the 
                         processing of my data as outlined.
                     </span>
                 </div>
@@ -127,7 +127,10 @@
                 </span>
             </div>
             
-            <div> @if(checkbox){
+            <div> @if(mailSuccessfullySend){
+                    <button type="submit" class="buttonHover">Thank You :)</button>
+                }
+                @else if(checkbox && validMail){
                     <button type="submit" class="buttonHover">Send message :)</button>
                 }
                 @else{
@@ -145,14 +148,12 @@
 
     <div class="bottomSection">
         @if(hover){
-            <a (mouseleave)="changeButtomArrowWhite()" href="#header"><img class="topArrowGreen" src="../../assets/img/contact/topArrowGreen.png" alt=""></a>
+            <a (mouseleave)="changeBottomArrowWhite()" href="#header"><img class="topArrowGreen" src="../../assets/img/contact/topArrowGreen.png" alt=""></a>
         }
         @else {
-            <a (mouseenter)="changeButtomArrowGreen()" href="#header"><img class="topArrow" src="../../assets/img/contact/topArrow.png" alt=""></a>
+            <a (mouseenter)="changeBottomArrowGreen()" href="#header"><img class="topArrow" src="../../assets/img/contact/topArrow.png" alt=""></a>
         }
-        
         <img class="purpleShadow" src="../../assets/img/contact/purpleShadowContacts.png" alt="">
-    
     </div>
     
 </section>

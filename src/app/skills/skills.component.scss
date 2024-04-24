@@ -2,9 +2,7 @@ section {
     height: 700px;
     display: flex;
     justify-content: space-between;
-    
 }
-
 
 .d-none {
     display: none;
@@ -15,7 +13,7 @@ section {
     width: 625px;
     height: 649px;
     position: relative;
-    left: 80px;
+    
     gap: 91px;
 
     img:hover {
@@ -31,7 +29,6 @@ section {
         -webkit-animation-iteration-count: infinite;
     }
 }
-
 
 .iconBox {
     width: 88px;
@@ -59,10 +56,6 @@ section {
     }
 }
 
-
-
-
-
 .column1 {
     display: flex;
     flex-direction: column;
@@ -79,19 +72,14 @@ section {
     gap: 83px;
 }
 
-
-
 .skills {
     display: flex;
     flex-direction: column;
     width: 572px;
     height: 286px;
-    
     position: relative;
     top: 150px;
     
-
-
     span {
         width: 471px;
         height: 38px;
@@ -127,7 +115,6 @@ section {
     }
 }
 
-
 button {
     width: 200px;
     height: 58px;
@@ -140,8 +127,6 @@ button {
     background: #70E61C;
     box-shadow: 4px 4px 4px 0px #00000040;
     cursor: pointer;
-
-    //Button Text
     color: #FFFFFF;
     font-family: Poppins;
     font-size: 23px;
@@ -154,7 +139,6 @@ button:hover {
     border-color: #9747FF;
     transform: scale(1.2);
 }
-
 
 @keyframes bounce {
 	0%, 100%, 20%, 50%, 80% {
@@ -174,7 +158,6 @@ button:hover {
 	}
 }
 
-
 @media (max-width: 1400px) {
     
     .iconfield {
@@ -182,38 +165,12 @@ button:hover {
         left: 40px;
     }
 
-
     .skills{
          transform: scale(0.90);
-            left: 30px;
-       
+         left: 30px; 
     }
 }
 
-
-@media (max-width: 1200px) {
-    
-    .iconfield {
-        transform: scale(0.80);
-        left: 40px;
-        bottom: 400px;
-        width: 50%;
-    }
-
-
-    .skills{
-        transform: scale(0.80);
-        left: 30px;
-        top: -220px !important;
-        width: 50%;
-       
-    }
-    section {
-        height: 150px;
-        
-    }
-
-}
 
 
 
@@ -225,17 +182,13 @@ button:hover {
         bottom: 500px;
     }
 
-
     .skills{
         transform: scale(0.65);
-        
         top: -320px !important;
-       
     }
 
     section {
         height: 0px;
-        
     }
 }
 
@@ -248,17 +201,12 @@ button:hover {
         bottom: 600px;
     }
 
-
     .skills{
         transform: scale(0.55);
         left: 10px;
         top: -420px !important;
-       
     }
-
 }
-
-
 
 @media (max-width: 700px) {
     
@@ -267,7 +215,6 @@ button:hover {
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
-        
     }
     
     .iconfield {
@@ -281,9 +228,7 @@ button:hover {
         bottom: 400px;
     }
 
-
     .iconBox {
-
         img {
             width: 45x;
             height: 55px;
@@ -299,13 +244,9 @@ button:hover {
             letter-spacing: 0em;
             text-align: left;
             color: #FFFFFF;
-            
         }
     }
 
-
-
-  
     .mobileButton {
         width: 100px;
         display: flex;
@@ -314,14 +255,9 @@ button:hover {
         top: -650px;
     }
 
-
-
-
     button {
         width: 158px;
         height: 49px;
-    
-        //Button Text
         color: #FFFFFF;
         font-family: Poppins;
         font-size: 16px;
@@ -340,7 +276,6 @@ button:hover {
 
         span {
             display: flex;
-        
             width: 300px;
         }
         
@@ -349,7 +284,6 @@ button:hover {
             justify-content: center;
           
             h1 {
-                
                 transform: scale(1);
                 color: #FFFFFF;
                 width: 241px;
@@ -361,8 +295,6 @@ button:hover {
                 margin-block-start: 0px;
                 margin-block-end: 30px;
             }
-    
-
 
             img {
                 margin-left: 0px;
@@ -370,13 +302,9 @@ button:hover {
                 width: 450px;
                 height: 4px;
                 border: 4px;
-
-
             }
-
         }
     }
-
 }
 
 @media (max-width: 450px) {
@@ -385,12 +313,9 @@ button:hover {
         bottom: 450px;
     }
 
-
     button {
         width: 200px;
         height: 58px;
-    
-        //Button Text
         color: #FFFFFF;
         font-family: Poppins;
         font-size: 16px;

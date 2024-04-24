@@ -23,12 +23,9 @@ export class ProjectComponent {
   @Input() idBackground = '';
   @Input() idImage = '';
 
-  
-
   dnone: boolean = true;
   hover: boolean = false;
   bgShadow: boolean = false;
-
 
   /**
    * shows projectdetails while hovering
@@ -60,10 +57,10 @@ export class ProjectComponent {
     }
     else if(idGit == 'joinGit'){
       window.open('https://github.com/SimonWeirauch')
-        }
+      }
     else if(idGit == 'crmGit'){
       window.open('https://github.com/SimonWeirauch')
-        }
+      }
     else {
       window.open('https://github.com/SimonWeirauch')
     }
@@ -76,16 +73,16 @@ export class ProjectComponent {
    */
   openTest(idTest: string){
     if(idTest == 'polloTest'){
-      window.open('https://simon-weirauch.developerakademie.net/elpolloloco/index.html')
+      window.open('https://simon-weirauch.de/elpolloloco/index.html')
     }
     else if(idTest == 'joinTest'){
-      window.open('https://simon-weirauch.developerakademie.net/join/index.html')
+      window.open('https://simon-weirauch.de/join/index.html')
     }
     else if(idTest == 'crmTest'){
-      window.open('https://simon-weirauch.developerakademie.net/join/index.html')
+      window.open('https://simon-weirauch.de/elpolloloco/index.html')
     }
     else {
-      window.open('https://simon-weirauch.developerakademie.net/join/index.html')
+      window.open('https://simon-weirauch.de/elpolloloco/index.html')
     }
   }
 }

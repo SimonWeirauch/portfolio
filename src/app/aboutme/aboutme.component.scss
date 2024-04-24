@@ -1,7 +1,6 @@
 section {
     display: flex;
     flex-direction: column;
-    //align-items: center;
     position: relative;
 }
 
@@ -10,7 +9,8 @@ section {
     color: #FFFFFF;
     display: flex;
     align-items: center;
-    width: 50%;
+    width: 100%;
+
 
     h1 {
         font-family: Poppins;
@@ -34,29 +34,42 @@ section {
         gap: 10px;
         padding: 0px 2px 0px 2px;
     }
-
-
-
-    .detailBox{
-        display: flex;
-        flex-direction: column;
-        height: 336px;
-        
-        gap: 35px;
-        z-index: 1;
-        position: relative;
-        left: 75px;
-    }
 }
 
 .imageBox {
     display: flex;
     flex-direction: row;
-    height: 500px;
-    width: 50%;
     position: relative;
-    right: 200px;
 }
+
+
+.detailBox{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    position: relative;
+    left: 75px;
+}
+
+.shadows{
+    width: 934px;
+    height: 800px;
+    display: flex;
+    position: relative;
+    left: 400px;
+    
+}
+
+.profilePic{
+    width: 900px;
+    height: 800px;
+    display: flex;
+    position: relative;
+    
+   left: -600px
+ 
+}
+
 
 
 .vector {
@@ -64,7 +77,8 @@ section {
     display: flex;
     position: relative;
     width: 100%;
-
+    height: 500px;
+    bottom: 170px;
     img {
         width: 100%;
         height: 900px;
@@ -94,37 +108,11 @@ section {
 }
 
 
-
-.shadows{
-    width: 934px;
-    height: 916.57px;
-    display: flex;
-    position: relative;
-    left: 400px;
-}
-
-.profilePic{
-    width: 900px;
-    height: 800px;
-    display: flex;
-    position: relative;
-    top: -80px;
-    left: -600px
-}
-
-
-
-
-
 @media (max-width: 1700px) {
     
+    
     .imageBox {
-        transform: scale(0.90);
-    }
-
-
-    .detailBox{
-        transform: scale(0.90);
+        right: 10%;
     }
 }
 
@@ -132,34 +120,32 @@ section {
 
 @media (max-width: 1500px) {
     
-    
-    .aboutMe{
-        transform: scaleX(0.85);
+     
+    .imageBox {
+        width: 100%;
+        right: 15%;
     }
 }
 
 
+@media (max-width: 1400px) {
+    
+    .vector {
+        bottom: 250px;
+        height: 150px;
+    }
 
-@media (max-width: 1200px) {
+    .imageBox {
+        transform: scale(0.8);
+    }
+}
+
+
+@media (max-width: 1300px) {
     
     .imageBox {
-        transform: scale(0.75);
+        right: 25%;
     }
-    
-    .aboutMe{
-         transform: scale(0.75);
-        position: relative;
-        bottom: 120px;
-    }
-
-    .vector {
-        bottom: 270px;
-    }
-
-    .detailBox {
-        bottom: 75px;
-    }
-
 }
 
 

@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgFor } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, inject, Output, EventEmitter } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
@@ -9,12 +9,13 @@ import { FormsModule, NgForm } from '@angular/forms';
   standalone: true,
   imports: [FormsModule, CommonModule],
   templateUrl: './contact.component.html',
-  styleUrl: './contact.component.scss'
+  styleUrls: ['./contact.component.scss', './contactResp.component.scss',]
+  
 })
 
 export class ContactComponent {
   
-  http = inject(HttpClient)   //http Client zur verfügung gestellt
+  http = inject(HttpClient)
 
   successImgName: boolean = true;
   errorImgName: boolean = true;
@@ -28,7 +29,6 @@ export class ContactComponent {
   errorImgMessage: boolean = true;
   errorMsgMessage: boolean = true;
 
-
   errorMsgPrivacy: boolean = true;
 
   borderGreenMessage: boolean = false;
@@ -40,13 +40,22 @@ export class ContactComponent {
   borderGreenMail: boolean = false;
   borderRedMail: boolean = false;
 
-
   buttonDisabled: boolean = true;
 
   checkbox: boolean = false;
 
   mailTest: boolean = false;
   privacy: boolean = false;
+
+  hover: boolean = false;
+
+  validMail: boolean = false;
+
+  mailSuccessfullySend: boolean = false;
+
+  @Output() privacyEmitter = new EventEmitter<boolean>();
+
+  regex = new RegExp("[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}")
 
   post = {
     endPoint: 'https://simon-weirauch.de/sendMail.php',
@@ -59,7 +68,6 @@ export class ContactComponent {
     },
   };
 
-
   contactData = {
     name: "",
     email: "",
@@ -67,7 +75,6 @@ export class ContactComponent {
   }
 
 
-  @Output() privacyEmitter = new EventEmitter<boolean>();
 
 
   /**
@@ -82,7 +89,6 @@ export class ContactComponent {
     else{
       this.privacy = true;
       this.privacyEmitter.emit(true)
-      
     }
   }
 
@@ -92,31 +98,21 @@ export class ContactComponent {
  * @param ngForm contactform
  */
   onSubmit(ngForm: NgForm) {
-    
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
-      console.log(this.contactData);
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-            //function to be called in production if submit is successful
-            console.log(this.contactData);
             ngForm.resetForm();
             this.acceptCheckbox();
-            
           },
-          error: (error) => {
-            console.error(error);
-          },
-          complete: () => console.info('send post complete'),
+          error: (error) => {console.error(error);},
+          complete: () => this.mailSuccessfullySend = true,
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-      //function to be called in testing
-      //console.log(this.contactData);
       ngForm.resetForm();
       this.acceptCheckbox();
-      
     }
-    else{
+    else {
       //function to be called in production if submit fails
       this.nameValidation();
       this.mailValidation();
@@ -147,19 +143,35 @@ export class ContactComponent {
    */
   nameValidation(){
     if(this.contactData.name == ""){
-      this.successImgName = true;
-      this.errorImgName = false;
-      this.errorMsgName = false;
-      this.borderGreenName = false;
-      this.borderRedName = true;
+      this.showNameErrorMsg();
     }
     else{
-      this.successImgName = false;
-      this.errorImgName = true;
-      this.errorMsgName = true;
-      this.borderGreenName = true;
-      this.borderRedName = false;
+      this.hideNameErrorMsg();
     }
+  }
+
+
+  /**
+   * shows the styling of the error message for the inputfield "name"
+   */
+  showNameErrorMsg(){
+    this.successImgName = true;
+    this.errorImgName = false;
+    this.errorMsgName = false;
+    this.borderGreenName = false;
+    this.borderRedName = true;
+  }
+
+
+  /**
+   * hides the styling of the error message for the inputfield "name"
+   */
+  hideNameErrorMsg(){
+    this.successImgName = false;
+    this.errorImgName = true;
+    this.errorMsgName = true;
+    this.borderGreenName = true;
+    this.borderRedName = false;
   }
 
 
@@ -167,20 +179,38 @@ export class ContactComponent {
    * styles the email inputfield according to the content of the inputfield
    */
   mailValidation(){
-      if(this.contactData.email == ""){
-      this.successImgMail = true;
-      this.errorImgMail = false;
-      this.errorMsgMail = false;
-      this.borderGreenMail = false;
-      this.borderRedMail = true;
+    if(!this.regex.test(this.contactData.email)){
+      this.showMailErrorMsg();
     }
     else{
-      this.successImgMail = false;
-      this.errorImgMail = true;
-      this.errorMsgMail = true;
-      this.borderGreenMail = true;
-      this.borderRedMail = false;
+      this.hideMailErrorMsg();
     }
+  }
+
+
+  /**
+   * shows the styling of the error message for the inputfield "name"
+   */
+  showMailErrorMsg(){
+    this.successImgMail = true;
+    this.errorImgMail = false;
+    this.errorMsgMail = false;
+    this.borderGreenMail = false;
+    this.borderRedMail = true;
+    this.validMail = false;
+  }
+
+
+  /**
+   * hides the styling of the error message for the inputfield "Mail"
+   */
+  hideMailErrorMsg(){
+    this.successImgMail = false;
+    this.errorImgMail = true;
+    this.errorMsgMail = true;
+    this.borderGreenMail = true;
+    this.borderRedMail = false;
+    this.validMail = true;
   }
 
 
@@ -190,19 +220,35 @@ export class ContactComponent {
    */
   messageValidation(){
     if(this.contactData.message.length < 4 || this.contactData.message == "" ){
-      this.successImgMessage = true;
-      this.errorImgMessage = false;
-      this.errorMsgMessage = false;
-      this.borderGreenMessage = false;
-      this.borderRedMessage = true;
+      this.showMessageErrorMsg();
     }
     else{
-      this.successImgMessage = false;
-      this.errorImgMessage = true;
-      this.errorMsgMessage = true;
-      this.borderGreenMessage = true;
-      this.borderRedMessage = false;
+      this.hideMessageErrorMsg();
     }
+  }
+
+
+  /**
+   * shows the styling of the error message for the textfield "Message"
+   */
+  showMessageErrorMsg(){
+    this.successImgMessage = true;
+    this.errorImgMessage = false;
+    this.errorMsgMessage = false;
+    this.borderGreenMessage = false;
+    this.borderRedMessage = true;
+  }
+
+
+  /**
+   * hides the styling of the error message for the textfield "Message"
+   */
+  hideMessageErrorMsg(){
+    this.successImgMessage = false;
+    this.errorImgMessage = true;
+    this.errorMsgMessage = true;
+    this.borderGreenMessage = true;
+    this.borderRedMessage = false;
   }
 
 
@@ -232,13 +278,11 @@ export class ContactComponent {
     }
   }
   
-  hover: boolean = false;
-
 
   /**
    * changes the color of the arrow button to green while hovering
    */
-  changeButtomArrowGreen(){
+  changeBottomArrowGreen(){
     this.hover = true;
   }
 
@@ -246,7 +290,7 @@ export class ContactComponent {
   /**
    * changes the color of the arrow button to white while not hovering
    */
-  changeButtomArrowWhite(){
+  changeBottomArrowWhite(){
     this.hover = false;
   }
 }

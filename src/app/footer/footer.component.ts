@@ -1,5 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, HostListener, Output, EventEmitter } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-footer',
@@ -10,6 +12,29 @@ import { Component, HostListener, Output, EventEmitter } from '@angular/core';
 })
 export class FooterComponent {
   
+
+
+  constructor(private router: Router){
+    console.log('footer triggered')
+    this.params = this.urlParams.get('style')
+    if(this.params){
+      if(this.params == 'legal'){
+        console.log('execute legal styling');
+      }
+      else {
+        console.log('execute privacy styling');
+      }
+    }
+    else{
+      console.log('execute portfolio styling')
+    }
+  }
+
+  urlParams = new URLSearchParams(window.location.search)
+  params: any;
+  
+
+  test: string = "";
   mobileView: boolean = false;
   hide: boolean = true;
   legal: boolean = false
@@ -18,6 +43,14 @@ export class FooterComponent {
   @Output() legalEmitter = new EventEmitter<boolean>();
   @Output() defaultEmitterFooter = new EventEmitter<boolean>();
   @Output() skillButtonAndScrollDownEmitterFooter = new EventEmitter<boolean>();
+  
+  @Output() LegalEmitterFooterCSS = new EventEmitter<boolean>();
+
+
+
+
+
+
 
   /**
    * Defines input variable in app component to render
@@ -33,7 +66,7 @@ export class FooterComponent {
    * change the DOM of app.component.html
    */
   setLegalPrivacyDefault(){
-    this.defaultEmitterFooter.emit(false)
+    this.defaultEmitterFooter.emit(true);
   }
 
 
@@ -42,14 +75,26 @@ export class FooterComponent {
    * change the DOM of app.component.html
    */
   changeLegal() {
+    
+    
     if(this.legal){
-      this.legalEmitter.emit(false)
+      
       //this.legal = false;
+      //this.router.navigateByUrl('/legal');
+      this.legalEmitter.emit(true);
+      console.log('changed by changeLegal() legal footercomponent to true ? = ' + this.legal)
+
+      
     }
     else{
-      this.legalEmitter.emit(true)
+      
       //this.legal = true;
+      this.legalEmitter.emit(true);
+
+      console.log('changed by changeLegal() legal to true ? = ' + this.legal)
+
     }
+    
   }
   
 
@@ -108,5 +153,4 @@ export class FooterComponent {
   showLinkedIn(){
     window.open('https://de.linkedin.com/')
   }
-
 }

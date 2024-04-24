@@ -1,4 +1,4 @@
-import { Component, Input, Output} from '@angular/core';
+import { Component, HostListener} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
@@ -22,17 +22,42 @@ import { LegalComponent } from './legal/legal.component';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'portfolio';
+
+
+  constructor(){
+    console.log('app triggered');
+    console.log('app legal: = ' + this.legal);
+    console.log('app privacy: = ' + this.privacy);
+    
+  }
 
   privacy: boolean = false;
   legal: boolean = false;
   
-  mobileOnValue: boolean = false;
-  mobileOffValue: boolean = true;
+ 
 
   hideValue: boolean = false;
   scrollDownValue: boolean = true;
 
+  landscapeMode: boolean = false;
+  
+
+
+  @HostListener('window:orientationchange', ['$event'])
+  onOrientationChange(event: Event){
+    this.checkViewport();
+  }
+
+  checkViewport(){
+    if (screen.availHeight < screen.availWidth) {
+      if(screen.availHeight < 440){
+        this.landscapeMode = true;
+        
+      }
+    }else{
+      this.landscapeMode = false;
+    }
+  }
 
   /**
    * Renders the DOM according to the bool so the "legal" page is shown
@@ -40,16 +65,11 @@ export class AppComponent {
    */
   changeLegal(statusLegal: boolean){
     this.legal = statusLegal;
+    console.log('I´am app component changed by changeLegal()  legal to true ? = ' + this.legal);
+
   }
 
 
-  /**
-   * Renders the DOM according to the bool so the "privacy" page is shown
-   * @param stautsPrivacy boolean that defines if the "privacy" page should be shown
-   */
-  changePrivacy(stautsPrivacy: boolean){
-    this.privacy = stautsPrivacy;
-  }
 
 
   /**
@@ -59,25 +79,7 @@ export class AppComponent {
   setDefault(legalPrivacyDefault: boolean){
     this.legal = legalPrivacyDefault;
     this.privacy = legalPrivacyDefault;
+
+    console.log('changed by setDefault(): legal = true: ' + this.legal + ' privacy: = true ' + this.privacy);
   }
-
-
-  /**
-   * Renders the DOM according to the bool so the button in the skill component and the "scroll down" span in the
-   * atf component is hidden
-   * @param skillButtonAndScrollDownEmitterHeader boolean that defines if the button in the skill component and
-   * the "scroll down" span in the atf component should be hidden
-   */
-  setSkillButtonAndScrollDown(skillButtonAndScrollDownEmitterHeader: boolean){
-    //skills component
-    this.mobileOnValue = skillButtonAndScrollDownEmitterHeader;
-    this.mobileOffValue = false;
-
-    //atf component
-    this.hideValue = skillButtonAndScrollDownEmitterHeader;
-    this.scrollDownValue = false;
-  }
-
 }
-
-
