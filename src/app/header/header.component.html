@@ -8,12 +8,22 @@
     </div>
     <div>
         <div class="d-none">
-            <a [ngClass]="{'d-none': quicklinks, 'clicked' : about}" (click)="styleQuicklinks('about'); setLegalPrivacyDefault()" id="about" href="#myaboutMe">About me</a>
+            <div class="language">
+                <a [ngClass]="{'d-none': quicklinks, 'clicked' : langDE}" (click)="styleQuicklinks('german'); setLegalPrivacyDefault()">DE</a>
+                <span [ngClass]="{'d-none': quicklinks}">|</span>
+                <a [ngClass]="{'d-none': quicklinks, 'clicked' : langEN}" (click)="styleQuicklinks('english'); setLegalPrivacyDefault()">EN</a>
+            </div>
+            <a [ngClass]="{'d-none': quicklinks, 'clicked' : about}" (click)="styleQuicklinks('about'); setLegalPrivacyDefault()" id="about" href="#aboutMeAnchor">About me</a>
             <a [ngClass]="{'d-none': quicklinks, 'clicked' : skills}" (click)="styleQuicklinks('skills'); setLegalPrivacyDefault()" id="skills" href="#myskills">Skills</a>
             <a [ngClass]="{'d-none': quicklinks, 'clicked' : portfolio}" (click)="styleQuicklinks('portfolio'); setLegalPrivacyDefault()" id="portfolio" href="#myportfolio">Portfolio</a>
         </div>
         
         <div class="burger d-none" >
+            <div class="language">
+                <a [ngClass]="{'d-none': mobileView, 'clicked' : langDE}" (click)="styleQuicklinks('german'); setLegalPrivacyDefault()">DE</a>
+                <span [ngClass]="{'d-none': mobileView}">|</span>
+                <a [ngClass]="{'d-none': mobileView, 'clicked' : langEN}" (click)="styleQuicklinks('english'); setLegalPrivacyDefault()">EN</a>
+            </div>
             <img (click)="showBurgerMenu()"  [ngClass]="{'d-none': mobileView}" src="../../assets/img/header/burger_menu.png" alt="">
         </div>
     </div>

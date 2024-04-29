@@ -74,9 +74,6 @@ export class ContactComponent {
     message: ""
   }
 
-
-
-
   /**
    * changes the status of the boolean "legal" which will
    * change the DOM of app.component.html

@@ -13,12 +13,12 @@
         </div>
     </div>  
     
-    <div id="myaboutMe" class="talk">
+    <div class="talk">
         <a href="#mycontact"><button> Let´s talk!</button></a>
     </div>
     
     
-    <div  class="socials">
+    <div id="myaboutMe" class="socials">
         <img id="line" src="../../assets/img/atf/line_green.png">
         <img (click)="showGit()" class="scaleUp" src="../../assets/img/atf/github_button.png">
         <a href="mailto:simon.w2@gmx.net">
@@ -30,9 +30,11 @@
     
     <div
     [ngClass]="{'d-none': hide, 'scrollDown': scrollDown}"
-    
     >
         <span>Scroll down </span>
         <img src="../../assets/img/atf/arrow-down-line.png">
     </div >
+    <div class="aboutAnchor">
+        <a id="aboutMeAnchor"> </a>
+    </div>
 </section>

@@ -23,31 +23,25 @@ import { LegalComponent } from './legal/legal.component';
 })
 export class AppComponent {
 
-
-  constructor(){
-    console.log('app triggered');
-    console.log('app legal: = ' + this.legal);
-    console.log('app privacy: = ' + this.privacy);
-    
-  }
-
   privacy: boolean = false;
   legal: boolean = false;
   
- 
 
   hideValue: boolean = false;
   scrollDownValue: boolean = true;
 
   landscapeMode: boolean = false;
   
-
-
   @HostListener('window:orientationchange', ['$event'])
   onOrientationChange(event: Event){
     this.checkViewport();
   }
 
+
+  /**
+   * switches the boolean of "landscapeMode" according to 
+   * the width of the window to turn landscape mode on or off
+   */
   checkViewport(){
     if (screen.availHeight < screen.availWidth) {
       if(screen.availHeight < 440){
@@ -59,17 +53,15 @@ export class AppComponent {
     }
   }
 
+
   /**
    * Renders the DOM according to the bool so the "legal" page is shown
    * @param statusLegal boolean that defines if the "legal" page should be shown
    */
   changeLegal(statusLegal: boolean){
     this.legal = statusLegal;
-    console.log('I´am app component changed by changeLegal()  legal to true ? = ' + this.legal);
 
   }
-
-
 
 
   /**
@@ -80,6 +72,5 @@ export class AppComponent {
     this.legal = legalPrivacyDefault;
     this.privacy = legalPrivacyDefault;
 
-    console.log('changed by setDefault(): legal = true: ' + this.legal + ' privacy: = true ' + this.privacy);
   }
 }

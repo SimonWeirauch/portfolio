@@ -10,7 +10,7 @@ id="header"></app-header>
 
 
 <app-footer 
-[ngClass]="{'hideInLandscape': landscapeMode, 'privacyFooter': privacy, 'legalFooter':legal}"
+[ngClass]="{'hideInLandscape': landscapeMode}"
 (legalEmitter)="changeLegal($event)" 
 (defaultEmitterFooter)="setDefault($event)" 
 

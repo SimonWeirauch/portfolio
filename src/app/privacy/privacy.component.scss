@@ -44,12 +44,14 @@ strong {
 
 
 .impressum {
-    height: 500px;
-    width: 80%;
+    height: max-content;
+    width: 90%;
     text-wrap: wrap;
     overflow-y: scroll;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+    padding-top: 148px;
 }
 
 ::-webkit-scrollbar {

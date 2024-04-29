@@ -5,12 +5,10 @@ section {
 }
 
 .aboutMe{
-    //height: 479px;
     color: #FFFFFF;
     display: flex;
     align-items: center;
     width: 100%;
-
 
     h1 {
         font-family: Poppins;
@@ -42,7 +40,6 @@ section {
     position: relative;
 }
 
-
 .detailBox{
     display: flex;
     flex-direction: column;
@@ -57,7 +54,6 @@ section {
     display: flex;
     position: relative;
     left: 400px;
-    
 }
 
 .profilePic{
@@ -65,15 +61,10 @@ section {
     height: 800px;
     display: flex;
     position: relative;
-    
    left: -600px
- 
 }
 
-
-
 .vector {
-
     display: flex;
     position: relative;
     width: 100%;
@@ -85,48 +76,37 @@ section {
     } 
 }
 
-
 .personalInfoBulb{
     display: flex;
     width: 460px;  
     gap: 35px;
-
     img:hover {
         transform: scale(1.2);
     }
 }
-
 
 .personalInfoPuzzle{
     display: flex;
     width: 460px;  
     gap: 35px;
-
     img:hover {
         transform: scale(1.2);
     }
 }
 
-
 @media (max-width: 1700px) {
-    
     
     .imageBox {
         right: 10%;
     }
 }
 
-
-
 @media (max-width: 1500px) {
-    
-     
     .imageBox {
         width: 100%;
         right: 15%;
     }
 }
-
 
 @media (max-width: 1400px) {
     
@@ -140,7 +120,6 @@ section {
     }
 }
 
-
 @media (max-width: 1300px) {
     
     .imageBox {
@@ -148,83 +127,81 @@ section {
     }
 }
 
-
-
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
     
-
-
-    .aboutMe{
-        transform: scale(0.70);
-        bottom: 160px;
+    .imageBox {
+        right: 30%;
     }
-
-    .vector {
-        bottom: 320px;
-    }
-
 }
 
+@media (max-width: 1050px) {
 
-@media (max-width: 900px) {
-    
-    .aboutMe{
-        transform: scale(0.60);
-        bottom: 200px;
+    section {
+        height: 900px;
     }
 
     .imageBox {
-        transform: scale(0.90);
-        top: 50px;
-        right: 300px;
-       
+        transform: scale(0.9);
+        bottom: 30px;
+        right: 45%;
     }
 
-    .profilePic{
-        top: -220px;
-        left: -600px
-    }
-
-
-
-    .detailBox {
-        left: 0 !important;
+    .detailBox{
+        transform: scale(0.9);
+        bottom: 0px;
+        left: 0px;
     }
 
     .vector {
-        bottom: 410px;
+        bottom: 250px;
+    }
+}
+
+@media (max-width: 950px) {
+    .imageBox {
+        right: 50%;
+    }
+}
+
+@media (max-width: 900px) {
+    .imageBox {
+        transform: scale(0.75);
+        right: 55%;
+        bottom: -30px;
     }
 
-    .socials {
+    .detailBox{
         transform: scale(0.80);
-        right: 10px;
-
+        
     }
+}
 
-    .scrollDown {
-        transform: scale(0.80);
-        right: -40px;
 
+@media (max-width: 850px) {
+    .imageBox {
+        right: 60%;
     }
-
 }
 
 
 @media (max-width: 800px) {
+    .detailBox{
+        transform: scale(0.75);
+        left: -20px;
+    }
+
     .imageBox {
-        transform: scale(0.90);
-        top: 55px;
-        right: 450px;
-       
+        transform: scale(0.70);
+        right: 65%;
+        bottom: -45px;
     }
-
-    .profilePic{
-        top: -220px;
-        left: -600px
-    }
-
 }
 
+@media (max-width: 750px) {
+    .imageBox {
+        right: 71%;
+    }
+}
 
 //MOBILE VIEW!
 @media (max-width: 700px) {
@@ -233,19 +210,16 @@ section {
         display: flex;
         flex-direction: column;
         position: relative;
-        height: 1000px;
-        bottom: 150px;
+        height: 1100px;
+        bottom: 0px;
     }
-    
     
     .aboutMe{
         flex-direction: column-reverse;
-        align-items: center;
+        align-items: flex-start;
         width: 100%;
         transform: scale(1);
-        bottom: -60px;
-
-    
+        
         h1 {
             font-family: Poppins;
             font-weight: 700;
@@ -255,7 +229,6 @@ section {
             margin-block-start: 0px; 
             transform: scale(1);
             position: relative;
-           
         }
     
         span {
@@ -272,19 +245,17 @@ section {
             padding: 0px 2px 0px 2px;
         }
     
-    
-    
         .detailBox{
             display: flex;
             flex-direction: column;
             height: 336px;
-            
+            width: 500px;
             gap: 35px;
             z-index: 1;
             position: relative;
-            left: 75px;
+            left: 40px;
             top: 80px;
-            transform: scale(0.9);
+            transform: scale(1);
         }
     }
     
@@ -297,44 +268,36 @@ section {
         z-index: -2;
         position: relative;
         right: 0px;
-        top: -25px;
-        transform: scale(0.55);
+        bottom: 95px;
+        transform: scale(0.65);
     }
     
-    
     .vector {
-    
         display: flex;
         position: relative;
         width: 100%;
-      
-        
-    
+        bottom: 500px;
+
         img {
             width: 100%;
             height: 180px;
             z-index: 0;
             position: relative;
-            top: 60px;
-            
+            top: 60px; 
         } 
     }
     
-    
-
     .shadows{
         width: 934px;
         height: 916.57px;
         display: flex;
         position: relative;
         top: -55px;
-        
     }
     
     .profilePic{
         width: 800px;
         height: 700px;
-        
         display: flex;
         position: relative;
         top: -20px;
@@ -343,29 +306,79 @@ section {
 
 }
 
+@media (max-width: 550px) {
+    .aboutMe {
+        .detailBox{
+            width: 400px;
+    
+            .personalInfoBulb{
+                width: 360px;  
+            }
+            
+            .personalInfoPuzzle{
+                width: 360px;  
+            }
+        }
+    }
+}
 
 @media (max-width: 450px) {
-    .aboutMe{
-        transform: scale(0.80);
+    section {
+        height: 1250px;
+    }
+
+    .aboutMe {
+        .detailBox{
+            width: 300px;
+    
+            .personalInfoBulb{
+                width: 340px;  
+            }
+            
+            .personalInfoPuzzle{
+                width: 340px;  
+            }
+        }
+    }
+}
+
+
+@media (max-width: 400px) {
+    .aboutMe {
+        .detailBox{
+            left: 20px;
+            top: 0px;
+            .personalInfoBulb{
+                width: 300px;  
+            }
+        
+            .personalInfoPuzzle{
+                width: 300px;  
+            }
+        }
     }
 
     .imageBox {
-        top: -50px;
-        transform: scale(0.55);
+        transform: scale(0.5);
     }
 
     .vector {
         img {
-            position: relative;
-            top: 25px;
-            
+            top: -2px;
         } 
     }
+}
 
-
-    .profilePic{
-
-        top: -20px;
-        left: -550px;
+@media (max-width: 350px) {
+    .aboutMe {
+        .detailBox{
+            .personalInfoBulb{
+                width: 260px;  
+            }
+        
+            .personalInfoPuzzle{
+                width: 260px;  
+            }
+        }
     }
 }

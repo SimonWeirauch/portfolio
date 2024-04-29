@@ -15,7 +15,7 @@
                     knowing your ideas and contributing to your projects with 
                     my work.
                 </span>
-                <span class="callToAction" >Need a Frontend developer? <b>Contact me!</b></span>
+                <span class="callToAction" >Need a Frontend developer?<b>Contact me!</b></span>
     
             </div>
         </div>
@@ -32,7 +32,9 @@
                         [ngClass]="{'borderGreen': borderGreenName, 'borderRed': borderRedName }" 
                         type="text" 
                         required 
-                        placeholder="Your name">
+                        placeholder="Your name"
+                    >
+            
                     
                     <img id="errorImgName"
                         [ngClass]="{'d-none': errorImgName, 'imgPositioning': true}"
@@ -43,10 +45,12 @@
                         [ngClass]="{'d-none': successImgName, 'imgPositioning': true}"
                         src="../../assets/img/contact/successSymbol.png" 
                     >
+                    
                 </div>
                 <span id="errorName" 
                     [ngClass]="{'d-none': errorMsgName}"
-                    >Your name is required</span>
+                    >Your name is required
+                </span>
             </div>
     
     
@@ -60,7 +64,7 @@
                         type="email" 
                         required 
                         placeholder="Your email" 
-                        >
+                    >
                     
                     <img id="errorImgMail"
                         [ngClass]="{'d-none': errorImgMail, 'imgPositioning': true}"
@@ -75,7 +79,7 @@
                 </div>
                 <span id="errorMail" 
                     [ngClass]="{'d-none': errorMsgMail}"
-                      >Your email is required (e.g. example&#64;domain.de)</span>
+                      >Your email is required (e.g. example&#64; domain.de)</span>
             </div>
     
             <div class="inputGab">
@@ -89,7 +93,8 @@
                             required
                             [ngClass]="{'borderGreen': borderGreenMessage, 'borderRed': borderRedMessage }"
                             
-                            placeholder="Your message"></textarea>
+                            placeholder="Your message">
+                        </textarea>
                     
                     <img id="errorImgText" 
                         [ngClass]="{'d-none': errorImgMessage, 'imgPositioning': true}"
@@ -117,7 +122,7 @@
                         <img (click)="acceptCheckbox(); sendForm()" src="../../assets/img/contact/checkbox_unchecked.png" alt="">
                     }
                     
-                    <span>I've read the <a href="privacy?style=privacy" (click)="changePrivacy()">privacy policy</a> and agree to the 
+                    <span>I've read the <a href="privacy" (click)="changePrivacy()">privacy policy</a> and agree to the 
                         processing of my data as outlined.
                     </span>
                 </div>

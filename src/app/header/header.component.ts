@@ -19,6 +19,8 @@ export class HeaderComponent {
   about: boolean = false;
   skills: boolean = false;
   portfolio: boolean = false;
+  langDE: boolean = false;
+  langEN: boolean = false;
   
   privacy: boolean = false;
   legal: boolean = false;
@@ -42,9 +44,7 @@ export class HeaderComponent {
    */
   setLegalPrivacyDefault(){
     this.defaultEmitterHeader.emit(false);
-    
-    console.log('changed from setLegalPrivacyDefault() privacy and legal to false');
-  }
+     }
 
 
  /**
@@ -113,9 +113,33 @@ export class HeaderComponent {
     else if(id =='skills'){
       this.styleSkillsLink();
     }
-    else{
+    else if(id =='portfolio'){
       this.stylePortfolioLink();
     }
+    else if(id =='english'){
+      this.styleEnglishLink();
+    }
+    else{
+      this.styleGermanLink();
+    }
+  }
+
+
+  styleEnglishLink(){
+    this.about = false;
+    this.skills = false;
+    this.portfolio = false;
+    this.langDE = false;
+    this.langEN = true;
+  }
+
+
+  styleGermanLink(){
+    this.about = false;
+    this.skills = false;
+    this.portfolio = false;
+    this.langDE = true;
+    this.langEN = false;
   }
 
 
@@ -126,6 +150,8 @@ export class HeaderComponent {
     this.about = true;
     this.skills = false;
     this.portfolio = false;
+    this.langDE = false;
+    this.langEN = false;
   }
 
 
@@ -136,6 +162,8 @@ export class HeaderComponent {
     this.about = false;
     this.skills = true;
     this.portfolio = false;
+    this.langDE = false;
+    this.langEN = false;
   }
 
 
@@ -146,6 +174,7 @@ export class HeaderComponent {
     this.about = false;
     this.skills = false;
     this.portfolio = true;
+    this.langDE = false;
+    this.langEN = false;
   }
 }
-

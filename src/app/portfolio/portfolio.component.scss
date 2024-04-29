@@ -154,7 +154,8 @@ app-project {
     
     .portfolioSection{
         transform: scale(0.70);
-        top: -200px;
+   
+        height: 900px;
     }
 
     .blueShadow{
@@ -173,23 +174,11 @@ app-project {
     
     .portfolioSection{
         transform: scale(0.60);
-        top: -250px;
-    }
-
-    .portfolioHeadline {
-        transform: scale(0.85);
-        position: relative;
-        left: -50px;
-    }
-
-    section {
-        position: relative;
-        top: -150px;
-        
+        height: 850px;
     }
 
     .blueShadow{
-        left: 750px;
+        left: 800px;
         top: -400px;
     }
     
@@ -204,13 +193,21 @@ app-project {
     
     .portfolioSection{
         transform: scale(0.55);
-        top: -275px;
+        height: 800px;
+        
     }
 
     .greenShadow{
         top: -10px;
     }
+
+    .blueShadow{
+        left: 800px;
+        top: -300px;
+    }
 }
+
+
 
 //MobileView
 @media (max-width: 700px) {
@@ -222,6 +219,7 @@ app-project {
         transform: scale(1);
         position: relative;
         left: 0px;
+        margin-top: 100px;
 
         span {
             left: 70px;
@@ -269,8 +267,8 @@ app-project {
     }
     
     .greenShadow{
-        left: -200px;
-        top: 1380px;
+        left: -180px;
+        top: 850px;
     }
 
 
@@ -300,31 +298,20 @@ app-project {
     }
 
     .blueShadow{
-        transform: scale(0.9);
-        left: 600px;
-        top: -250px;
+        left: 620px;
+        top: -200px;
     }
     
     .greenShadow{
-        transform: scale(0.9);
         left: -150px;
-        top: 830px;
+        top: 400px;
     }
 
 }
 
 
-@media (max-width: 600px) {
-    .greenShadow{
-        left: -100px;
-    }
-}
 
 @media (max-width: 400px) {
-    .greenShadow{
-        left: 0px;
-        top: 730px;
-    }
 
     .portfolioHeadline {
         transform: scale(1);
@@ -332,15 +319,18 @@ app-project {
         left: 0px;
 
         span {
-            left: 10px;
-           
+            left: 0px;
+            width: 295px;
         }
     }
 
     app-project {
-        transform: scale(1);
+        transform: scale(0.98);
         margin-bottom: 50px;
         width: 320px;
         height: 320px;
+        display: flex;
+        position: relative;
+        left: -2px;
     }
 }

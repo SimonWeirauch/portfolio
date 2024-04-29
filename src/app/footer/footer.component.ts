@@ -11,45 +11,17 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
-  
-
-
-  constructor(private router: Router){
-    console.log('footer triggered')
-    this.params = this.urlParams.get('style')
-    if(this.params){
-      if(this.params == 'legal'){
-        console.log('execute legal styling');
-      }
-      else {
-        console.log('execute privacy styling');
-      }
-    }
-    else{
-      console.log('execute portfolio styling')
-    }
-  }
-
   urlParams = new URLSearchParams(window.location.search)
   params: any;
   
-
-  test: string = "";
   mobileView: boolean = false;
   hide: boolean = true;
   legal: boolean = false
 
-
   @Output() legalEmitter = new EventEmitter<boolean>();
   @Output() defaultEmitterFooter = new EventEmitter<boolean>();
   @Output() skillButtonAndScrollDownEmitterFooter = new EventEmitter<boolean>();
-  
   @Output() LegalEmitterFooterCSS = new EventEmitter<boolean>();
-
-
-
-
-
 
 
   /**
@@ -75,24 +47,11 @@ export class FooterComponent {
    * change the DOM of app.component.html
    */
   changeLegal() {
-    
-    
     if(this.legal){
-      
-      //this.legal = false;
-      //this.router.navigateByUrl('/legal');
       this.legalEmitter.emit(true);
-      console.log('changed by changeLegal() legal footercomponent to true ? = ' + this.legal)
-
-      
     }
     else{
-      
-      //this.legal = true;
       this.legalEmitter.emit(true);
-
-      console.log('changed by changeLegal() legal to true ? = ' + this.legal)
-
     }
     
   }
