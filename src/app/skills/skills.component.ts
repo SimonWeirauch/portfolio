@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component, HostListener, Input } from '@angular/core';
+import { Component, HostListener, Input, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { LanguageService } from '../language.service';
 
 @Component({
   selector: 'app-skills',
@@ -13,7 +14,8 @@ export class SkillsComponent {
 
   @Input() mobileOn?: boolean;
   @Input() mobileOff?: boolean;
-  
+  languageService = inject(LanguageService)
+
 
  /**
  * Needed for testing purposes

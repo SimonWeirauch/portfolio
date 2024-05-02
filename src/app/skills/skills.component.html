@@ -6,7 +6,7 @@
     </div>
     
     <div class="iconfield" >
-        <div class="column1">
+        <div class="column1" data-aos="fade-right" data-aos-duration="500">
             <div class="iconBox">
                 <img src="../../assets/img/skills/Javascript.png">
                 <span>JavaScript</span> 
@@ -27,7 +27,7 @@
                 </div>
             </div>
         </div>
-        <div class="column2">
+        <div class="column2" data-aos="fade-right" data-aos-duration="500" data-aos-delay="250">
             <div class="iconBox">
                 <img src="../../assets/img/skills/angular.png">
                 <span>Angular</span> 
@@ -41,7 +41,7 @@
                 <span>Rest-Api</span> 
             </div>
         </div>
-        <div class="column2">
+        <div class="column2" data-aos="fade-right" data-aos-duration="500" data-aos-delay="500">
             <div class="iconBox">
                 <img src="../../assets/img/skills/ts.png">
                 <span>TypeScript</span> 
@@ -51,7 +51,7 @@
                 <span>CSS</span> 
             </div>
         </div>
-        <div class="column2"> 
+        <div class="column2" data-aos="fade-right" data-aos-duration="500" data-aos-delay="750"> 
             <div class="iconBox">
                 <img src="../../assets/img/skills/html.png"> 
                 <span>HTML</span> 
@@ -60,16 +60,26 @@
         </div>
     </div> 
 
-    <div class="skills">
+    <div class="skills" data-aos="fade-left" data-aos-duration="500">
         <div class="headline">
             <h1>Skills</h1>
             <img src="../../assets/img/skills/line_blue.png">
         </div>
-        <span>I have gained experience in building projects with various 
-            front end technologies and concepts.
-        </span>
-        <a
-        [ngClass]="{'d-none': mobileOn}"
-        href="#mycontact"><button>Get in touch</button></a>
+        @if(languageService.langEN){
+            <span>I have gained experience in building projects with various 
+                front end technologies and concepts.
+            </span>
+            <a
+            [ngClass]="{'d-none': mobileOn}"
+            href="#mycontact"><button>Get in touch</button></a>
+        }@else{
+            <span>Ich habe Erfahrung im Aufbau mit verschiedenen 
+                Frontend-Technologien und -Konzepte gesammelt.
+            </span>
+            <a
+            [ngClass]="{'d-none': mobileOn}"
+            href="#mycontact"><button>Kontakt</button></a>
+        }
+
     </div>
 </section>

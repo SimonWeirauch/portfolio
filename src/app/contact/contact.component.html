@@ -1,156 +1,291 @@
 <section >
-    <div class="headline">
-        <h1 >Contact</h1>
-        <img src="../../assets/img/contact/greenLineContacts.png">
-    </div>
     
-    <div class="middleSection">
-        <div class="contactTextbox">
-            <div class="contactTextheadline">
-                <img src="../../assets/img/contact/blueLineContacts.png">
-                <h2>Got a problem to solve?</h2>
-            </div>
-            <div class="contactText">
-                <span>Contact me through this form, I am interested in hearing you, 
-                    knowing your ideas and contributing to your projects with 
-                    my work.
-                </span>
-                <span class="callToAction" >Need a Frontend developer?<b>Contact me!</b></span>
-    
-            </div>
+    @if(languageService.langEN){
+        <div class="headline" data-aos="fade-right">
+            <h1 >Contact</h1>
+            <img src="../../assets/img/contact/greenLineContacts.png">
         </div>
-
-
-        <form class="formGab" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+        <div class="middleSection">
+            <div class="contactTextbox" data-aos="fade-right" >
+                <div class="contactTextheadline">
+                    <img src="../../assets/img/contact/blueLineContacts.png">
+                    <h2>Got a problem to solve?</h2>
+                </div>
+                <div class="contactText">
+                    <span>Contact me through this form, I am interested in hearing you, 
+                        knowing your ideas and contributing to your projects with 
+                        my work.
+                    </span>
+                    <span class="callToAction" >Need a Frontend developer?<b>Contact me!</b></span>
         
-            <div class="inputGab">
-                <div class="inputBox">
-                    <input (input)="showHint('name')" 
-                        [(ngModel)]="contactData.name" 
-                        id="inputName" 
-                        name="name"
-                        [ngClass]="{'borderGreen': borderGreenName, 'borderRed': borderRedName }" 
-                        type="text" 
-                        required 
-                        placeholder="Your name"
-                    >
+                </div>
+            </div>
+            <form class="formGab" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" data-aos="fade-left">
             
-                    
-                    <img id="errorImgName"
-                        [ngClass]="{'d-none': errorImgName, 'imgPositioning': true}"
-                        src="../../assets/img/contact/errorSymbol.png" 
-                    >
-                  
-                    <img id="successImgName" 
-                        [ngClass]="{'d-none': successImgName, 'imgPositioning': true}"
-                        src="../../assets/img/contact/successSymbol.png" 
-                    >
-                    
-                </div>
-                <span id="errorName" 
-                    [ngClass]="{'d-none': errorMsgName}"
-                    >Your name is required
-                </span>
-            </div>
-    
-    
-            <div class="inputGab">
-                <div class="inputBox">
-                    <input (input)="showHint('email')" 
-                        [(ngModel)]="contactData.email"  
-                        name="email"  
-                        id="inputMail" 
-                        [ngClass]="{'borderGreen': borderGreenMail, 'borderRed': borderRedMail }"
-                        type="email" 
-                        required 
-                        placeholder="Your email" 
-                    >
-                    
-                    <img id="errorImgMail"
-                        [ngClass]="{'d-none': errorImgMail, 'imgPositioning': true}"
-                        src="../../assets/img/contact/errorSymbol.png" 
-                        alt=""
-                    >
-    
-                    <img id="successImgMail"
-                         [ngClass]="{'d-none': successImgMail, 'imgPositioning': true}"
-                         src="../../assets/img/contact/successSymbol.png" 
-                         alt="">
-                </div>
-                <span id="errorMail" 
-                    [ngClass]="{'d-none': errorMsgMail}"
-                      >Your email is required (e.g. example&#64; domain.de)</span>
-            </div>
-    
-            <div class="inputGab">
-                <div class="inputBox">
-                    <textarea (input)="showHint('message')" 
-                            [(ngModel)]="contactData.message" 
-                            name="text" (input)="messageValidation()"
-                            minlength="4" 
-                            
-                            id="inputText" 
-                            required
-                            [ngClass]="{'borderGreen': borderGreenMessage, 'borderRed': borderRedMessage }"
-                            
-                            placeholder="Your message">
-                        </textarea>
-                    
-                    <img id="errorImgText" 
-                        [ngClass]="{'d-none': errorImgMessage, 'imgPositioning': true}"
-                        src="../../assets/img/contact/errorSymbol.png" 
-                        alt=""
-                    >
-    
-                    <img id="successImgText" 
-                        [ngClass]="{'d-none': successImgMessage, 'imgPositioning': true}" 
-                        src="../../assets/img/contact/successSymbol.png" 
-                        alt=""
-                    >
-                </div>
-                <span id="errorText" 
-                    [ngClass]="{'d-none': errorMsgMessage}"
-                    >Your message is empty or has less than 4 characters</span>
-            </div>
-            
-            <div class="inputGab">
-                <div class="privacy">
-                    @if(checkbox){
-                        <img (click)="acceptCheckbox(); sendForm()" src="../../assets/img/contact/checkbox_checked.png" alt="">
-                    }
-                    @else(){
-                        <img (click)="acceptCheckbox(); sendForm()" src="../../assets/img/contact/checkbox_unchecked.png" alt="">
-                    }
-                    
-                    <span>I've read the <a href="privacy" (click)="changePrivacy()">privacy policy</a> and agree to the 
-                        processing of my data as outlined.
+                <div class="inputGab">
+                    <div class="inputBox">
+                        <input (input)="showHint('name')" 
+                            [(ngModel)]="contactData.name" 
+                            id="inputName" 
+                            name="name"
+                            [ngClass]="{'borderGreen': borderGreenName, 'borderRed': borderRedName }" 
+                            type="text" 
+                            required 
+                            placeholder="Your name"
+                        >
+                        <img id="errorImgName"
+                            [ngClass]="{'d-none': errorImgName, 'imgPositioning': true}"
+                            src="../../assets/img/contact/errorSymbol.png" 
+                        >
+                        <img id="successImgName" 
+                            [ngClass]="{'d-none': successImgName, 'imgPositioning': true}"
+                            src="../../assets/img/contact/successSymbol.png" 
+                        >
+                    </div>
+                    <span id="errorName" 
+                        [ngClass]="{'d-none': errorMsgName}"
+                        >Your name is required
                     </span>
                 </div>
-                <span id="errorPrivacy"
-                       [ngClass]="{'d-none': errorMsgPrivacy}"
-                      >Please accept the privacy policy.
-                </span>
-            </div>
-            
-            <div> @if(mailSuccessfullySend){
-                    <button type="submit" class="buttonHover">Thank You :)</button>
-                }
-                @else if(checkbox && validMail){
-                    <button type="submit" class="buttonHover">Send message :)</button>
-                }
-                @else{
-                    <button 
-                    disabled 
-                    [ngClass]="{'disabledButton': buttonDisabled}"
-                    >Send message :)</button>
-                }
-            </div>
-        </form>
-
-    </div>
-
+        
+                <div class="inputGab">
+                    <div class="inputBox">
+                        <input (input)="showHint('email')" 
+                            [(ngModel)]="contactData.email"  
+                            name="email"  
+                            id="inputMail" 
+                            [ngClass]="{'borderGreen': borderGreenMail, 'borderRed': borderRedMail }"
+                            type="email" 
+                            required 
+                            placeholder="Your email" 
+                        >
+                        
+                        <img id="errorImgMail"
+                            [ngClass]="{'d-none': errorImgMail, 'imgPositioning': true}"
+                            src="../../assets/img/contact/errorSymbol.png" 
+                            alt=""
+                        >
+        
+                        <img id="successImgMail"
+                             [ngClass]="{'d-none': successImgMail, 'imgPositioning': true}"
+                             src="../../assets/img/contact/successSymbol.png" 
+                             alt="">
+                    </div>
+                    <span id="errorMail" 
+                        [ngClass]="{'d-none': errorMsgMail}"
+                          >Your email is required (e.g. example&#64; domain.de)</span>
+                </div>
+        
+                <div class="inputGab">
+                    <div class="inputBox">
+                        <textarea (input)="showHint('message')" 
+                                [(ngModel)]="contactData.message" 
+                                name="text" (input)="messageValidation()"
+                                minlength="4" 
+                                
+                                id="inputText" 
+                                required
+                                [ngClass]="{'borderGreen': borderGreenMessage, 'borderRed': borderRedMessage }"
+                                
+                                placeholder="Your message">
+                            </textarea>
+                        
+                        <img id="errorImgText" 
+                            [ngClass]="{'d-none': errorImgMessage, 'imgPositioning': true}"
+                            src="../../assets/img/contact/errorSymbol.png" 
+                            alt=""
+                        >
+        
+                        <img id="successImgText" 
+                            [ngClass]="{'d-none': successImgMessage, 'imgPositioning': true}" 
+                            src="../../assets/img/contact/successSymbol.png" 
+                            alt=""
+                        >
+                    </div>
+                    <span id="errorText" 
+                        [ngClass]="{'d-none': errorMsgMessage}"
+                        >Your message is empty or has less than 4 characters</span>
+                </div>
+                
+                <div class="inputGab">
+                    <div class="privacy">
+                        @if(checkbox){
+                            <img (click)="acceptCheckbox(); sendForm()" src="../../assets/img/contact/checkbox_checked.png" alt="">
+                        }
+                        @else(){
+                            <img (click)="acceptCheckbox(); sendForm()" src="../../assets/img/contact/checkbox_unchecked.png" alt="">
+                        }
+                        
+                        <span>I've read the <a href="privacy" (click)="changePrivacy()">privacy policy</a> and agree to the 
+                            processing of my data as outlined.
+                        </span>
+                    </div>
+                    <span id="errorPrivacy"
+                           [ngClass]="{'d-none': errorMsgPrivacy}"
+                          >Please accept the privacy policy.
+                    </span>
+                </div>
+                
+                <div> @if(mailSuccessfullySend){
+                        <button type="submit" class="buttonHover">Thank You :)</button>
+                    }
+                    @else if(checkbox && validMail){
+                        <button type="submit" class="buttonHover">Send message :)</button>
+                    }
+                    @else{
+                        <button 
+                        disabled 
+                        [ngClass]="{'disabledButton': buttonDisabled}"
+                        >Send message :)</button>
+                    }
+                </div>
+            </form>
     
+        </div>
+    }@else{
+        <div class="headline" data-aos="fade-right">
+            <h1 >Kontakt</h1>
+            <img src="../../assets/img/contact/greenLineContacts.png">
+        </div>
+        <div class="middleSection">
+            <div class="contactTextbox" data-aos="fade-right">
+                <div class="contactTextheadline">
+                    <img src="../../assets/img/contact/blueLineContacts.png">
+                    <h2>Problem zu lösen?</h2>
+                </div>
+                <div class="contactText">
+                    <span>Kontaktieren Sie mich über dieses Formular, ich bin daran interessiert, von Ihnen zu hören und
+                        Sie bei Ihren Ideen und Projekten zu unterstützen.
+                    </span>
 
+                    <span class="callToAction" >Suchen Sie einen Frontend developer?<br> <b>Kontaktieren Sie mich!</b></span>
+        
+                </div>
+            </div>
+            <form class="formGab" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" data-aos="fade-left">
+            
+                <div class="inputGab">
+                    <div class="inputBox">
+                        <input (input)="showHint('name')" 
+                            [(ngModel)]="contactData.name" 
+                            id="inputName" 
+                            name="name"
+                            [ngClass]="{'borderGreen': borderGreenName, 'borderRed': borderRedName }" 
+                            type="text" 
+                            required 
+                            placeholder="Ihr Name"
+                        >
+                        <img id="errorImgName"
+                            [ngClass]="{'d-none': errorImgName, 'imgPositioning': true}"
+                            src="../../assets/img/contact/errorSymbol.png" 
+                        >
+                        <img id="successImgName" 
+                            [ngClass]="{'d-none': successImgName, 'imgPositioning': true}"
+                            src="../../assets/img/contact/successSymbol.png" 
+                        >
+                    </div>
+                    <span id="errorName" 
+                        [ngClass]="{'d-none': errorMsgName}"
+                        >Ihr Name wird benötigt
+                    </span>
+                </div>
+        
+                <div class="inputGab">
+                    <div class="inputBox">
+                        <input (input)="showHint('email')" 
+                            [(ngModel)]="contactData.email"  
+                            name="email"  
+                            id="inputMail" 
+                            [ngClass]="{'borderGreen': borderGreenMail, 'borderRed': borderRedMail }"
+                            type="email" 
+                            required 
+                            placeholder="Ihre E-Mail" 
+                        >
+                        
+                        <img id="errorImgMail"
+                            [ngClass]="{'d-none': errorImgMail, 'imgPositioning': true}"
+                            src="../../assets/img/contact/errorSymbol.png" 
+                            alt=""
+                        >
+        
+                        <img id="successImgMail"
+                             [ngClass]="{'d-none': successImgMail, 'imgPositioning': true}"
+                             src="../../assets/img/contact/successSymbol.png" 
+                             alt="">
+                    </div>
+                    <span id="errorMail" 
+                        [ngClass]="{'d-none': errorMsgMail}"
+                          >Ihre E-Mail wird benötigt (z.B. beispiel&#64; domain.de)</span>
+                </div>
+        
+                <div class="inputGab">
+                    <div class="inputBox">
+                        <textarea (input)="showHint('message')" 
+                                [(ngModel)]="contactData.message" 
+                                name="text" (input)="messageValidation()"
+                                minlength="4" 
+                                
+                                id="inputText" 
+                                required
+                                [ngClass]="{'borderGreen': borderGreenMessage, 'borderRed': borderRedMessage }"
+                                
+                                placeholder="Ihre Nachricht">
+                            </textarea>
+                        
+                        <img id="errorImgText" 
+                            [ngClass]="{'d-none': errorImgMessage, 'imgPositioning': true}"
+                            src="../../assets/img/contact/errorSymbol.png" 
+                            alt=""
+                        >
+        
+                        <img id="successImgText" 
+                            [ngClass]="{'d-none': successImgMessage, 'imgPositioning': true}" 
+                            src="../../assets/img/contact/successSymbol.png" 
+                            alt=""
+                        >
+                    </div>
+                    <span id="errorText" 
+                        [ngClass]="{'d-none': errorMsgMessage}"
+                        >Ihre Nachricht ist leer oder hat weniger als 4 Buchstaben</span>
+                </div>
+                
+                <div class="inputGab">
+                    <div class="privacy">
+                        @if(checkbox){
+                            <img (click)="acceptCheckbox(); sendForm()" src="../../assets/img/contact/checkbox_checked.png" alt="">
+                        }
+                        @else(){
+                            <img (click)="acceptCheckbox(); sendForm()" src="../../assets/img/contact/checkbox_unchecked.png" alt="">
+                        }
+                        
+                        <span>Ich habe die <a href="privacy" (click)="changePrivacy()">Datenschutzbestimmung</a> gelesen und  
+                            stimme der Verarbeitung zu.
+                        </span>
+                    </div>
+                    <span id="errorPrivacy"
+                           [ngClass]="{'d-none': errorMsgPrivacy}"
+                          >Bitte akzeptieren Sie die Datenschutzbestimmung
+                    </span>
+                </div>
+                
+                <div> @if(mailSuccessfullySend){
+                        <button type="submit" class="buttonHover">Vielen Dank :)</button>
+                    }
+                    @else if(checkbox && validMail){
+                        <button type="submit" class="buttonHover">Senden :)</button>
+                    }
+                    @else{
+                        <button 
+                        disabled 
+                        [ngClass]="{'disabledButton': buttonDisabled}"
+                        >Senden :)</button>
+                    }
+                </div>
+            </form>
+    
+        </div>
+    }
+    
     <div class="bottomSection">
         @if(hover){
             <a (mouseleave)="changeBottomArrowWhite()" href="#header"><img class="topArrowGreen" src="../../assets/img/contact/topArrowGreen.png" alt=""></a>

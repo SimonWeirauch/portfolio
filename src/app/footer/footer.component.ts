@@ -11,17 +11,14 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
-  urlParams = new URLSearchParams(window.location.search)
-  params: any;
-  
   mobileView: boolean = false;
   hide: boolean = true;
   legal: boolean = false
 
   @Output() legalEmitter = new EventEmitter<boolean>();
   @Output() defaultEmitterFooter = new EventEmitter<boolean>();
-  @Output() skillButtonAndScrollDownEmitterFooter = new EventEmitter<boolean>();
   @Output() LegalEmitterFooterCSS = new EventEmitter<boolean>();
+  @Output() skillButtonAndScrollDownEmitterFooter = new EventEmitter<boolean>();
 
 
   /**
@@ -52,8 +49,7 @@ export class FooterComponent {
     }
     else{
       this.legalEmitter.emit(true);
-    }
-    
+    } 
   }
   
 

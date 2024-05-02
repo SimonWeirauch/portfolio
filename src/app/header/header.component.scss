@@ -14,14 +14,16 @@ header {
     display: none;
 }
 
+.languageVisible {
+    display: none;
+}
+
 .header{
     display: flex;
     position: fixed;
     justify-content: space-between;
     align-items: center;
     color: #FFFFFF;
-
-    
     z-index: 999;
     padding: 24px 50px 24px 50px;
     background-color: #141D2F;
@@ -39,13 +41,11 @@ header {
         text-wrap: nowrap;
         margin-right: 32px;
         height: 32px;
-        
     }
 
     .name a{
         margin-left: 0px;
     }
-
 
     div a{
         text-decoration: none;
@@ -55,12 +55,9 @@ header {
         margin-left: 32px;
     }
 
-
-
     div a:hover {
         color: #70E61C;
     }
-
 
     .clicked {
         border-bottom: 2px solid #9747FF;
@@ -69,9 +66,9 @@ header {
 
     .language {
         margin-right: 8px;
-        
         span {
             font-size: 20px;
+            color: #9747FF;
         }
         
         a {
@@ -80,7 +77,6 @@ header {
         }
     }
 }
-
 
 .burgerMenu {
     position: fixed;
@@ -95,7 +91,6 @@ header {
     background-color: #414856;
     transform: translateX(102vw);
     transition: all 125ms ease-in-out;
-
     .orientation {
         width: 100vw;
         height: 100vh;
@@ -122,8 +117,6 @@ header {
     }
 }
 
-
-/* move to the screen */
 .show-burgerMenu {
     transform: translateX(0px);
     
@@ -140,7 +133,6 @@ header {
    }
 }
 
-
 @media (max-width: 410px) {
     
     .header {
@@ -150,8 +142,6 @@ header {
         }
     }
 
-    
-    
     .burgerMenu {
         .orientation {
             position: absolute;
@@ -159,7 +149,6 @@ header {
        }
     }
  }
-
 
  @media (max-width: 375px) {
     .burgerMenu {

@@ -2,28 +2,48 @@
     <div class="aboutMe" >
         
         <div class="detailBox">
-            <h1>About me</h1>
-            <span>Hello! My name is Simon Weirauch, and I'm a frontend developer 
-                from Mainz, Germany. I've always been fascinated by technological innovations. 
-                Now, I'm eager to incorporate this passion into my professional life. 
-            </span>
-            
-            <div  class="personalInfoBulb">
-                <img class="icons" src="../../assets/img/about/bulb_desktop.png">
-                <span>Teamarbeit und Kommunikation sind für mich ebenso wichtig wie technische Exzellenz. Als Teil agiler Projektteams habe 
-                    ich sowohl in mitarbeitender als auch leitender Rolle gelernt, wie entscheidend eine offene, 
-                    transparente Kommunikation für den Projekterfolg ist 
+            @if(languageService.langEN){
+                <h1 data-aos="fade-left" data-aos-duration="1500">About me</h1>
+                <span data-aos="fade-left" data-aos-duration="1500">Hello! My name is Simon Weirauch, and I'm a frontend developer 
+                    from Mainz, Germany. I've always been fascinated by technological innovations. 
+                    Now, I'm eager to incorporate this passion into my professional life. 
                 </span>
-            </div>
-            <div id="myRespSkills" class="personalInfoPuzzle">
-                <img class="icons" src="../../assets/img/about/puzzle_white.png">
-                <span>Ich freue mich darauf, mein Wissen und meine Fähigkeiten in neue Herausforderungen einzubringen und 
-                    gemeinsam innovative Lösungen zu schaffen. Ich freue mich auf Sie! 
+                <div data-aos="fade-left" data-aos-duration="1500"  class="personalInfoBulb">
+                    <img class="icons" src="../../assets/img/about/bulb_desktop.png">
+                    <span>Teamwork and communication are just as important to me as technical excellence. 
+                        As part of agile project teams I learned, both in an assisting role and in a managerial role, 
+                        how crucial an open, Transparent communication is essential for project success
+                    </span>
+                </div>
+                <div data-aos="fade-left" data-aos-duration="1500" id="myRespSkills" class="personalInfoPuzzle">
+                    <img class="icons" src="../../assets/img/about/puzzle_white.png">
+                    <span>I look forward to applying my knowledge and skills to new challenges
+                        to create innovative solutions together. I look forward to meeting you! 
+                    </span>
+                </div>
+            }@else{
+                <h1 data-aos="fade-left" data-aos-duration="1500">Über mich</h1>
+                <span data-aos="fade-left" data-aos-duration="1500">Hallo! Mein Name ist Simon Weirauch und bin frontend developer 
+                    aus Mainz. Technologische Innovationen haben mich schon immer begeistert, was. 
+                    mich nun dazu führt diese Leidenschaft in meinem Beruf auszuüben. 
                 </span>
-            </div>
+                <div data-aos="fade-left" data-aos-duration="1500"  class="personalInfoBulb">
+                    <img class="icons" src="../../assets/img/about/bulb_desktop.png">
+                    <span>Teamarbeit und Kommunikation sind für mich ebenso wichtig wie technische Exzellenz. Als Teil agiler Projektteams habe 
+                        ich sowohl in mitarbeitender als auch leitender Rolle gelernt, wie entscheidend eine offene, 
+                        transparente Kommunikation für den Projekterfolg ist 
+                    </span>
+                </div>
+                <div data-aos="fade-left" data-aos-duration="1500" id="myRespSkills" class="personalInfoPuzzle">
+                    <img class="icons" src="../../assets/img/about/puzzle_white.png">
+                    <span>Ich freue mich darauf, mein Wissen und meine Fähigkeiten in neue Herausforderungen einzubringen und 
+                        gemeinsam innovative Lösungen zu schaffen. Ich freue mich auf Sie! 
+                    </span>
+                </div>
+            }
         </div>
         
-        <div class="imageBox">
+        <div class="imageBox" >
             <img class="shadows" src="../../assets/img/about/photo_shadows.png">
             <img class="profilePic" src="../../assets/img/about/profile.png">
         </div>

@@ -1,6 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { Component, HostListener, Input} from '@angular/core';
+import { Component, HostListener, Input, inject} from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { LanguageService } from '../language.service';
+
 
 
 @Component({
@@ -14,6 +16,7 @@ export class AtfComponent {
   
   @Input() hide?: boolean;
   @Input() scrollDown?: boolean;
+  languageService = inject(LanguageService)
 
   /**
  * Needed for testing purposes
@@ -68,6 +71,6 @@ export class AtfComponent {
    * Opens a new window with linkedin
    */
   showLinkedIn(){
-    window.open('https://de.linkedin.com/')
+    window.open('https://www.linkedin.com/in/simon-weirauch-0b8859307/')
   }
 }

@@ -9,20 +9,25 @@
     <div>
         <div class="d-none">
             <div class="language">
-                <a [ngClass]="{'d-none': quicklinks, 'clicked' : langDE}" (click)="styleQuicklinks('german'); setLegalPrivacyDefault()">DE</a>
+                <a [ngClass]="{'d-none': quicklinks, 'clicked' : langDE}"  (click)="switchLanguage('de'); styleLanguage('german'); setLegalPrivacyDefault();">DE</a>
                 <span [ngClass]="{'d-none': quicklinks}">|</span>
-                <a [ngClass]="{'d-none': quicklinks, 'clicked' : langEN}" (click)="styleQuicklinks('english'); setLegalPrivacyDefault()">EN</a>
+                <a [ngClass]="{'d-none': quicklinks, 'clicked' : langEN}" (click)="switchLanguage('en'); styleLanguage('english'); setLegalPrivacyDefault();">EN</a>
             </div>
-            <a [ngClass]="{'d-none': quicklinks, 'clicked' : about}" (click)="styleQuicklinks('about'); setLegalPrivacyDefault()" id="about" href="#aboutMeAnchor">About me</a>
+            @if(languageService.langEN){
+                <a [ngClass]="{'d-none': quicklinks, 'clicked' : about,  }" (click)="styleQuicklinks('about'); setLegalPrivacyDefault()" id="about" href="#aboutMeAnchor">About me</a>
+            }
+            @else{
+                <a [ngClass]="{'d-none': quicklinks, 'clicked' : about, }" (click)="styleQuicklinks('about'); setLegalPrivacyDefault()" id="aboutDE" href="#aboutMeAnchor">Über mich</a>
+            }
             <a [ngClass]="{'d-none': quicklinks, 'clicked' : skills}" (click)="styleQuicklinks('skills'); setLegalPrivacyDefault()" id="skills" href="#myskills">Skills</a>
             <a [ngClass]="{'d-none': quicklinks, 'clicked' : portfolio}" (click)="styleQuicklinks('portfolio'); setLegalPrivacyDefault()" id="portfolio" href="#myportfolio">Portfolio</a>
         </div>
         
         <div class="burger d-none" >
             <div class="language">
-                <a [ngClass]="{'d-none': mobileView, 'clicked' : langDE}" (click)="styleQuicklinks('german'); setLegalPrivacyDefault()">DE</a>
+                <a [ngClass]="{'d-none': mobileView, 'clicked' : langDE}" (click)="styleLanguage('german'); setLegalPrivacyDefault(); switchLanguage('de')">DE</a>
                 <span [ngClass]="{'d-none': mobileView}">|</span>
-                <a [ngClass]="{'d-none': mobileView, 'clicked' : langEN}" (click)="styleQuicklinks('english'); setLegalPrivacyDefault()">EN</a>
+                <a [ngClass]="{'d-none': mobileView, 'clicked' : langEN}" (click)="styleLanguage('english'); setLegalPrivacyDefault(); switchLanguage('en')">EN</a>
             </div>
             <img (click)="showBurgerMenu()"  [ngClass]="{'d-none': mobileView}" src="../../assets/img/header/burger_menu.png" alt="">
         </div>
@@ -36,10 +41,21 @@
     >
         <div class="orientation">
             <div>
-                <a (click)="setLegalPrivacyDefault(); setSkillButtonAndScrollDown()" href="#myaboutMe">About me</a>
+                @if(languageService.langEN){
+                    <a (click)="setLegalPrivacyDefault(); setSkillButtonAndScrollDown()" href="#myaboutMe">About me</a>
+                }
+                @else {
+                    <a (click)="setLegalPrivacyDefault(); setSkillButtonAndScrollDown()" href="#myaboutMe">Über mich</a>
+                }
+                
                 <a (click)="setLegalPrivacyDefault(); setSkillButtonAndScrollDown()" href="#myRespSkills">Skills</a>
                 <a (click)="setLegalPrivacyDefault(); setSkillButtonAndScrollDown()" href="#myportfolio">Portfolio</a>
-                <a (click)="setLegalPrivacyDefault(); setSkillButtonAndScrollDown()" href="#mycontact">Contact</a>
+                
+                @if(languageService.langEN){
+                    <a (click)="setLegalPrivacyDefault(); setSkillButtonAndScrollDown()" href="#mycontact">Contact</a>
+                }@else {
+                    <a (click)="setLegalPrivacyDefault(); setSkillButtonAndScrollDown()" href="#mycontact">Kontakt</a>
+                }
             </div>
         </div>
     </div>

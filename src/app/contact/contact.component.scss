@@ -42,9 +42,7 @@ section {
 .contactTextbox {
     display: flex;
     flex-direction: column;
-    
     color: #FFFFFF;
-    
     .contactTextheadline{
         display: flex;
         flex-direction: row;
@@ -97,6 +95,8 @@ section {
         line-height: 19px;
         letter-spacing: 0em;
         text-align: left;
+        display: flex;
+        flex-direction: column;
     }
 }
 
@@ -116,7 +116,6 @@ form {
     flex-direction: column;
     width: 617px;
     height: 504px;
-
     span {
         font-family: Poppins;
         font-size: 14px;
@@ -196,7 +195,6 @@ form {
         display: flex;
         align-items: center;
         gap: 8px;
-
         span {   
             width: 617px;
             gap: 8px;
@@ -285,12 +283,10 @@ form {
     border: 1px solid #E61C40 !important;
 }
 
-
 .bottomSection{
     display: flex;
     justify-content: flex-end;
     width: auto;
-   
     .purpleShadow {
         position: relative;
         top: -350px;

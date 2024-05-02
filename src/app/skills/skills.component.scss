@@ -13,7 +13,6 @@ section {
     width: 625px;
     height: 649px;
     position: relative;
-    
     gap: 91px;
 
     img:hover {
@@ -37,7 +36,6 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-
     img {
         width: 55.8px;
         height: 60px;
@@ -79,7 +77,6 @@ section {
     height: 286px;
     position: relative;
     top: 150px;
-    
     span {
         width: 471px;
         height: 38px;
@@ -171,7 +168,6 @@ button:hover {
     }
 }
 
-
 @media (max-width: 1100px) {
     .skills {
         span {
@@ -179,7 +175,6 @@ button:hover {
         }
     }
 }
-
 
 @media (max-width: 1050px) {
     .iconfield {
@@ -197,13 +192,11 @@ button:hover {
     }
 }
 
-
 @media (max-width: 900px) {
     .iconfield {
         gap: 60px;
     }
 }
-
 
 @media (max-width: 800px) {
     .iconfield {
@@ -215,7 +208,6 @@ button:hover {
     }
 }
 
-
 //MOBILE VIEW!
 @media (max-width: 700px) {
     
@@ -223,7 +215,6 @@ button:hover {
         height: 1200px;
         display: flex;
         flex-direction: column-reverse;
-    
     }
     
     .iconfield {
@@ -234,7 +225,6 @@ button:hover {
         left: 25px;
         transform: scale(1);
         gap: 70px;
-   
     }
 
     .iconBox {
@@ -293,7 +283,6 @@ button:hover {
         .headline {
             display: flex;
             justify-content: center;
-          
             h1 {
                 transform: scale(1);
                 color: #FFFFFF;
@@ -375,7 +364,6 @@ button:hover {
 
 @media (max-width: 350px) {
     .skills {
-      
         span {
             width: 280px;
         }

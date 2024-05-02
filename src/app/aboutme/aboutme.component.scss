@@ -9,7 +9,6 @@ section {
     display: flex;
     align-items: center;
     width: 100%;
-
     h1 {
         font-family: Poppins;
         font-weight: 700;
@@ -17,6 +16,7 @@ section {
         line-height: 108px;
         margin-block-end: 40px;
         margin-block-start: 0px; 
+        width: 480px;
     }
 
     span {
@@ -95,21 +95,18 @@ section {
 }
 
 @media (max-width: 1700px) {
-    
     .imageBox {
-        right: 10%;
+        right: 15%;
     }
 }
 
 @media (max-width: 1500px) {
     .imageBox {
         width: 100%;
-        right: 15%;
     }
 }
 
 @media (max-width: 1400px) {
-    
     .vector {
         bottom: 250px;
         height: 150px;
@@ -117,39 +114,37 @@ section {
 
     .imageBox {
         transform: scale(0.8);
+        right: 20%;
     }
 }
 
 @media (max-width: 1300px) {
-    
     .imageBox {
-        right: 25%;
+        right: 27%;
     }
 }
 
 @media (max-width: 1200px) {
-    
+    section {
+        height: 900px;
+        bottom: 50px;
+    }
+
     .imageBox {
-        right: 30%;
+        right: 35%;
     }
 }
 
 @media (max-width: 1050px) {
-
-    section {
-        height: 900px;
-    }
-
     .imageBox {
-        transform: scale(0.9);
-        bottom: 30px;
+        bottom: -5px;
         right: 45%;
     }
 
     .detailBox{
         transform: scale(0.9);
         bottom: 0px;
-        left: 0px;
+        left: 40px;
     }
 
     .vector {
@@ -159,27 +154,38 @@ section {
 
 @media (max-width: 950px) {
     .imageBox {
-        right: 50%;
+        right: 45%;
+    }
+
+    .detailBox{
+        width: 350px;
+        .personalInfoBulb{
+            width: 350px;
+        }
+
+        .personalInfoPuzzle{
+            width: 350px;
+        }
     }
 }
 
 @media (max-width: 900px) {
     .imageBox {
         transform: scale(0.75);
-        right: 55%;
         bottom: -30px;
+        right: 50%;
     }
 
     .detailBox{
         transform: scale(0.80);
-        
+        left: 0px;
     }
 }
 
 
 @media (max-width: 850px) {
     .imageBox {
-        right: 60%;
+        right: 55%;
     }
 }
 
@@ -192,20 +198,19 @@ section {
 
     .imageBox {
         transform: scale(0.70);
-        right: 65%;
+        right: 60%;
         bottom: -45px;
     }
 }
 
 @media (max-width: 750px) {
     .imageBox {
-        right: 71%;
+        right: 67%;
     }
 }
 
 //MOBILE VIEW!
 @media (max-width: 700px) {
-    
     section {
         display: flex;
         flex-direction: column;
@@ -219,7 +224,6 @@ section {
         align-items: flex-start;
         width: 100%;
         transform: scale(1);
-        
         h1 {
             font-family: Poppins;
             font-weight: 700;
@@ -277,7 +281,6 @@ section {
         position: relative;
         width: 100%;
         bottom: 500px;
-
         img {
             width: 100%;
             height: 180px;
@@ -303,14 +306,12 @@ section {
         top: -20px;
         left: -550px;
     }
-
 }
 
 @media (max-width: 550px) {
     .aboutMe {
         .detailBox{
             width: 400px;
-    
             .personalInfoBulb{
                 width: 360px;  
             }
@@ -330,7 +331,6 @@ section {
     .aboutMe {
         .detailBox{
             width: 300px;
-    
             .personalInfoBulb{
                 width: 340px;  
             }
@@ -347,7 +347,7 @@ section {
     .aboutMe {
         .detailBox{
             left: 20px;
-            top: 0px;
+            top: 30px;
             .personalInfoBulb{
                 width: 300px;  
             }

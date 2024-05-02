@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component, HostListener, Output, EventEmitter} from '@angular/core';
+import { Component, HostListener, Output, EventEmitter, inject} from '@angular/core';
+import { LanguageService } from '../language.service';
 
 
 
@@ -19,16 +20,31 @@ export class HeaderComponent {
   about: boolean = false;
   skills: boolean = false;
   portfolio: boolean = false;
-  langDE: boolean = false;
+  
+  langDE: boolean = true;
   langEN: boolean = false;
   
   privacy: boolean = false;
   legal: boolean = false;
 
+  languageService = inject(LanguageService)
   @Output() defaultEmitterHeader = new EventEmitter<boolean>();
   @Output() skillButtonAndScrollDownEmitterHeader = new EventEmitter<boolean>();
 
 
+  /**
+   * switches language variable of language service
+   */
+  switchLanguage(id: string){
+    if(id == "en"){
+      this.languageService.langEN = true
+    }
+    else{
+      this.languageService.langEN = false
+    }
+  }
+
+  
   /**
    * Defines input variable in app component to render
    * skill and atf component for mobile usage
@@ -113,10 +129,19 @@ export class HeaderComponent {
     else if(id =='skills'){
       this.styleSkillsLink();
     }
-    else if(id =='portfolio'){
+    else{
       this.stylePortfolioLink();
     }
-    else if(id =='english'){
+  }
+
+
+/**
+ * executes function to style the language
+ * quicklinks according to the pressed quicklink
+ * @param id 
+ */
+  styleLanguage(id: string){
+    if(id =='english'){
       this.styleEnglishLink();
     }
     else{
@@ -125,19 +150,19 @@ export class HeaderComponent {
   }
 
 
+  /**
+   * styles the "EN" quicklink
+   */
   styleEnglishLink(){
-    this.about = false;
-    this.skills = false;
-    this.portfolio = false;
     this.langDE = false;
     this.langEN = true;
   }
 
 
+  /**
+   * styles the "DE" quicklink
+   */
   styleGermanLink(){
-    this.about = false;
-    this.skills = false;
-    this.portfolio = false;
     this.langDE = true;
     this.langEN = false;
   }
@@ -150,8 +175,6 @@ export class HeaderComponent {
     this.about = true;
     this.skills = false;
     this.portfolio = false;
-    this.langDE = false;
-    this.langEN = false;
   }
 
 
@@ -162,8 +185,6 @@ export class HeaderComponent {
     this.about = false;
     this.skills = true;
     this.portfolio = false;
-    this.langDE = false;
-    this.langEN = false;
   }
 
 
@@ -174,7 +195,5 @@ export class HeaderComponent {
     this.about = false;
     this.skills = false;
     this.portfolio = true;
-    this.langDE = false;
-    this.langEN = false;
   }
 }

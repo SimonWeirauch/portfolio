@@ -1,6 +1,4 @@
 @media (max-width: 1300px) {
-
-
     form {
         input {
             width: 75%;
@@ -9,10 +7,8 @@
         textarea {
             width: 75%;
         }
-
     }
 
-    
     .contactTextbox {
         .contactTextheadline{
             img {
@@ -23,11 +19,9 @@
             }
         }
     }
-    
 }
 
 @media (max-width: 1200px) {
-    
     form {
         position: relative;
         right: -70px;
@@ -51,7 +45,6 @@
         }
     }
 
-
     .contactTextbox{
         position: relative;
         left: 2%;
@@ -63,7 +56,6 @@
         position: relative;
     }
 
-    
     .contactTextbox {
         .contactTextheadline{
             img {
@@ -102,15 +94,7 @@
         
     }
 
-
-
     .bottomSection{
-        .purpleShadow {
-            height: 300px;
-            width: 400px;
-            top: -160px
-        }
-
         .topArrow {
             left: 380px;
             top: 40px;
@@ -124,7 +108,6 @@
         a{
             height: 0px;
         }
-
     }
 }
 
@@ -161,6 +144,12 @@
             left: 400px;
             top: 40px;
         }
+
+        .purpleShadow {
+            height: 500px;
+            width: 400px;
+            top: -220px
+        }
     }
 
     .contactTextbox{
@@ -179,7 +168,6 @@
 }
 
 @media (max-width: 800px) {
-
     section {
         height: 950px;
     }
@@ -227,10 +215,6 @@
         .topArrowGreen {
             top: 110px;
         }
-
-        .purpleShadow {
-            top: -100px
-        }
     }   
 }
 
@@ -240,9 +224,8 @@
         position: relative;
         bottom: 0px;
         top: 100px;
-        height: 1050px;
+        height: 1100px;
     }
-
 
     .headline {
         h1 {
@@ -286,16 +269,15 @@
         }
 
         .purpleShadow {
-            top: -105px;
+            top: -150px;
         }
     }
 
-
     .contactTextbox {
         position: relative;
-       
         left: 10px;
         margin-right: 0px;
+        margin-bottom: 40px;
         .contactTextheadline{
             img {
                 position: absolute;
@@ -309,7 +291,6 @@
                 height: 28px;
                 gap: 0px;
                 opacity: 0px;
-                
                 font-family: Poppins;
                 font-size: 23px;
                 font-weight: 700;
@@ -346,12 +327,9 @@
         .contactText {
             span {
                 gap: 8px;
-
             } 
         }
     }
-
-
 
     form {
         height: 442px;
@@ -359,7 +337,6 @@
         opacity: 0px;
         position: relative;
         left: 75px;
-       
         span {
             position: relative;
             width: 400px;
@@ -451,8 +428,6 @@
 }
 
 @media (max-width: 600px) {
-    
-    
     .contactTextbox {
         .contactTextheadline{
             img {
@@ -467,15 +442,13 @@
             width: 75%;
         }
     }
-    
 }
 
 
 @media (max-width: 500px) {
     section {
-        height: 1080px;
+        height: 1100px;
     }
-
 
     form {
         left: 100px;
@@ -487,9 +460,7 @@
             width: 340px;
             left: 0px;
         }
-
     }
-    
     
     .contactTextbox {
         position: relative;
@@ -499,27 +470,35 @@
             margin-bottom: 16px;
         }
     }
+
+    .bottomSection {
+        .topArrow {
+            left: 370px;
+            top: 90px;
+        }
+
+        .topArrowGreen {
+            left: 370px;
+            top: 90px;
+        }
+    }
 }
 
 
 @media (max-width: 450px) {
-   
     section {
         height: 1150px;
     }
 
-    
     .contactTextbox {
         left: 85px;
     }
-
 
     .callToAction {
         transform: scale(0.88);
         position: relative;
         left: -27px;
     }
-
 
     form {
         left: 150px;
@@ -530,7 +509,6 @@
         textarea {
             width: 77.5%;
         }
-        
         
         span {
             width: 290px;
@@ -555,45 +533,37 @@
     }
 
     .bottomSection {
-       
-        .purpleShadow {
-            top: -35px;
-        }
-
         .topArrow {
-            left: 320px;
+            top: 145px;
+            left: 360px;
         }
 
         .topArrowGreen {
-            left: 320px;
+            top: 145px;
+            left: 360px;
         }
     }
 }
 
 @media (max-width: 400px) {
     .bottomSection {
-       
         .purpleShadow {
-            top: -35px;
+            top: -100px;
         }
 
         .topArrow {
-            left: 280px;
+            left: 375px;
         }
 
         .topArrowGreen {
-            left: 280px;
+            left: 375px;
         }
     }
-
 }
-
-
 
 @media (max-width: 350px) {
     .contactTextbox {
         right: -85px;
-        
         .contactTextheadline{
             img {
                 left: -22%;
@@ -628,19 +598,6 @@
 
         textarea {
             width: 75%;
-        }
-    }
-
-    .bottomSection {
-       
-        .topArrow {
-            left: 275px;
-            top: 190px;
-        }
-
-        .topArrowGreen {
-            left: 275px;
-            top: 190px;
         }
     }
 }

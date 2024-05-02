@@ -1,18 +1,13 @@
 
 <app-header 
 [ngClass]="{'hideInLandscape': landscapeMode}"
-
-(defaultEmitterHeader)="setDefault($event)" 
-
+(defaultEmitterHeader)="setDefault($event)"
 id="header"></app-header>
 
 <router-outlet></router-outlet>
-
 
 <app-footer 
 [ngClass]="{'hideInLandscape': landscapeMode}"
 (legalEmitter)="changeLegal($event)" 
 (defaultEmitterFooter)="setDefault($event)" 
-
-
 id="footer"></app-footer>

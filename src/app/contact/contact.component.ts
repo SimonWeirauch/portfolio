@@ -2,6 +2,7 @@ import { CommonModule, NgFor } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, inject, Output, EventEmitter } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
+import { LanguageService } from '../language.service';
 
 
 @Component({
@@ -16,6 +17,8 @@ import { FormsModule, NgForm } from '@angular/forms';
 export class ContactComponent {
   
   http = inject(HttpClient)
+
+  languageService = inject(LanguageService)
 
   successImgName: boolean = true;
   errorImgName: boolean = true;
@@ -116,7 +119,6 @@ export class ContactComponent {
       this.messageValidation();
     }
   }
-
 
   /**
    * shows the error messages underneath the inputfield or textareafield

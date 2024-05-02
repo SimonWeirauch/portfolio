@@ -4,9 +4,17 @@
             <img src="../../assets/img/portfolio/line_purple.png">
             <h1 >Portfolio</h1>
         </div>
-        <span>Explore a selection of my work here - 
-            Interact with projects to see my skills in action.
-        </span>
+        @if(languageService.langEN){
+            <span>Explore a selection of my work here - 
+                Interact with projects to see my skills in action.
+            </span>
+        }
+        @else {
+            <span>Entdecken Sie hier eine Auswahl meiner Arbeiten -
+                Interagiere mit Projekten, um meine Fähigkeiten in Aktion zu sehen.
+            </span>
+        }
+
     </div>
     
     <div class="shadows">
@@ -15,8 +23,11 @@
     </div>
     
     <div class="portfolioSection">
-
-        <app-project 
+        @if(languageService.langEN){
+            <app-project 
+            data-aos="flip-up"
+            data-aos-duration="500"
+            data-aos-delay="0"
             imageSrc="../../assets/img/project/polloloco_Bg.png"
             projectTitle="El Pollo Loco"
             description="Jump, run and throw game based on object-oriented 
@@ -31,8 +42,10 @@
             >
         </app-project>
 
-
         <app-project 
+            data-aos="flip-up"
+            data-aos-duration="500"
+            data-aos-delay="250"
             imageSrc="../../assets/img/project/join_Bg.png"
             projectTitle="Join"
             description="Task manager inspired by the Kanban System. Create 
@@ -45,12 +58,68 @@
             idImage="joinImg"
         ></app-project>
         
-        
         <app-project 
+            data-aos="flip-up"
+            data-aos-duration="500"
+            data-aos-delay="0"
             imageSrc="../../assets/img/project/crm_Bg.png"
             projectTitle="Simple CRM"
             description="A very Simple Customer Relationship Management 
                         system working with CRUD functionality."
+            tech="Angular | Firebase"
+            idGit="crmGit"
+            idTest="crmTest"
+            idProject="crm"
+            idBackground="crmBg"
+            idImage="crmImg"
+            > 
+        </app-project>
+        
+        }
+        @else{
+            <app-project 
+            data-aos="flip-up"
+            data-aos-duration="500"
+            data-aos-delay="0"
+            imageSrc="../../assets/img/project/polloloco_Bg.png"
+            projectTitle="El Pollo Loco"
+            description="Ein Spring-, Lauf- und Wurfspiel auf objektorientierter
+            Basis. Hilf Pepe, Münzen und
+            Tabasco-Salsa zu finden, 
+            um gegen die verrückte Henne zu kämpfen"
+            tech="Javascript | HTML | CSS"
+            idGit="polloGit"
+            idTest="polloTest"
+            idProject="pollo"
+            idBackground="polloBg"
+            idImage="polloImg"
+            >
+        </app-project>
+
+        <app-project 
+            data-aos="flip-up"
+            data-aos-duration="500"
+            data-aos-delay="250"
+            imageSrc="../../assets/img/project/join_Bg.png"
+            projectTitle="Join"
+            description="Vom Kanban-System inspirierter Aufgabenmanager. Erstellen
+            und organisieren Sie Aufgaben per Drag-and-Drop, weisen Sie Benutzer und Kategorien zu."
+            tech="Javascript | HTML | CSS"
+            idGit="joinGit"
+            idTest="joinTest"
+            idProject="join"
+            idBackground="joinBg"
+            idImage="joinImg"
+        ></app-project>
+        
+        <app-project 
+            data-aos="flip-up"
+            data-aos-duration="500"
+            data-aos-delay="0"
+            imageSrc="../../assets/img/project/crm_Bg.png"
+            projectTitle="Simple CRM"
+            description="Ein sehr einfaches Kundenmanagementsystem
+                    , welches mit CRUD-Funktionalität arbeitet."
             tech="Angular | Firebase"
             idGit="crmGit"
             idTest="crmTest"
@@ -72,17 +141,13 @@
             idProject="poke"
             idBackground="pokeBg"
             idImage="pokeImg"
-            
             >
         </app-project>
         -->
-
+        }
     </div>
     
-   
     <div class="hrefAnchor" id="mycontact">
        
     </div>
-
-
 </section>

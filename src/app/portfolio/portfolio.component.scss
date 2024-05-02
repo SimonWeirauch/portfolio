@@ -2,10 +2,8 @@
 section {
     display: flex;
     flex-direction: column;
-    
     align-items: center;
-    width: 100%;
-    
+    width: 100%; 
 }
 
 .portfolioHeadline {
@@ -18,14 +16,10 @@ section {
     span {
         width: 470px;
         height: 38px;
-        
         display: flex;
-        
-
         position: relative;
         top: 70px;
         left: 100px;
-
         font-family: Poppins;
         font-weight: 400;
         font-size: 16px;
@@ -40,13 +34,11 @@ section {
     bottom: 50px;
     width: 100px;
     height: 2px;
-   
 }
 
 .headline{
     display: flex;
     align-items: center;
-    
     h1 {
         display: flex;
         position: absolute;
@@ -63,7 +55,6 @@ section {
         width: 50px;
         height: 4px;
         border: 4px;
-        
     }
 }
 
@@ -84,14 +75,11 @@ app-project {
 .portfolioSection {
     display: flex;
     justify-content: center;
-    
     position: relative;
     left: 0px;
-
     flex-wrap: wrap;
     width: 1238px;
     height: 1238px;
-
 }
 
 .shadows{
@@ -100,7 +88,6 @@ app-project {
     width: 500px;
     height: 0px;
     position: relative;
-    
     right: 500px;
 }
 
@@ -119,16 +106,11 @@ app-project {
     rotate: 0deg;
 }
 
-
-
 @media (max-width: 1300px) {
-    
     .portfolioSection{
-        transform: scale(0.90);
-       
+        transform: scale(0.90); 
     }
 }
-
 
 @media (max-width: 1200px) {
     
@@ -149,12 +131,10 @@ app-project {
     }
 }
 
-
 @media (max-width: 1050px) {
     
     .portfolioSection{
         transform: scale(0.70);
-   
         height: 900px;
     }
 
@@ -168,7 +148,6 @@ app-project {
         top: 150px;
     }
 }
-
 
 @media (max-width: 900px) {
     
@@ -188,13 +167,11 @@ app-project {
     }
 }
 
-
 @media (max-width: 800px) {
     
     .portfolioSection{
         transform: scale(0.55);
         height: 800px;
-        
     }
 
     .greenShadow{
@@ -206,8 +183,6 @@ app-project {
         top: -300px;
     }
 }
-
-
 
 //MobileView
 @media (max-width: 700px) {
@@ -227,7 +202,6 @@ app-project {
         }
     }
 
-
     .headline{
         display: flex;
         align-items: center;
@@ -235,7 +209,6 @@ app-project {
         h1 {
             display: flex;
             position: absolute;
-            
             color: #FFFFFF;
             font-family: Poppins;
             font-weight: 700;
@@ -271,7 +244,6 @@ app-project {
         top: 850px;
     }
 
-
     app-project {
         display: flex;
         justify-content: center;
@@ -280,14 +252,12 @@ app-project {
         height: 553px;
         border-radius: 15px;
         margin-right: 0px;
-        margin-bottom: -25px;
+        margin-bottom: 50px;
         border: 1px solid #70E61C;
         overflow: hidden; 
-        transform: scale(0.9);
+        transform: scale(1);
     }
-
 }
-
 
 @media (max-width: 600px) {
     app-project {
@@ -306,10 +276,7 @@ app-project {
         left: -150px;
         top: 400px;
     }
-
 }
-
-
 
 @media (max-width: 400px) {
 
@@ -317,7 +284,6 @@ app-project {
         transform: scale(1);
         position: relative;
         left: 0px;
-
         span {
             left: 0px;
             width: 295px;

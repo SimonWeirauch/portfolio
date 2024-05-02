@@ -12,6 +12,7 @@ import { ProjectComponent } from './project/project.component';
 import { PrivacyComponent } from './privacy/privacy.component';
 import { LegalComponent } from './legal/legal.component';
 
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -22,21 +23,19 @@ import { LegalComponent } from './legal/legal.component';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-
+  
   privacy: boolean = false;
   legal: boolean = false;
-  
-
+  langEN = false;
+ 
   hideValue: boolean = false;
   scrollDownValue: boolean = true;
-
   landscapeMode: boolean = false;
   
   @HostListener('window:orientationchange', ['$event'])
   onOrientationChange(event: Event){
     this.checkViewport();
   }
-
 
   /**
    * switches the boolean of "landscapeMode" according to 
@@ -52,7 +51,6 @@ export class AppComponent {
       this.landscapeMode = false;
     }
   }
-
 
   /**
    * Renders the DOM according to the bool so the "legal" page is shown

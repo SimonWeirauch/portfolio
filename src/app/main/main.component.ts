@@ -11,6 +11,8 @@ import { FooterComponent } from '../footer/footer.component';
 import { ProjectComponent } from '../project/project.component';
 import { PrivacyComponent } from '../privacy/privacy.component';
 import { LegalComponent } from '../legal/legal.component';
+import aos from 'aos';
+import 'aos/dist/aos.css';
 
 
 @Component({
@@ -27,6 +29,18 @@ export class MainComponent {
   landscapeMode: boolean = false;
   landscapeInfo: boolean = true;
 
+  /**
+   * initiates all animation on the page
+   */
+constructor(){
+  aos.init();
+}
+
+  @HostListener('window:orientationchange', ['$event'])
+  onOrientationChange(event: Event){
+    this.checkViewport();
+  }
+
 
   /**
    * Renders the DOM according to the bool so the "privacy" page is shown
@@ -36,12 +50,7 @@ export class MainComponent {
     this.privacy = stautsPrivacy;
   }
 
-  @HostListener('window:orientationchange', ['$event'])
-  onOrientationChange(event: Event){
-    this.checkViewport();
-  }
-
- 
+  
   checkViewport(){
     if (screen.availHeight < screen.availWidth) {
       if(screen.availHeight < 440){
