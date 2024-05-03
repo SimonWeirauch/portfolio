@@ -7,9 +7,29 @@
 
 header {
     height: 100px;
-    max-width: 1920px;
-    min-width: 320px;
     width: 100%;
+}
+
+.m-styling{
+    background: linear-gradient(to right, #fff 65%, #9747FF 35%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.n-styling{
+    background: linear-gradient(to right, #fff 34%, #70E61C 34%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.s-styling{
+    background: linear-gradient(to top, #fff 46%, #70E61C 34%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .d-none {

@@ -1,4 +1,4 @@
-import { CommonModule, NgFor } from '@angular/common';
+import { CommonModule} from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, inject, Output, EventEmitter } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';

@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import {ViewportScroller } from '@angular/common';
+import { LanguageService } from '../language.service';
 
 @Component({
   selector: 'app-privacy',
@@ -8,5 +10,10 @@ import { Component } from '@angular/core';
   styleUrl: './privacy.component.scss'
 })
 export class PrivacyComponent {
+  languageService = inject(LanguageService)
+
+  constructor(viewportScroller: ViewportScroller){
+    viewportScroller.scrollToPosition([0,0]);
+  }
 
 }

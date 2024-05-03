@@ -7,7 +7,6 @@ section {
     max-width: 1920px;
     min-width: 320px;
     width: 100%;
-    overflow: hidden;
 }
 
 .d-none {
@@ -377,6 +376,12 @@ button:hover {
 @media (max-width: 350px) {
     .blueShadow {
         right: 150px;
+    }
+
+    .horizontal {
+        span {
+            left: -12px;
+        }
     }
 }
 

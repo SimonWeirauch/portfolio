@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component, HostListener, Output, EventEmitter } from '@angular/core';
+import { Component, HostListener, Output, EventEmitter, inject } from '@angular/core';
 import { ActivatedRoute, Router, RouterLink, RouterLinkActive } from '@angular/router';
-
+import { LanguageService } from '../language.service';
 
 @Component({
   selector: 'app-footer',
@@ -14,16 +14,13 @@ export class FooterComponent {
   mobileView: boolean = false;
   hide: boolean = true;
   legal: boolean = false
+  languageService = inject(LanguageService)
 
   @Output() legalEmitter = new EventEmitter<boolean>();
   @Output() defaultEmitterFooter = new EventEmitter<boolean>();
   @Output() LegalEmitterFooterCSS = new EventEmitter<boolean>();
   @Output() skillButtonAndScrollDownEmitterFooter = new EventEmitter<boolean>();
 
-
-  constructor(){
-    
-  }
 
   /**
    * Defines input variable in app component to render

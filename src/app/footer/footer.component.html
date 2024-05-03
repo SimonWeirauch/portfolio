@@ -1,15 +1,21 @@
 <footer>
-    
     <div class="textbox">
         
         <div class="name">
             <a href="#atf" (click)="setLegalPrivacyDefault(); setSkillButtonAndScrollDown()">
                 <span id="name" >Simon</span>
             </a>
-            
-            <a routerLink="/legal" routerLinkActive="active"  (click)="changeLegal()" [ngClass]="{'d-none': hide}" class="cursor" id="impressum" >Impressum</a>
+            @if(languageService.langEN){
+                <a routerLink="/legal" routerLinkActive="active" 
+                (click)="changeLegal()" [ngClass]="{'d-none': hide}" 
+                class="cursor" id="impressum" >Imprint</a>
+            }
+            @else {
+                <a routerLink="/legal" routerLinkActive="active" 
+                (click)="changeLegal()" [ngClass]="{'d-none': hide}" 
+                class="cursor" id="impressum" >Impressum</a>
+            }
         </div>
-        
         
         <span class="copyright">© Simon Weirauch 2024</span>
             
@@ -20,10 +26,17 @@
             </a>
             <img (click)="showLinkedIn()" src="../../assets/img/atf/linkedin_button.png">
         </div>
+        @if(languageService.langEN){
+            <a routerLink="/legal" routerLinkActive="active" (click)="changeLegal()"
+            class="d-none cursor" [ngClass]="{'d-none': mobileView}" >Imprint
+            </a>
+        }
+        @else {
+            <a routerLink="/legal" routerLinkActive="active" (click)="changeLegal()"
+            class="d-none cursor" [ngClass]="{'d-none': mobileView}" >Impressum
+            </a>
+        }
 
-        <a routerLink="/legal" routerLinkActive="active"  (click)="changeLegal()"
-        
-        class="d-none cursor" [ngClass]="{'d-none': mobileView}" >Impressum</a>
     </div>
 
 </footer>

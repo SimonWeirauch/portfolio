@@ -281,6 +281,13 @@ app-project {
         left: -150px;
         top: 400px;
     }
+
+    .portfolioHeadline {
+        transform: scale(1);
+        position: relative;
+        left: 0px;
+        margin-bottom: 50px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -301,7 +308,7 @@ app-project {
         left: 0px;
         span {
             left: 8%;
-            width: 295px;
+            width: 260px;
         }
     }
 
@@ -313,5 +320,17 @@ app-project {
         display: flex;
         position: relative;
         left: -2px;
+    }
+}
+
+
+@media (max-width: 350px) {
+    app-project {
+        margin-bottom: 50px;
+        width: 280px;
+        height: 280px;
+        display: flex;
+        position: relative;
+        left: -7px;
     }
 }

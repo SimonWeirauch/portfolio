@@ -2,7 +2,6 @@ section {
     display: flex;
     flex-direction: column;
     position: relative;
-    max-width: 1920px;
     min-width: 320px;
     width: 100%;
     overflow: hidden;
@@ -355,7 +354,7 @@ section {
 
 @media (max-width: 450px) {
     section {
-        height: 1250px;
+        height: 1380px;
     }
 
     .aboutMe {
@@ -409,6 +408,10 @@ section {
             .personalInfoPuzzle{
                 width: 260px;  
             }
+        }
+
+        span {
+            width: 280px;
         }
     }
 }

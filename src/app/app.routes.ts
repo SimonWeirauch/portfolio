@@ -1,4 +1,4 @@
-import { Routes } from '@angular/router';
+import { Routes} from '@angular/router';
 import { PrivacyComponent } from './privacy/privacy.component';
 import { LegalComponent } from './legal/legal.component';
 import { MainComponent } from './main/main.component';

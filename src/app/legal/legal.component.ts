@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import {ViewportScroller } from '@angular/common';
+import { LanguageService } from '../language.service';
 
 @Component({
   selector: 'app-legal',
@@ -8,6 +10,10 @@ import { Component } from '@angular/core';
   styleUrl: './legal.component.scss'
 })
 export class LegalComponent {
-
+  languageService = inject(LanguageService)
+  
+  constructor(viewportScroller: ViewportScroller){
+    viewportScroller.scrollToPosition([0,0]);
+  }
 
 }
