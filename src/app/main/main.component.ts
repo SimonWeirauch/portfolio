@@ -49,8 +49,7 @@ constructor(){
   changePrivacy(stautsPrivacy: boolean){
     this.privacy = stautsPrivacy;
   }
-
-  
+ 
   checkViewport(){
     if (screen.availHeight < screen.availWidth) {
       if(screen.availHeight < 440){

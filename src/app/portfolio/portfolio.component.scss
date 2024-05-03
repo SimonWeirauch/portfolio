@@ -3,7 +3,10 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%; 
+    width: 100%;
+    max-width: 1920px;
+    min-width: 320px;
+  
 }
 
 .portfolioHeadline {
@@ -28,10 +31,10 @@ section {
     }
 }
 
-.hrefAnchor {
+.contactAnchor {
     display: flex;
     position: relative;
-    bottom: 50px;
+    bottom: 120px;
     width: 100px;
     height: 2px;
 }
@@ -94,7 +97,7 @@ app-project {
 .blueShadow{
     display: flex;
     position: absolute;
-    left: 1050px;
+    left: 900px;
     top: -500px;
     rotate: -4.71deg;
 }
@@ -190,6 +193,8 @@ app-project {
         top: 0;
     }
 
+
+
     .portfolioHeadline {
         transform: scale(1);
         position: relative;
@@ -278,6 +283,16 @@ app-project {
     }
 }
 
+@media (max-width: 480px) {
+    .portfolioHeadline {
+        span {
+            left: 13%;
+            width: 295px;
+        }
+    }
+}
+
+
 @media (max-width: 400px) {
 
     .portfolioHeadline {
@@ -285,7 +300,7 @@ app-project {
         position: relative;
         left: 0px;
         span {
-            left: 0px;
+            left: 8%;
             width: 295px;
         }
     }

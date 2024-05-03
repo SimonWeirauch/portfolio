@@ -3,12 +3,13 @@ import { HttpClient } from '@angular/common/http';
 import { Component, inject, Output, EventEmitter } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { LanguageService } from '../language.service';
+import { ActivatedRoute, Router, RouterLink, RouterLinkActive } from '@angular/router';
 
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule, RouterLink, RouterLinkActive],
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss', './contactResp.component.scss',]
   

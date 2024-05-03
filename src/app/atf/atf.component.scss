@@ -4,6 +4,10 @@ section {
     background-color: #141D2F;
     justify-content: center;
     height: 100vh;
+    max-width: 1920px;
+    min-width: 320px;
+    width: 100%;
+    overflow: hidden;
 }
 
 .d-none {
@@ -24,14 +28,15 @@ section {
 .purpleShadow {
     position: relative;
     left: 200.23px;
-    top: 40px;
+    top: 60px;
     rotate: -2.66deg;
 }
 
 .blueShadow {
     position: relative;
-    top: -80px;
+    top: 10px;
     right: 100px;
+    height: 700px;
     width: 779.58px;
     rotate: -10.13deg;
 }
@@ -54,6 +59,7 @@ section {
     justify-content: center;
     align-items: center;
     gap: 6px;
+    transform: scale(0.95);
     span {
         font-family: Poppins;
         font-weight: 400;
@@ -171,10 +177,7 @@ button:hover {
     right: 2px;
 }
 
-.aboutAnchor {
-    position: relative;
-    top: -140px;
-}
+
 
 @media (max-width: 1500px) {
     .purpleShadow {
@@ -184,9 +187,7 @@ button:hover {
 }
 
 @media (max-width: 1400px) {
-    .aboutAnchor {
-        top: -60px;
-    }
+
 }
 
 @media (max-width: 1300px) {
@@ -196,9 +197,7 @@ button:hover {
 }
 
 @media (max-width: 1200px) {
-    .aboutAnchor {
-        top: -120px;
-    }
+
 }
 
 @media (max-width: 1050px) {
@@ -206,9 +205,7 @@ button:hover {
         transform: scale(0.65);
     }
 
-    .aboutAnchor {
-        top: -100px;
-    }
+
 }
 
 @media (max-width: 900px) {
@@ -216,9 +213,7 @@ button:hover {
         transform: scale(0.55);
     } 
 
-    .aboutAnchor {
-        top: -60px;
-    }
+
 }
 
 @media (max-width: 800px) {
@@ -326,6 +321,8 @@ button:hover {
         gap: 35px;
         transform: scale(1);
     }
+
+
 }
 
 @media (max-width: 600px) {
@@ -348,7 +345,7 @@ button:hover {
     .socials {
         transform: scale(0.8);
         right: 40px;
-        top: 0px;
+        top: 60px;
     }
 }
 
@@ -380,5 +377,11 @@ button:hover {
 @media (max-width: 350px) {
     .blueShadow {
         right: 150px;
+    }
+}
+
+@media (max-height: 730px){
+    .purpleShadow {
+        top: 20px;
     }
 }

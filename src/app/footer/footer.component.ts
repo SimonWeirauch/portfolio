@@ -1,12 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component, HostListener, Output, EventEmitter } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink, RouterLinkActive } from '@angular/router';
 
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink, RouterLinkActive],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss'
 })
@@ -20,6 +20,10 @@ export class FooterComponent {
   @Output() LegalEmitterFooterCSS = new EventEmitter<boolean>();
   @Output() skillButtonAndScrollDownEmitterFooter = new EventEmitter<boolean>();
 
+
+  constructor(){
+    
+  }
 
   /**
    * Defines input variable in app component to render

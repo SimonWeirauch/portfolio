@@ -1,8 +1,21 @@
 <section >
+    
     <div class="mobileButton">
-        <a
-        [ngClass]="{'d-none': mobileOff}"
-        href="#mycontact"><button>Get in touch</button></a>
+        @if(languageService.langEN){
+            <a
+            [ngClass]="{'d-none': mobileOff}"
+            href="#mycontact"><button id="myRespPortfolio">Get in touch</button>
+            </a>
+        }@else {
+            <a
+            [ngClass]="{'d-none': mobileOff}"
+            href="#mycontact"><button id="myRespPortfolio">Kontakt</button>
+            </a>
+        }
+    </div>
+    
+    <div class="mySkillsAnchorClass">
+        <a id="myskills"> </a>
     </div>
     
     <div class="iconfield" >

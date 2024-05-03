@@ -1,28 +1,24 @@
-<div [ngClass]="{'hideInPortrait': landscapeInfo}">
-    <div class="background">
-        <img src="../assets/img/atf/landscape.png">   
-        <span>This page is designed for potrait mode only</span>
+
+
+
+   
+    <div [ngClass]="{'hideInPortrait': landscapeInfo}">
+        <div class="background">
+            <img src="../assets/img/atf/landscape.png">   
+            <span>This page is designed for potrait mode only</span>
+        </div>
+    
     </div>
 
-</div>
-
-
-
-<app-atf id="atf"
-
-[ngClass]="{'hideInLandscape': landscapeMode}"
-></app-atf>
-
-<app-aboutme [ngClass]="{'hideInLandscape': landscapeMode}"></app-aboutme>
+    <app-atf class="dimensions" id="atf" [ngClass]="{'hideInLandscape': landscapeMode}"></app-atf>
     
-<app-skills
-[ngClass]="{'hideInLandscape': landscapeMode}"
+    <app-aboutme class="dimensions" [ngClass]="{'hideInLandscape': landscapeMode}"></app-aboutme>
+        
+    <app-skills class="skills" [ngClass]="{'hideInLandscape': landscapeMode}"></app-skills>
+    
+    <app-portfolio class="dimensions" [ngClass]="{'hideInLandscape': landscapeMode}" ></app-portfolio>
+    
+    <app-contact class="dimensions" [ngClass]="{'hideInLandscape': landscapeMode}" (privacyEmitter)="changePrivacy($event)"></app-contact>
 
-></app-skills>
 
-<app-portfolio [ngClass]="{'hideInLandscape': landscapeMode}" ></app-portfolio>
 
-<app-contact
-[ngClass]="{'hideInLandscape': landscapeMode}" 
-(privacyEmitter)="changePrivacy($event)"
-></app-contact>

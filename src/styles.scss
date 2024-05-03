@@ -6,6 +6,11 @@ body {
 
 html {
   scroll-behavior: smooth;
+  
+}
+
+webkit ::-webkit-scrollbar {
+ display: none;
 }
 
 app-root {

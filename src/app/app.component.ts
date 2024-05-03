@@ -1,6 +1,6 @@
 import { Component, HostListener} from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { AtfComponent } from './atf/atf.component';
 import { AboutmeComponent } from './aboutme/aboutme.component';
@@ -16,7 +16,7 @@ import { LegalComponent } from './legal/legal.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, HeaderComponent, AtfComponent, 
+  imports: [CommonModule, RouterOutlet, RouterLink, RouterLinkActive, HeaderComponent, AtfComponent, 
           AboutmeComponent, SkillsComponent, PortfolioComponent, ContactComponent, FooterComponent,
           ProjectComponent, PrivacyComponent, LegalComponent],
   templateUrl: './app.component.html',
