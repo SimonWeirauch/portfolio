@@ -1,37 +1,43 @@
-<section>
-    <div  class="verticalHeadlineBox">
+<img class="atfGreen" src="../../assets/img/atf/line_green.png">
 
-        <div class="horizontal" >
-            <img class="purpleShadow" src="/assets/img/atf/purple_shadow_atf.png">
-            <span class="iam">I am</span>
-            <div class="nameSection">
-                <span id="name">Simon Weirauch</span>
-                <span id="title">FRONTEND DEVELOPER</span>
+
+<section>
+    <div class="wrapperAtf">
+        <div  class="verticalHeadlineBox">
+
+            <div class="horizontal" >
+                <img class="purpleShadow" src="/assets/img/atf/purple_shadow_atf.png">
+                <span class="iam">I am</span>
+                <div class="nameSection">
+                    <span id="name">Simon Weirauch</span>
+                    <span id="title">FRONTEND DEVELOPER</span>
+                </div>
+                <img class="blueShadow" src="/assets/img/atf/blue_shadow_atf.png">
             </div>
-            <img class="blueShadow" src="/assets/img/atf/blue_shadow_atf.png">
-        </div>
-    </div>  
-    
-    <div class="talk">
-        <a href="#mycontact"><button> Let´s talk!</button></a>
-    </div>
-    
-    
-    <div id="myaboutMe" class="socials">
-        <img id="line" src="../../assets/img/atf/line_green.png">
-        <img (click)="showGit()" class="scaleUp" src="../../assets/img/atf/github_button.png">
-        <a href="mailto:simon.w2@gmx.net">
-            <img class="scaleUp"  src="../../assets/img/atf/email_button.png">
-        </a>
+        </div>  
         
-        <img (click)="showLinkedIn()" class="scaleUp" src="../../assets/img/atf/linkedin_button.png">
+        <div class="talk">
+            <a href="#mycontact"><button> Let´s talk!</button></a>
+        </div>
+        
+        
+        <div id="myaboutMe" class="socials">
+            <img id="line" src="../../assets/img/atf/line_green.png">
+            <img (click)="showGit()" class="scaleUp" src="../../assets/img/atf/github_button.png">
+            <a href="mailto:simon.w2@gmx.net">
+                <img class="scaleUp"  src="../../assets/img/atf/email_button.png">
+            </a>
+            
+            <img (click)="showLinkedIn()" class="scaleUp" src="../../assets/img/atf/linkedin_button.png">
+        </div>
+        
+        <div
+        [ngClass]="{'d-none': hide, 'scrollDown': scrollDown}"
+        >
+            <span>Scroll down </span>
+            <img src="../../assets/img/atf/arrow-down-line.png">
+        </div >
+
     </div>
-    
-    <div
-    [ngClass]="{'d-none': hide, 'scrollDown': scrollDown}"
-    >
-        <span>Scroll down </span>
-        <img src="../../assets/img/atf/arrow-down-line.png">
-    </div >
 
 </section>

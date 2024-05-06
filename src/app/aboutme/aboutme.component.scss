@@ -2,14 +2,19 @@ section {
     display: flex;
     flex-direction: column;
     position: relative;
-    min-width: 320px;
-    width: 100%;
-    overflow: hidden;
+    align-items: center;
 }
 
 .aboutAnchor {
     position: relative;
     top: -120px;
+}
+
+.wrapperAbout {
+    display: flex;
+    width: 100%;
+    max-width: 1920px;
+    min-width: 320px;
 }
 
 .aboutMe{
@@ -46,6 +51,7 @@ section {
     display: flex;
     flex-direction: row;
     position: relative;
+    right: 10%;
 }
 
 .detailBox{
@@ -57,19 +63,20 @@ section {
 }
 
 .shadows{
-    width: 934px;
+    width: 1200px;
     height: 800px;
     display: flex;
     position: relative;
-    left: 400px;
+    left: 450px;
 }
 
 .profilePic{
-    width: 900px;
+    width: 1200px;
     height: 800px;
     display: flex;
     position: relative;
-   left: -600px
+    left: -800px;
+    bottom: -10px;
 }
 
 .vector {
@@ -104,7 +111,17 @@ section {
 
 @media (max-width: 1700px) {
     .imageBox {
-        right: 15%;
+        right: 10%;
+        width: 100%;
+        bottom: -10px;
+    }
+
+    .shadows{
+        width: 1200px;
+        height: 800px;
+        display: flex;
+        position: relative;
+        left: 300px;
     }
 }
 
@@ -132,7 +149,7 @@ section {
 
 @media (max-width: 1300px) {
     .imageBox {
-        right: 27%;
+        right: 25%;
     }
 }
 
@@ -143,7 +160,7 @@ section {
     }
 
     .imageBox {
-        right: 35%;
+        right: 27%;
     }
 
     .aboutAnchor {
@@ -153,8 +170,7 @@ section {
 
 @media (max-width: 1050px) {
     .imageBox {
-        bottom: -5px;
-        right: 45%;
+        right: 36%;
     }
 
     .aboutAnchor {
@@ -174,7 +190,7 @@ section {
 
 @media (max-width: 950px) {
     .imageBox {
-        right: 45%;
+        right: 34%;
     }
 
     .detailBox{
@@ -193,7 +209,7 @@ section {
     .imageBox {
         transform: scale(0.75);
         bottom: -30px;
-        right: 50%;
+        right: 43%;
     }
 
     .aboutAnchor {
@@ -209,7 +225,7 @@ section {
 
 @media (max-width: 850px) {
     .imageBox {
-        right: 55%;
+        right: 45%;
     }
 }
 
@@ -222,14 +238,14 @@ section {
 
     .imageBox {
         transform: scale(0.70);
-        right: 60%;
+        right: 52%;
         bottom: -45px;
     }
 }
 
 @media (max-width: 750px) {
     .imageBox {
-        right: 67%;
+        right: 54%;
     }
 }
 
@@ -240,7 +256,7 @@ section {
         flex-direction: column;
         position: relative;
         height: 1160px;
-        bottom: 0px;
+        bottom: 50px;
     }
     
     .aboutAnchor {
@@ -303,6 +319,14 @@ section {
         right: 0px;
         bottom: 75px;
         transform: scale(0.65);
+        .profilePic{
+            width: 1125px;
+            height: 750px;
+            display: flex;
+            position: relative;
+            top: -50px;
+            left: -550px;
+        }
     }
     
     .vector {
@@ -324,16 +348,8 @@ section {
         height: 916.57px;
         display: flex;
         position: relative;
-        top: -55px;
-    }
-    
-    .profilePic{
-        width: 800px;
-        height: 700px;
-        display: flex;
-        position: relative;
-        top: -20px;
-        left: -550px;
+        top: -60px;
+        left: 500px;
     }
 }
 
@@ -349,12 +365,16 @@ section {
                 width: 360px;  
             }
         }
+        .imageBox {
+            transform: scale(0.5);
+            bottom: 24px;
+        }
     }
 }
 
 @media (max-width: 450px) {
     section {
-        height: 1380px;
+        height: 1250px;
     }
 
     .aboutMe {
@@ -368,9 +388,12 @@ section {
                 width: 340px;  
             }
         }
+        .imageBox {
+            transform: scale(0.45);
+            bottom: 0px;
+        }
     }
 }
-
 
 @media (max-width: 400px) {
     .aboutMe {
@@ -385,10 +408,11 @@ section {
                 width: 300px;  
             }
         }
-    }
-
-    .imageBox {
-        transform: scale(0.5);
+        .imageBox {
+            transform: scale(0.35);
+            bottom: 39px;
+            left: -15px;
+        }
     }
 
     .vector {

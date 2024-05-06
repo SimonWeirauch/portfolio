@@ -1,28 +1,39 @@
-
 section {
+    height: 1700px;
+    display: flex;
+    justify-content: center;
+}
+
+.purple {
+    width: 20%;
+    height: 4px;
+    position: relative;
+    display: flex;
+    top: 131px;
+}
+
+.wrapperPortfolio {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     max-width: 1920px;
     min-width: 320px;
-  
 }
 
 .portfolioHeadline {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    width: 100%;
+    width: 0px;
     height: 210px;
-    
     span {
         width: 470px;
         height: 38px;
         display: flex;
         position: relative;
-        top: 70px;
-        left: 100px;
+        top: 0px;
+        left: 60px;
         font-family: Poppins;
         font-weight: 400;
         font-size: 16px;
@@ -44,14 +55,14 @@ section {
     align-items: center;
     h1 {
         display: flex;
-        position: absolute;
-        left: 100px;
         color: #FFFFFF;
         font-family: Poppins;
         font-weight: 700;
         font-size: 90px;
         line-height: 108px;
         gap: 10px;
+        z-index: 1;
+        background-color: #141D2F;
     }
 
     img {
@@ -60,7 +71,6 @@ section {
         border: 4px;
     }
 }
-
 
 app-project {
     display: flex;
@@ -79,16 +89,14 @@ app-project {
     display: flex;
     justify-content: center;
     position: relative;
-    left: 0px;
-    flex-wrap: wrap;
-    width: 1238px;
-    height: 1238px;
+    top: 400px;
+    z-index: 1;
 }
 
 .shadows{
     display: flex;
     justify-content: space-between;
-    width: 500px;
+    width: 0px;
     height: 0px;
     position: relative;
     right: 500px;
@@ -97,120 +105,150 @@ app-project {
 .blueShadow{
     display: flex;
     position: absolute;
-    left: 900px;
-    top: -500px;
+    left: -100px;
+    top: 0px;
     rotate: -4.71deg;
 }
 
 .greenShadow{
     position: absolute;
-    left: -550px;
-    top: 500px;
+    right: 800px;
+    top: 900px;
     rotate: 0deg;
 }
 
+@media (max-width: 1700px) {
+    .greenShadow{
+        right: 700px;
+    }
+}
+
+@media (max-width: 1500px) {
+    .greenShadow{
+        right: 600px;
+    }
+}
+
+@media (max-width: 1400px) {
+    .greenShadow{
+        right: 500px;
+        top: 900px;
+    }
+}
+
 @media (max-width: 1300px) {
+    section {
+        height: 1500px;
+    }
+    
     .portfolioSection{
-        transform: scale(0.90); 
+        transform: scale(0.90);
+        top: 300px; 
+    }
+
+    .greenShadow{
+        right: 450px;
+        top: 700px;
     }
 }
 
 @media (max-width: 1200px) {
-    
     .portfolioSection{
         transform: scale(0.80);
-        top: -150px;
-        height: 1000px;
     }
-
-    .blueShadow{
-        left: 900px;
-        top: -500px;
-    }
-    
+ 
     .greenShadow{
-        left: -400px;
-        top: 300px
+        right: 400px;
     }
 }
 
 @media (max-width: 1050px) {
-    
     .portfolioSection{
         transform: scale(0.70);
         height: 900px;
+        top: 300px;
+    }
+
+    section {
+        height: 1350px;
     }
 
     .blueShadow{
-        left: 750px;
-        top: -400px;
+        left: 0px;
     }
     
     .greenShadow{
-        left: -300px;
-        top: 150px;
+        right: 200px;
+        top: 600px;
     }
 }
 
 @media (max-width: 900px) {
-    
     .portfolioSection{
         transform: scale(0.60);
         height: 850px;
+        top: 200px;
+    }
+
+    section {
+        height: 1150px;
     }
 
     .blueShadow{
-        left: 800px;
-        top: -400px;
+        left: 150px;
     }
     
     .greenShadow{
-        left: -250px;
-        top: 25px;
+        right: 100px;
+        top: 400px;
     }
 }
 
 @media (max-width: 800px) {
-    
     .portfolioSection{
         transform: scale(0.55);
         height: 800px;
     }
 
+    section {
+        height: 1100px;
+    }
+
     .greenShadow{
-        top: -10px;
+        right: -100px;
+        top: 350px;
     }
 
     .blueShadow{
-        left: 800px;
-        top: -300px;
+        left: 200px;
     }
 }
 
 //MobileView
 @media (max-width: 700px) {
     section {
-        top: 0;
+        height: 2000px;
     }
 
-
+    .purple {
+        top: 104px;
+    }
 
     .portfolioHeadline {
         transform: scale(1);
         position: relative;
         left: 0px;
         margin-top: 100px;
-
         span {
             left: 70px;
             width: 320px;
+            top: 50px;
         }
     }
 
     .headline{
         display: flex;
         align-items: center;
-        
         h1 {
             display: flex;
             position: absolute;
@@ -234,19 +272,22 @@ app-project {
 
     .portfolioSection{
         transform: scale(1);
-        top: 0px;
         width: 100%;
         height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        top: 150px;
     }
 
     .blueShadow{
-        left: 700px;
-        top: -150px;
+        left: 150px;
+        top: -50px;
     }
     
     .greenShadow{
-        left: -180px;
-        top: 850px;
+        top: 1250px;
+        right: -150px;
     }
 
     app-project {
@@ -272,14 +313,22 @@ app-project {
         height: 340px;
     }
 
+    section {
+        height: 1400px;
+    }
+
+    .portfolioSection{
+        top: 200px;
+    }
+
     .blueShadow{
-        left: 620px;
-        top: -200px;
+        left: 230px;
+        top: -50px;
     }
     
     .greenShadow{
-        left: -150px;
-        top: 400px;
+        top: 650px;
+        right: -200px;
     }
 
     .portfolioHeadline {
@@ -293,23 +342,37 @@ app-project {
 @media (max-width: 480px) {
     .portfolioHeadline {
         span {
-            left: 13%;
             width: 295px;
         }
+    }
+
+    .greenShadow{
+        right: -350px;
+    }
+
+    .blueShadow{
+        left: 300px; 
     }
 }
 
 
 @media (max-width: 400px) {
-
     .portfolioHeadline {
         transform: scale(1);
         position: relative;
         left: 0px;
         span {
-            left: 8%;
+            left: 40px;
             width: 260px;
         }
+    }
+
+    .greenShadow{
+        right: -400px;
+    }
+
+    .blueShadow{
+        left: 300px; 
     }
 
     app-project {
@@ -325,6 +388,21 @@ app-project {
 
 
 @media (max-width: 350px) {
+    .portfolioHeadline {
+        span {
+            left: 20px;
+        }
+    }
+
+    .greenShadow{
+        right: -400px;
+        top: 450px;
+    }
+
+    section {
+        height: 1200px;
+    }
+    
     app-project {
         margin-bottom: 50px;
         width: 280px;

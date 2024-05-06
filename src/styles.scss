@@ -9,9 +9,18 @@ html {
   
 }
 
-webkit ::-webkit-scrollbar {
- display: none;
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 5px;
 }
+
+
+::-webkit-scrollbar-thumb {
+  background-color: #70E61C;
+  border-radius: 4px;
+}
+
 
 app-root {
   display: flex;

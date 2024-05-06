@@ -1,12 +1,25 @@
 section {
+    background-color: #141D2F;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.atfGreen {
+    width: 22%;
+    height: 4px;
+    position: relative;
+    display: flex;
+    top: 870px;
+}
+
+.wrapperAtf {
     display: flex;
     flex-direction: column;
-    background-color: #141D2F;
     justify-content: center;
-    height: 100vh;
     max-width: 1920px;
     min-width: 320px;
-    width: 100%;
 }
 
 .d-none {
@@ -17,7 +30,6 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     position: relative;
     top: 80px;
     width: 100%;
@@ -45,7 +57,6 @@ section {
     flex-direction: column;
     position: relative;
     width: 1100px;
- 
 }
 
 .iam {
@@ -74,6 +85,7 @@ section {
     font-family: Poppins;
     font-weight: 700;
     font-size: 128px;
+    width: 1200px;
     line-height: 153.6px;
     writing-mode: horizontal-tb;
 }
@@ -99,7 +111,6 @@ section {
         z-index: 3;
         text-decoration: none;
         color: #FFFFFF;
-    
         button {
             display: flex;
             justify-content: center;
@@ -136,6 +147,8 @@ button:hover {
     position: relative;
     top: 50px;
     gap: 42px;
+    background-color: #141D2F;
+    z-index: 1;
 }
 
 .scaleUp:hover {
@@ -144,6 +157,7 @@ button:hover {
 }
 
 #line{
+    position: relative;
     width: 100px;
     border: 4px;
     border-color: #70E61C;
@@ -176,17 +190,11 @@ button:hover {
     right: 2px;
 }
 
-
-
 @media (max-width: 1500px) {
     .purpleShadow {
         position: relative;
         left: 200px;
     }
-}
-
-@media (max-width: 1400px) {
-
 }
 
 @media (max-width: 1300px) {
@@ -195,24 +203,16 @@ button:hover {
     }
 }
 
-@media (max-width: 1200px) {
-
-}
-
 @media (max-width: 1050px) {
     .horizontal{
         transform: scale(0.65);
     }
-
-
 }
 
 @media (max-width: 900px) {
     .horizontal{
         transform: scale(0.55);
     } 
-
-
 }
 
 @media (max-width: 800px) {
@@ -223,6 +223,21 @@ button:hover {
 
 //MOBILE VIEW!
 @media (max-width: 700px) {
+    section {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .atfGreen {
+        height: 0px;
+    }
+
+    .wrapperAtf {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
     .purpleShadow {
         position: relative;
         left: 180px;
@@ -234,7 +249,7 @@ button:hover {
     .blueShadow {
         position: relative;
         top: 110px;
-        right: 60px;
+        right: 780px;
         width: 600px;
         transform: scale(1);
         rotate: 0deg;
@@ -251,7 +266,6 @@ button:hover {
         a {
             width: 133px;
             height: 49px;
-            
             button {
                 width: 133px;
                 height: 49px;
@@ -274,6 +288,7 @@ button:hover {
         display: flex;
         position: relative;
         top: -100px;
+        left: 340px;
         justify-content: center;
         align-items: center;
         gap: 6px;
@@ -320,23 +335,17 @@ button:hover {
         gap: 35px;
         transform: scale(1);
     }
-
-
 }
 
 @media (max-width: 600px) {
     .blueShadow {
-        right: 100px;
+        right: 800px;
     }
 }
 
 @media (max-width: 500px) {
     .blueShadow {
-        right: 130px;
-    }
-
-    .horizontal {
-        right: 20px;
+        right: 850px;
     }
 }
 
@@ -350,32 +359,31 @@ button:hover {
 
 @media (max-width: 450px) {
     .horizontal {
-        transform: scale(0.9); 
+        transform: scale(0.9);
+        left: 300px; 
     }
 
     .talk {
         transform: scale(0.9);
+        right: 10px;
     }
 }
 
 @media (max-width: 400px) {
     .horizontal {
         transform: scale(0.7);
-        right: 13px;  
+        left: 250px; 
     }
-
     .talk {
         transform: scale(0.8);
-    }
-
-    .blueShadow {
-        right: 110px;
+        right: -10px;
     }
 }
 
 @media (max-width: 350px) {
-    .blueShadow {
-        right: 150px;
+    .talk {
+        transform: scale(0.8);
+        right: 0px;
     }
 
     .horizontal {

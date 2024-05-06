@@ -5,10 +5,6 @@
     line-height: 27.6px;
 }
 
-header {
-    height: 100px;
-    width: 100%;
-}
 
 .m-styling{
     background: linear-gradient(to right, #fff 65%, #9747FF 35%);
@@ -23,7 +19,6 @@ header {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-
 
 .s-styling{
     background: linear-gradient(to top, #fff 46%, #70E61C 34%);
@@ -40,16 +35,20 @@ header {
     display: none;
 }
 
+header {
+    height: 100px;
+    width: 100%;
+}
+
 .header{
     display: flex;
     position: fixed;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     color: #FFFFFF;
     z-index: 999;
     padding: 24px 50px 24px 50px;
     background-color: #141D2F;
-
     span{
         cursor: pointer;
         font-family: Poppins;
@@ -61,12 +60,22 @@ header {
     div {
         display: flex;
         text-wrap: nowrap;
-        margin-right: 32px;
+        margin-right: 24px;
         height: 32px;
     }
 
-    .name a{
-        margin-left: 0px;
+    .wrapperHeader {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 1920px;
+        min-width: 320px;
+    }
+
+    .name {
+        a {
+            margin-left: 0px;
+        }
     }
 
     div a{
@@ -140,8 +149,7 @@ header {
 }
 
 .show-burgerMenu {
-    transform: translateX(0px);
-    
+    transform: translateX(0px); 
 }
 
 @media (max-width: 700px) {
@@ -156,7 +164,6 @@ header {
 }
 
 @media (max-width: 410px) {
-    
     .header {
         padding: 24px 50px 24px 10px;
         div {

@@ -1,3 +1,12 @@
+@media (max-width: 2350px) {
+    .blue {
+        width: 20%;
+        height: 4px;
+        position: relative;
+        display: flex;
+    }
+}
+
 @media (max-width: 1300px) {
     form {
         input {
@@ -67,18 +76,6 @@
             }
         }
     }
-
-    .bottomSection{
-        .topArrow {
-            top: 60px;
-            left: 575px;
-        }
-
-        .topArrowGreen {
-            top: 60px;
-            left: 575px;
-        }
-    }
 }
 
 
@@ -91,23 +88,18 @@
     .contactTextbox{
         position: relative;
         left: 8%;
-        
     }
 
-    .bottomSection{
-        .topArrow {
-            left: 380px;
-            top: 40px;
-        }
-
-        .topArrowGreen {
-            left: 380px;
-            top: 40px;
-        }
-        
+    .bottomSection{        
+        height: 80px;
         a{
             height: 0px;
         }
+    }
+
+    .blue {
+        display: flex;
+        top: 326px;
     }
 }
 
@@ -136,19 +128,11 @@
 
     .bottomSection{
         .topArrow {
-            left: 400px;
-            top: 40px;
+            left: 550px; 
         }
 
         .topArrowGreen {
-            left: 400px;
-            top: 40px;
-        }
-
-        .purpleShadow {
-            height: 500px;
-            width: 400px;
-            top: -220px
+            left: 550px;
         }
     }
 
@@ -206,20 +190,20 @@
     .privacy {    
         width: 320px;
     }
-
-    .bottomSection{
-        .topArrow {
-            top: 110px;
-        }
-
-        .topArrowGreen {
-            top: 110px;
-        }
-    }   
 }
 
 //MOBILE VIEW!
 @media (max-width: 700px) {
+    .green {
+        top: 166px;
+        left: 66%;
+    }
+
+    .blue {
+        display: flex;
+        top: 265px;
+    }
+    
     section {
         position: relative;
         bottom: 0px;
@@ -258,18 +242,13 @@
 
     .bottomSection {
         top: 0px;
-        height: 0px;
-        
+       
         .topArrow {
-            left: 330px;
+            left: 500px;
         }
 
         .topArrowGreen {
-            left: 330px;
-        }
-
-        .purpleShadow {
-            top: -150px;
+            left: 500px;
         }
     }
 
@@ -363,7 +342,6 @@
             line-height: 19px;
             letter-spacing: 0em;
             text-align: left;
-
         }
 
         textarea {
@@ -427,23 +405,13 @@
     }
 }
 
-@media (max-width: 600px) {
-    .contactTextbox {
-        .contactTextheadline{
-            img {
-                left: -22%;
-                width: 100px;
-            }
-        }
-    }
-
+@media (max-width: 600px) { 
     form {
         .inputBox {
             width: 75%;
         }
     }
 }
-
 
 @media (max-width: 500px) {
     section {
@@ -468,18 +436,6 @@
         span {
             width: 300px;
             margin-bottom: 16px;
-        }
-    }
-
-    .bottomSection {
-        .topArrow {
-            left: 370px;
-            top: 90px;
-        }
-
-        .topArrowGreen {
-            left: 370px;
-            top: 90px;
         }
     }
 }
@@ -531,46 +487,11 @@
             left: 0px;
         }    
     }
-
-    .bottomSection {
-        .topArrow {
-            top: 145px;
-            left: 360px;
-        }
-
-        .topArrowGreen {
-            top: 145px;
-            left: 360px;
-        }
-    }
-}
-
-@media (max-width: 400px) {
-    .bottomSection {
-        .purpleShadow {
-            top: -100px;
-        }
-
-        .topArrow {
-            left: 375px;
-        }
-
-        .topArrowGreen {
-            left: 375px;
-        }
-    }
 }
 
 @media (max-width: 350px) {
     .contactTextbox {
         right: -85px;
-        .contactTextheadline{
-            img {
-                left: -22%;
-                width: 100px;
-            }
-        }
-        
         span {
             width: 300px;
             margin-bottom: 16px;

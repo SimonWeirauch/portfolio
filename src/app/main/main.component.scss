@@ -14,9 +14,9 @@ div {
 }
 
 app-skills{
+    position: relative;
     top: -180px;
 }
-
 
 .hideInPortrait{
     display: none;
@@ -51,21 +51,12 @@ span {
     margin-bottom: 30px;
 }
 
-.skills{
-    position: relative;
-    width: 100%;
-    display: flex;
-    max-width: 1920px;
-    min-width: 320px;
-}
-
 .dimensions{
     width: 100%;
     display: flex;
     max-width: 1920px;
     min-width: 320px;
 }
-
 
 .legal {
     position: relative;
@@ -85,11 +76,16 @@ span {
     min-width: 320px;
 }
 
-
-
 @media (max-width: 700px) {
     app-skills{
         position: relative;
         top: 0px;
+    }
+}
+
+@media (max-width: 350px) {
+    app-skills{
+        position: relative;
+        top: 40px;
     }
 }

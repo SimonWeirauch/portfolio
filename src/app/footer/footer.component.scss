@@ -1,6 +1,6 @@
 footer {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     color: #FFFFFF;
     overflow: hidden;
@@ -8,8 +8,16 @@ footer {
     height: 287px;
     background: linear-gradient(0deg, #141D2F, #141D2F);
     border-top: 4px solid #70E61C;
-    min-width: 320px;
 }
+
+.wrapperFooter {
+    display: flex;
+    width: 100%;
+    max-width: 1920px;
+    min-width: 320px;
+    justify-content: space-between;
+}
+
 
 a {
     color: white;
@@ -26,11 +34,10 @@ a {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding-left: 100px;
-    padding-right: 100px;
-    
+    padding-left: 50px;
+    padding-right: 70px;
 }
-
+    
 .copyright {
     font-family: Poppins;
     font-size: 23px;
@@ -38,7 +45,6 @@ a {
     line-height: 28px;
     letter-spacing: 0em;
     text-align: left;
-
 }
 
 .socials{
@@ -102,13 +108,6 @@ a {
 @media (max-width: 900px) {
     .copyright {
         font-size: 15px;
-    }
-}
-
-@media (max-width: 800px) {
-    .textbox {
-        padding-left: 50px;
-        padding-right: 50px;   
     }
 }
 

@@ -1,11 +1,38 @@
 
 section {
-    height: 900px;
+    height: 850px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+}
+
+.wrapperContact {
     display: flex;
     position: relative;
     flex-direction: column;
     width: 100%;
-    overflow: hidden;
+    max-width: 1920px;
+    min-width: 320px;
+}
+
+.blue {
+    width: 20%;
+    height: 4px;
+    position: relative;
+    display: flex;
+    top: 310px;
+}
+
+.green {
+    width: 44%;
+    height: 5px;
+    position: relative;
+    display: flex;
+    top: 131px;
+    left: 58%;
+    border: 4px;
+    margin-left: 20px;
 }
 
 .headline {
@@ -23,7 +50,7 @@ section {
     }
 
     img {
-        height: 4px;
+        height: 0px;
         width: 40%;
         margin-left: 20px;
         border: 4px;
@@ -34,8 +61,7 @@ section {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    max-width: 1920px;
-    min-width: 320px;
+
 }
 
 .d-none{
@@ -50,7 +76,8 @@ section {
         display: flex;
         flex-direction: row;
         align-items: center;
-
+        background-color: #141D2F;
+        z-index: 1;
         img {
             position: absolute;
             top: 300px;
@@ -119,6 +146,7 @@ form {
     flex-direction: column;
     width: 617px;
     height: 504px;
+    z-index: 2;
     span {
         font-family: Poppins;
         font-size: 14px;
@@ -290,6 +318,7 @@ form {
     display: flex;
     justify-content: flex-end;
     width: auto;
+    height: 100px;
     .purpleShadow {
         position: relative;
         top: -350px;

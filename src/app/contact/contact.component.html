@@ -1,5 +1,11 @@
+
+<img data-aos="fade-right" class="blue" src="../../assets/img/contact/blueLineContacts.png">
+<img data-aos="fade-right" class="green" src="../../assets/img/contact/greenLineContacts.png">
+
+
 <section >
-    
+    <div class="wrapperContact">
+
     @if(languageService.langEN){
         <div class="headline" data-aos="fade-right">
             <h1 >Contact</h1>
@@ -8,7 +14,6 @@
         <div class="middleSection">
             <div class="contactTextbox" data-aos="fade-right" >
                 <div class="contactTextheadline">
-                    <img src="../../assets/img/contact/blueLineContacts.png">
                     <h2>Got a problem to solve?</h2>
                 </div>
                 <div class="contactText">
@@ -150,7 +155,6 @@
         <div class="middleSection">
             <div class="contactTextbox" data-aos="fade-right">
                 <div class="contactTextheadline">
-                    <img src="../../assets/img/contact/blueLineContacts.png">
                     <h2>Problem zu lösen?</h2>
                 </div>
                 <div class="contactText">
@@ -285,15 +289,23 @@
     
         </div>
     }
-    
-    <div class="bottomSection">
-        @if(hover){
-            <a (mouseleave)="changeBottomArrowWhite()" href="#header"><img class="topArrowGreen" src="../../assets/img/contact/topArrowGreen.png" alt=""></a>
-        }
-        @else {
-            <a (mouseenter)="changeBottomArrowGreen()" href="#header"><img class="topArrow" src="../../assets/img/contact/topArrow.png" alt=""></a>
-        }
-        <img class="purpleShadow" src="../../assets/img/contact/purpleShadowContacts.png" alt="">
-    </div>
-    
+
+
+
+
+</div>
+
+
+
 </section>
+
+<div class="bottomSection">
+    @if(hover){
+        <a (mouseleave)="changeBottomArrowWhite()" href="#header"><img class="topArrowGreen" src="../../assets/img/contact/topArrowGreen.png" alt=""></a>
+    }
+    @else {
+        <a (mouseenter)="changeBottomArrowGreen()" href="#header"><img class="topArrow" src="../../assets/img/contact/topArrow.png" alt=""></a>
+    }
+    <img class="purpleShadow" src="../../assets/img/contact/purpleShadowContacts.png" alt="">
+
+</div>
