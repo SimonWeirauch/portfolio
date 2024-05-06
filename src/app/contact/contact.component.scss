@@ -60,8 +60,10 @@ section {
 .middleSection {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-
+    justify-content: space-between;
+    position: relative;
+    margin-right: 100px;
+    margin-left: 40px;
 }
 
 .d-none{

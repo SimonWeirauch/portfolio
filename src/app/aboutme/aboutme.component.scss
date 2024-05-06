@@ -59,7 +59,7 @@ section {
     flex-direction: column;
     gap: 35px;
     position: relative;
-    left: 75px;
+    left: 36px;
 }
 
 .shadows{
@@ -180,7 +180,7 @@ section {
     .detailBox{
         transform: scale(0.9);
         bottom: 0px;
-        left: 40px;
+        left: 22px;
     }
 
     .vector {
@@ -218,7 +218,7 @@ section {
 
     .detailBox{
         transform: scale(0.80);
-        left: 0px;
+        left: 14px;
     }
 }
 
@@ -233,14 +233,26 @@ section {
 @media (max-width: 800px) {
     .detailBox{
         transform: scale(0.75);
-        left: -20px;
+        left: 0px;
     }
 
     .imageBox {
         transform: scale(0.70);
-        right: 52%;
+        right: 51%;
         bottom: -45px;
     }
+
+    .personalInfoBulb{
+        position: relative;
+        left: -20px;
+    }
+    
+    .personalInfoPuzzle{
+        position: relative;
+        left: -20px;
+    }
+
+
 }
 
 @media (max-width: 750px) {
@@ -305,6 +317,15 @@ section {
             left: 40px;
             top: 95px;
             transform: scale(1);
+            .personalInfoBulb{
+                position: relative;
+                left: 0px;
+            }
+            
+            .personalInfoPuzzle{
+                position: relative;
+                left: 0px;
+            }
         }
     }
     
@@ -317,8 +338,8 @@ section {
         z-index: -2;
         position: relative;
         right: 0px;
-        bottom: 75px;
-        transform: scale(0.65);
+        bottom: 20px;
+        transform: scale(0.5);
         .profilePic{
             width: 1125px;
             height: 750px;
@@ -351,6 +372,7 @@ section {
         top: -60px;
         left: 500px;
     }
+    
 }
 
 @media (max-width: 550px) {

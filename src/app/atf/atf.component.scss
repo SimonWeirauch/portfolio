@@ -151,6 +151,7 @@ button:hover {
     gap: 42px;
     background-color: #141D2F;
     z-index: 1;
+    margin-left: 15px;
 }
 
 .scaleUp:hover {
@@ -276,12 +277,20 @@ button:hover {
     
     .blueShadow {
         position: relative;
-        top: 110px;
+        top: 98px;
         right: 780px;
         width: 600px;
         transform: scale(1);
         rotate: 0deg;
         height: 350px;
+    }
+
+    #line{
+        position: relative;
+        height: 0px;
+        width: 100px;
+        border: 4px;
+        border-color: #70E61C;
     }
 
     .talk {
@@ -310,6 +319,7 @@ button:hover {
         transform: scale(1);
         right: 10px;
         top: 0px;
+        margin-left: 25px;
     }
 
     .horizontal {

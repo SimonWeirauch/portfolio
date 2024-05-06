@@ -1,3 +1,18 @@
+section {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+}
+
+.wrapperLegal {
+    display: flex;
+    position: relative;
+    width: 100%;
+    max-width: 1920px;
+    min-width: 320px;
+}
+
 p {
     color: white;
     font-family: Poppins;
@@ -33,15 +48,39 @@ strong {
 
 .legal {
     height: max-content;
-    width: 90%;
     text-wrap: wrap;
     overflow-y: scroll;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 43px;
+    padding-right: 32px;
     padding-bottom: 5%;
     padding-top: 148px;
 }
 
 ::-webkit-scrollbar {
     overflow-y: hidden;
+}
+
+
+@media (max-width: 1930px) {
+    .legal {
+        height: max-content;
+        text-wrap: wrap;
+        overflow-y: scroll;
+        padding-left: 56px;
+        padding-right: 32px;
+        padding-bottom: 5%;
+        padding-top: 148px;
+    }
+}
+
+@media (max-width: 410px) {
+    .legal {
+        height: max-content;
+        text-wrap: wrap;
+        overflow-y: scroll;
+        padding-left: 17px;
+        padding-right: 32px;
+        padding-bottom: 5%;
+        padding-top: 148px;
+    }
 }

@@ -38,7 +38,7 @@ section {
     height: 649px;
     position: relative;
     gap: 91px;
-    left: 75px;
+    left: 40px;
     img:hover {
         animation-name: bounce;
         -moz-animation-name: bounce;
@@ -101,6 +101,7 @@ section {
     height: 286px;
     position: relative;
     top: 150px;
+    left: 70px;
     span {
         width: 471px;
         height: 38px;
@@ -204,7 +205,7 @@ button:hover {
 
 @media (max-width: 1050px) {
     .iconfield {
-        left: 0px;
+        left: 20px;
         transform: scale(0.9);
     }
 
