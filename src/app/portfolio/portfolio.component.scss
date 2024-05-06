@@ -45,7 +45,7 @@ section {
 .contactAnchor {
     display: flex;
     position: relative;
-    bottom: 120px;
+    top: 1600px;
     width: 100px;
     height: 2px;
 }
@@ -141,6 +141,10 @@ app-project {
         height: 1500px;
     }
     
+    .contactAnchor {
+        top: 1400px;
+    }
+
     .portfolioSection{
         transform: scale(0.90);
         top: 300px; 
@@ -169,6 +173,10 @@ app-project {
         top: 300px;
     }
 
+    .contactAnchor {
+        top: 1250px;
+    }
+
     section {
         height: 1350px;
     }
@@ -188,6 +196,10 @@ app-project {
         transform: scale(0.60);
         height: 850px;
         top: 200px;
+    }
+
+    .contactAnchor {
+        top: 1050px;
     }
 
     section {
@@ -214,6 +226,10 @@ app-project {
         height: 1100px;
     }
 
+    .contactAnchor {
+        top: 1000px;
+    }
+
     .greenShadow{
         right: -100px;
         top: 350px;
@@ -228,6 +244,10 @@ app-project {
 @media (max-width: 700px) {
     section {
         height: 2000px;
+    }
+
+    .contactAnchor {
+        top: 1950px;
     }
 
     .purple {
@@ -317,6 +337,10 @@ app-project {
         height: 1400px;
     }
 
+    .contactAnchor {
+        top: 1350px;
+    }
+
     .portfolioSection{
         top: 200px;
     }
@@ -401,6 +425,10 @@ app-project {
 
     section {
         height: 1200px;
+    }
+
+    .contactAnchor {
+        top: 1150px;
     }
     
     app-project {

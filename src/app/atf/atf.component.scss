@@ -3,15 +3,14 @@ section {
     height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 
 .atfGreen {
-    width: 22%;
+    width: 23%;
     height: 4px;
     position: relative;
     display: flex;
-    top: 870px;
+    top: 368px;
 }
 
 .wrapperAtf {
@@ -70,6 +69,8 @@ section {
     align-items: center;
     gap: 6px;
     transform: scale(0.95);
+    position: relative;
+    right: 200px;
     span {
         font-family: Poppins;
         font-weight: 400;
@@ -105,6 +106,7 @@ section {
     align-items: center;
     position: relative;
     top: -100px;
+    right: 200px;
     a {
         width: 165px;
         height: 58px;
@@ -190,6 +192,22 @@ button:hover {
     right: 2px;
 }
 
+
+@media (max-width: 2200px) {
+    .horizontal{
+        right: 100px;
+    }
+    .talk {
+        right: 100px;
+    }
+}
+
+@media (max-width: 1600px) {
+    .horizontal{
+        right: 100px;
+    }
+}
+
 @media (max-width: 1500px) {
     .purpleShadow {
         position: relative;
@@ -200,12 +218,22 @@ button:hover {
 @media (max-width: 1300px) {
     .horizontal{
         transform: scale(0.85);
+        right: 80px;
+    }
+
+    .talk {
+        right: 80px;
     }
 }
 
 @media (max-width: 1050px) {
     .horizontal{
         transform: scale(0.65);
+        right: 60px;
+    }
+
+    .talk {
+        right: 60px;
     }
 }
 
@@ -229,7 +257,7 @@ button:hover {
     }
 
     .atfGreen {
-        height: 0px;
+        top: 224px;
     }
 
     .wrapperAtf {
@@ -259,9 +287,9 @@ button:hover {
     .talk {
         display: flex;
         justify-content: center;
-        align-items: center;
         position: relative;
         top: -150px;
+        left: -60px;
         transform: scale(1);
         a {
             width: 133px;
@@ -288,7 +316,7 @@ button:hover {
         display: flex;
         position: relative;
         top: -100px;
-        left: 340px;
+        left: 300px;
         justify-content: center;
         align-items: center;
         gap: 6px;
@@ -355,41 +383,32 @@ button:hover {
         right: 40px;
         top: 60px;
     }
+
+    .atfGreen {
+        top: 285px;
+    }
 }
 
 @media (max-width: 450px) {
     .horizontal {
         transform: scale(0.9);
-        left: 300px; 
+        left: 260px; 
     }
 
     .talk {
         transform: scale(0.9);
-        right: 10px;
+        left: -45px;
     }
 }
 
 @media (max-width: 400px) {
     .horizontal {
         transform: scale(0.7);
-        left: 250px; 
+        left: 200px; 
     }
     .talk {
         transform: scale(0.8);
-        right: -10px;
-    }
-}
-
-@media (max-width: 350px) {
-    .talk {
-        transform: scale(0.8);
-        right: 0px;
-    }
-
-    .horizontal {
-        span {
-            left: -12px;
-        }
+        left: -45px;
     }
 }
 
