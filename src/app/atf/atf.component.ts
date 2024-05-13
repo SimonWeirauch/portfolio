@@ -18,6 +18,11 @@ export class AtfComponent {
   @Input() scrollDown?: boolean;
   languageService = inject(LanguageService)
 
+
+  constructor(){
+    this.isMobileView();
+  }
+
   /**
  * Needed for testing purposes
  * Executes the function "isMobileView()" if window is resized

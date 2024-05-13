@@ -1,13 +1,14 @@
 import { CommonModule } from '@angular/common';
 import { Component, HostListener, Output, EventEmitter, inject} from '@angular/core';
 import { LanguageService } from '../language.service';
+import {RouterLink, RouterLinkActive } from '@angular/router';
 
 
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink, RouterLinkActive],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })

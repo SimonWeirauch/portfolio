@@ -16,6 +16,9 @@ export class SkillsComponent {
   @Input() mobileOff?: boolean;
   languageService = inject(LanguageService)
 
+  constructor(){
+    this.mobileView();
+  }
 
  /**
  * Needed for testing purposes
